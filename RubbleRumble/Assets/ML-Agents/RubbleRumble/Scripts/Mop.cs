@@ -10,7 +10,6 @@ public class Mop : MonoBehaviour
     public GameObject player;
     public GameObject sink;
     private GameObject nearDust;
-    private PlayerInteract playerInteract;
 
     public Material[] mat = new Material[3];
 
@@ -34,7 +33,6 @@ public class Mop : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindWithTag("Player");
-        playerInteract = player.GetComponent<PlayerInteract>();
         //isTrigger = false;
         isTrigger = true;
         useCount = 0;
@@ -69,8 +67,6 @@ public class Mop : MonoBehaviour
         {
             WashMopNearSink();
         }
-
-        ReturnCurrentInteract();
     }
 
     //private void OnCollisionEnter(Collision collision)
@@ -137,42 +133,7 @@ public class Mop : MonoBehaviour
         }
     }
 
-    private int ReturnCurrentInteract()
-    {
-        if (holdTime > 0f && holdTime < 2f) // 홀딩하고 있는 상태면
-        {
-            playerInteract.InteractUIState = 3;    // 홀딩바 활성화
-            return playerInteract.InteractUIState;
-        }
-
-        float distance = Vector3.Distance(transform.position, sink.transform.position);
-        if (distance <= triggerDistance)    // 개수대 가까이 있고
-        {
-            if (useCount >= 2)  // 가용횟수 넘었으면
-            {
-                playerInteract.InteractUIState = 2;    // 상호작용 Q 안내
-                return playerInteract.InteractUIState;
-            }
-            else        // 사용 가능한 상태면
-            {
-                playerInteract.InteractUIState = 0;    // 상호작용 비활성화
-                return playerInteract.InteractUIState;
-            }
-        }
-
-        if (nearDust != null && useCount < 2)   // 얼룩을 제거할 수 있으면
-        {
-            playerInteract.InteractUIState = 1;    // 상호작용 E 안내
-            return playerInteract.InteractUIState;
-        }
-
-        // 조건에 맞지 않으면
-        playerInteract.InteractUIState = 0;    // 상호작용 비활성화
-        return playerInteract.InteractUIState;
-    }
-
-    public float GetHoldingTime()
-    {
-        return holdTime;
-    }
+    public float GetHoldingTime() { return holdTime; }
+    public int GetUseCount() { return useCount; }
+    public GameObject GetNearDust() { return nearDust; }
 }

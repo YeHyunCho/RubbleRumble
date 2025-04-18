@@ -30,6 +30,14 @@ TagManager:
   - purpleAgent
   - purpleGoal
   - tile
+  - RecyclingBin
+  - UnfoldedBox
+  - Box
+  - Dust
+  - Can
+  - Workbench
+  - Sink
+  - WorkbenchArea
   layers:
   - Default
   - TransparentFX
@@ -38,7 +46,7 @@ TagManager:
   - Water
   - UI
   - 
-  - 
+  - Pickup
   - invisible
   - 
   - 

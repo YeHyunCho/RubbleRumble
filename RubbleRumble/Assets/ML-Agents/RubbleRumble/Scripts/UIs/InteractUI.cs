@@ -68,11 +68,13 @@ public class InteractUI : MonoBehaviour
                 {
                     interactTxtObj.SetActive(false);    // 상호작용 텍스트 비활성화
                     holdingBarObj.SetActive(true);      // 홀딩바 활성화
+
                     if (ToolManager.Instance.currentTool == 0)  // 맨손으로 작업하고 있으면
                         holdingBarImg.fillAmount = playerController.GetHoldingTime() / unfoldDuration;  // 홀딩바 갱신
                     else
                     {
-                        mop = FindObjectOfType<Mop>();
+                        if (mop == null)
+                            mop = FindObjectOfType<Mop>();
                         holdingBarImg.fillAmount = mop.GetHoldingTime() / unfoldDuration;  // 홀딩바 갱신
                     }
                     break;
