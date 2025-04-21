@@ -32,7 +32,7 @@ public class StageManager : SingletonBase<StageManager>
     private void Start()
     {
         Time.timeScale = 1.0f;
-        IsPlaying = true;
+        IsPlaying = true;   // 플레이 중인 상태로 설정
     }
 
     private void Update()

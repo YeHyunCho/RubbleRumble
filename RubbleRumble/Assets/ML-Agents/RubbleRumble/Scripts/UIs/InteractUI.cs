@@ -23,7 +23,9 @@ public class InteractUI : MonoBehaviour
     {
         SetUITransform();
 
-        holdingBarImg.fillAmount = 0;
+        holdingBarImg.fillAmount = 0;   // 홀딩바 초기화
+        
+        // 상호작용 UI 비활성화
         interactTxtObj.SetActive(false);
         holdingBarObj.SetActive(false);
     }
@@ -48,9 +50,10 @@ public class InteractUI : MonoBehaviour
         UpdateInteractUI(playerInteract.InteractUIState);
     }
 
+    // 상호작용 UI의 위치와 회전값 초기화
     private void SetUITransform()
     {
-        camTransform = Camera.main.transform;
+        camTransform = Camera.main.transform;   // 메인 카메라 기준으로 카메라 위치 설정
         playerTransform = GameObject.FindWithTag("Player").transform;
 
         fixedYPosition = transform.position.y;  // 고정할 y축 값
@@ -60,6 +63,7 @@ public class InteractUI : MonoBehaviour
         transform.rotation = fixedRotation;
     }
 
+    // UI 상태에 따라 상호작용 UI 갱신
     private void UpdateInteractUI(int interactUIState)
     {
         switch (interactUIState)
@@ -71,7 +75,7 @@ public class InteractUI : MonoBehaviour
 
                     if (ToolManager.Instance.currentTool == 0)  // 맨손으로 작업하고 있으면
                         holdingBarImg.fillAmount = playerController.GetHoldingTime() / unfoldDuration;  // 홀딩바 갱신
-                    else
+                    else    // 대걸레를 세척하고 있으면
                     {
                         if (mop == null)
                             mop = FindObjectOfType<Mop>();

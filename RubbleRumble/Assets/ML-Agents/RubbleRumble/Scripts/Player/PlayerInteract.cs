@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
-    [SerializeField] private float interactRange;
-    [SerializeField] private LayerMask pickupLayerMask;
+    [SerializeField] private float interactRange;       // 쓰레기 탐지 범위
+    [SerializeField] private LayerMask pickupLayerMask; // 상호작용 가능한 레이어 마스크(pickable로 설정)
 
     [SerializeField] private PlayerController playerController;
     [SerializeField] private PlayerHand playerHand;

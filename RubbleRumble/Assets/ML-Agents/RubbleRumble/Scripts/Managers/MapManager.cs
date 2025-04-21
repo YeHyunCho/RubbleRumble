@@ -12,17 +12,18 @@ public class MapManager : SingletonBase<MapManager>
     [SerializeField] private int canCnt;
     [SerializeField] private int boxCnt;
 
-    public List<Obstacle> playerObstacleList;
-    public List<Obstacle> aiObstacleList;
+    public List<Obstacle> playerObstacleList;   // 씬에 활성화된 플레이어의 쓰레기 리스트
+    public List<Obstacle> aiObstacleList;       // 씬에 활성화된 AI의 쓰레기 리스트
 
     [Header("Pool")]
-    [SerializeField] private PoolManager.PoolConfig[] _poolConfigs;
+    [SerializeField] private PoolManager.PoolConfig[] _poolConfigs; // 인스펙터에서 풀 설정
 
     protected override void Awake()
     {
         base.Awake();
         PoolManager.Instance.AddPools<Obstacle>(_poolConfigs);
 
+        // 맵에 쓰레기 종류와 개수 설정
         SettingMap(playerMap, aiMap, "Dirt", dirtCnt);
         SettingMap(playerMap, aiMap, "Can", canCnt);
         SettingMap(playerMap, aiMap, "Box", boxCnt);
@@ -32,20 +33,23 @@ public class MapManager : SingletonBase<MapManager>
     {
         for (int i = 0; i < count; i++)
         {
+            // 랜덤 위치 설정
             // Vector3 randPos = new Vector3(Random.Range(-4.5f, 4.5f), 0.2f, Random.Range(-4.5f, 4.5f));
             Vector3 randPos = new Vector3(Random.Range(-10.0f, 10.0f), 0.2f, Random.Range(-10.0f, 10.0f));
             randPos = transform.TransformDirection(randPos);
 
+            // 풀에서 가져오고 위치와 회전값 설정
             Obstacle playerObstacle = PoolManager.Instance.SpawnFromPool<Obstacle>(name, randPos + playerMap.transform.position, Quaternion.identity);
-            playerObstacle.IsPlayer = true;
-            AddToList(playerObstacle);
+            playerObstacle.IsPlayer = true; // 쓰레기를 플레이어로 소유권 설정
+            AddToList(playerObstacle);  // 플레이어 쓰레기 활성화 리스트에 추가
 
             Obstacle aiObstacle = PoolManager.Instance.SpawnFromPool<Obstacle>(name, randPos + aiMap.transform.position, Quaternion.identity);
-            aiObstacle.IsPlayer = false;
-            AddToList(aiObstacle);
+            aiObstacle.IsPlayer = false; // 쓰레기를 AI로 소유권 설정
+            AddToList(aiObstacle);  // AI 쓰레기 활성화 리스트에 추가
         }
     }
 
+    // 활성화된 쓰레기 리스트에서 삭제
     public void RemoveFromList(Obstacle obstacle)
     {
         if (obstacle.IsPlayer)
@@ -60,6 +64,7 @@ public class MapManager : SingletonBase<MapManager>
         }
     }
 
+    // 활성화된 쓰레기 리스트에 추가
     public void AddToList(Obstacle obstacle)
     {
         if (obstacle.IsPlayer)
@@ -74,6 +79,7 @@ public class MapManager : SingletonBase<MapManager>
         }
     }
 
+    // 모든 활성화된 쓰레기 오브젝트를 풀에 반환
     public void ReturnAllObstacles()
     {
         for (int i = playerObstacleList.Count; i > 0; i--)
