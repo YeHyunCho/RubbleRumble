@@ -15,6 +15,8 @@ public class MapManager : SingletonBase<MapManager>
     public List<Obstacle> playerObstacleList;   // 씬에 활성화된 플레이어의 쓰레기 리스트
     public List<Obstacle> aiObstacleList;       // 씬에 활성화된 AI의 쓰레기 리스트
 
+    [SerializeField] private List<float> spawnTime; // 쓰레기 재생성 하는 시간(반드시 빠른 시간 순으로 정렬)
+
     [Header("Pool")]
     [SerializeField] private PoolManager.PoolConfig[] _poolConfigs; // 인스펙터에서 풀 설정
 
@@ -23,13 +25,29 @@ public class MapManager : SingletonBase<MapManager>
         base.Awake();
         PoolManager.Instance.AddPools<Obstacle>(_poolConfigs);
 
-        // 맵에 쓰레기 종류와 개수 설정
-        SettingMap(playerMap, aiMap, "Dirt", dirtCnt);
-        SettingMap(playerMap, aiMap, "Can", canCnt);
-        SettingMap(playerMap, aiMap, "Box", boxCnt);
+        SettingMap();   // 맵에 쓰레기 초기 세팅
     }
 
-    private void SettingMap(Transform playerMap, Transform aiMap, string name, int count)
+    private void Update()
+    {
+        if (!StageManager.Instance.IsPlaying) return;   // 플레이 상태가 아니면 바로 리턴
+        if (spawnTime.Count == 0) return; // 더이상 쓰레기를 스폰하지 않아도 되면 리턴
+        if (Time.time >= spawnTime[0])
+        {
+            SettingMap();   // 쓰레기 생성
+            spawnTime.RemoveAt(0);
+        }
+    }
+
+    // 맵에 쓰레기 종류와 개수 설정
+    private void SettingMap()
+    {
+        SpawnObstacle(playerMap, aiMap, "Dirt", dirtCnt);
+        SpawnObstacle(playerMap, aiMap, "Can", canCnt);
+        SpawnObstacle(playerMap, aiMap, "Box", boxCnt);
+    }
+
+    private void SpawnObstacle(Transform playerMap, Transform aiMap, string name, int count)
     {
         for (int i = 0; i < count; i++)
         {

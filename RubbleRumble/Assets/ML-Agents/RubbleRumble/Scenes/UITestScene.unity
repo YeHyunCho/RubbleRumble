@@ -939,6 +939,9 @@ MonoBehaviour:
   boxCnt: 1
   playerObstacleList: []
   aiObstacleList: []
+  spawnTime:
+  - 30
+  - 50
   _poolConfigs:
   - tag: Dirt
     prefab: {fileID: 6306101440815883320, guid: ffc5a96d6b373d84cb7461a6ca19643a,
