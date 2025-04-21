@@ -116,6 +116,7 @@ public class PlayerController : MonoBehaviour
                         trashOnWorkbench = null; // 작업대에서 원래 박스 참조 제거
                         qKeyHoldTime = 0f; // 홀드 시간 초기화 (코루틴 시작 시)
                     }
+                    trashOnWorkbench = workBench.CheckOnWorkbench(); // 작업대 위 오브젝트 확인
                 }
             }
 
