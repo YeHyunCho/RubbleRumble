@@ -1,15 +1,24 @@
 using UnityEditor.EditorTools;
 using UnityEngine;
 
+// 상호작용 UI 상태를 열거형으로 정의
+public enum InteractUIState
+{
+    None = 0,           // 비활성화 상태
+    PressE = 1,         // E키 누르기 (잡기, 버리기 등)
+    PressQ = 2,         // Q키 누르기 (재활용 시작, 세척 시작 등)
+    Holding = 3         // 진행 휠바퀴 표시 (재활용중, 세척중)
+}
+
 public class PlayerInteract : MonoBehaviour
 {
-    [SerializeField] private float interactRange;       // 쓰레기 탐지 범위
+    [SerializeField] private float interactRange;       // 상호작용 탐지 범위
     [SerializeField] private LayerMask pickupLayerMask; // 상호작용 가능한 레이어 마스크(pickable로 설정)
 
     [SerializeField] private PlayerController playerController;
     [SerializeField] private PlayerHand playerHand;
     [SerializeField] private Mop mop;
-    public int InteractUIState { get; private set; }
+    public InteractUIState CurrentUIState { get; private set; }
 
     private void Awake()
     {
@@ -24,100 +33,149 @@ public class PlayerInteract : MonoBehaviour
     // 모든 상호작용 조건을 체크하고 최종 UI 상태를 결정하는 메서드
     private void UpdateInteractUIState()
     {
-        int newState = 0; // 기본 상태: 비활성화
+        // 기본 상태: 비활성화
+        InteractUIState newState = InteractUIState.None;
 
-        // 플레이어가 맨손일 때 raycast로 'Pickable' layer를 탐지하면 상호작용 E 활성화
-        if (ToolManager.Instance.currentTool == 0 && !playerController.GetIsHoldingTrash())
-        {
-            Ray ray = new Ray(transform.position + Vector3.up, transform.forward * interactRange);
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit, interactRange, pickupLayerMask))
-            {
-                // 줍기 가능한 오브젝트 확인
-                if (hit.collider.CompareTag("Can") || hit.collider.CompareTag("Box") || hit.collider.CompareTag("UnfoldedBox"))
-                {
-                    newState = 1; // 상호작용 E 활성화
-                }
-            }
-        }
-
-        // 맨손으로 쓰레기를 들고 있는 상태
-        if (ToolManager.Instance.currentTool == 0 && playerController.GetIsHoldingTrash() && playerController.GetHeldObject() != null)
-        {
-            // 쓰레기를 들고 있는 상태에서 recyclingBin 근처에 있으면 상호작용 E 활성화
-            if (playerController.GetIsNearRecyclingBin())
-            {
-                if (playerController.GetHeldObject().CompareTag("UnfoldedBox") || playerController.GetHeldObject().CompareTag("Can"))
-                {
-                    newState = 1; // 상호작용 E 활성화 (버리기)
-                }
-                // Box 태그는 버릴 수 없음 (상태 0 유지)
-            }
-
-            // Box 태그인 오브젝트를 들고 있는 상태에서 workbench에 근처에 있으면 상호작용 Q 활성화
-            else if (playerController.GetIsNearWorkbench() && playerController.GetHeldObject().CompareTag("Box"))
-            {
-                if (playerController.GetIsUnfolding())
-                {
-                    newState = 3; // 홀딩바 활성화
-                }
-                else if (playerController.GetTrashOnWorkbench() == null) // 작업대가 비어있을 때만
-                {
-                    newState = 2; // 상호작용 Q 활성화 (놓기)
-                }
-            }
-        }
-
-        // workbench에 trigger된 상태에서 Q키를 누르고 있으면 홀딩바 활성화
-        // workbench에 trigger된 상태에서 workbench 위에 tag가 unfoldedbox인 오브젝트가 있으면 상호작용 E 활성화
-        if (playerController.GetIsNearWorkbench() && !playerController.GetIsHoldingTrash())
-        {
-            if (playerController.GetTrashOnWorkbench() != null)
-            {
-                if (playerController.GetTrashOnWorkbench().CompareTag("Box") && !playerController.GetIsUnfolding())
-                {
-                    if (Input.GetKey(KeyCode.Q))
-                    {
-                        newState = 3; // 홀딩바 활성화
-                    }
-                    else
-                    {
-                        newState = 2; // 상호작용 Q 활성화 (펴기 시작)
-                    }
-                }
-                else if (playerController.GetTrashOnWorkbench().CompareTag("UnfoldedBox"))
-                {
-                    newState = 1; // 상호작용 E 활성화 (집기)
-                }
-            }
-        }
-
-        // mop을 들고 있는 상태에서 dust가 mop에 trigger되고 가용 횟수를 넘지 않은 상태이면 상호작용 E 활성화
+        // 대걸레 사용 관련 상태 체크
         if (ToolManager.Instance.currentTool == 2) // 도구 인덱스 2가 대걸레인 경우
         {
-            if (mop == null) mop = FindObjectOfType<Mop>(); // mop 참조 연결
-            if (mop.GetNearDust() != null && mop.GetUseCount() < 2)
-            {
-                newState = 1; // 상호작용 E 활성화 (닦기)
-            }
+            newState = CheckMopInteract();
+            CurrentUIState = newState;
+            return;
+        }
 
-            // mop을 들고 있는 상태에서 sink 근처에 있고 mop이 최대 가용 횟수인 상태이면 상호작용 Q 활성화
-            // mop을 들고 있는 상태에서 sink 근처에 있고 mop이 최대 가용 횟수인 상태이고 Q 키를 누르고 있으면 홀딩바 활성화
-            float sinkDistance = Vector3.Distance(mop.transform.position, mop.sink.transform.position);
-            if (sinkDistance <= mop.triggerDistance && mop.GetUseCount() >= 2)
+        // 빈 손으로 물건을 집을 수 있는 상태 체크
+        if (ToolManager.Instance.currentTool == 0 && !playerController.GetIsHoldingTrash())
+        {
+            newState = CheckHandInteract();
+            if (newState != InteractUIState.None)
             {
-                if (Input.GetKey(KeyCode.Q) && mop.GetHoldingTime() > 0f && mop.GetHoldingTime() < 2f)
-                {
-                    newState = 3; // 홀딩바 활성화
-                }
-                else
-                {
-                    newState = 2; // 상호작용 Q 활성화 (씻기)
-                }
+                CurrentUIState = newState;
+                return;
             }
         }
 
-        InteractUIState = newState;
+        // 쓰레기를 들고 있는 상태에서의 상호작용 체크
+        if (ToolManager.Instance.currentTool == 0 && playerController.GetIsHoldingTrash() && playerController.GetHeldObject() != null)
+        {
+            newState = CheckTrashInteract();
+            if (newState != InteractUIState.None)
+            {
+                CurrentUIState = newState;
+                return;
+            }
+        }
+
+        // 작업대 근처에서의 상호작용 체크
+        if (playerController.GetIsNearWorkbench() && !playerController.GetIsHoldingTrash())
+        {
+            newState = CheckWorkbenchInteract();
+        }
+
+        CurrentUIState = newState;
+    }
+
+    // 대걸레 관련 상호작용 체크
+    private InteractUIState CheckMopInteract()
+    {
+        if (mop == null) mop = FindObjectOfType<Mop>();
+
+        // 먼지를 닦을 수 있는 상태 체크
+        if (mop.GetNearDust() != null && mop.GetUseCount() < 2)
+        {
+            return InteractUIState.PressE; // 상호작용 E 활성화 (닦기)
+        }
+
+        // 개수대에서 대걸레 세척 관련 체크
+        float sinkDistance = Vector3.Distance(mop.transform.position, mop.sink.transform.position);
+        if (sinkDistance <= mop.triggerDistance && mop.GetUseCount() >= 2)
+        {
+            if (Input.GetKey(KeyCode.Q) && mop.GetHoldingTime() > 0f && mop.GetHoldingTime() < 2f)
+            {
+                return InteractUIState.Holding; // 홀딩바 활성화
+            }
+
+            return InteractUIState.PressQ; // 상호작용 Q 활성화 (세척)
+        }
+
+        return InteractUIState.None;
+    }
+
+    // 빈 손일 때 상호작용 체크
+    private InteractUIState CheckHandInteract()
+    {
+        Ray ray = new Ray(transform.position + Vector3.up, transform.forward * interactRange);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, interactRange, pickupLayerMask))
+        {
+            // 집기 가능한 오브젝트 확인
+            if (hit.collider.CompareTag("Can") || hit.collider.CompareTag("Box") || hit.collider.CompareTag("UnfoldedBox"))
+            {
+                return InteractUIState.PressE; // 상호작용 E 활성화
+            }
+        }
+        return InteractUIState.None;
+    }
+
+    // 쓰레기를 들고 있을 때 상호작용 체크
+    private InteractUIState CheckTrashInteract()
+    {
+        GameObject heldObject = playerController.GetHeldObject();
+
+        // 분리수거장 근처에서의 상호작용
+        if (playerController.GetIsNearRecyclingBin())
+        {
+            if (heldObject.CompareTag("UnfoldedBox") || heldObject.CompareTag("Can"))
+            {
+                return InteractUIState.PressE; // 상호작용 E 활성화 (버리기)
+            }
+
+            return InteractUIState.None; // Box 태그는 버릴 수 없음
+        }
+
+        // 작업대 근처에서의 상호작용
+        if (playerController.GetIsNearWorkbench() && heldObject.CompareTag("Box"))
+        {
+            if (playerController.GetIsUnfolding())
+            {
+                return InteractUIState.Holding; // 홀딩바 활성화
+            }
+
+            if (playerController.GetTrashOnWorkbench() == null) // 작업대가 비어있을 때만
+            {
+                return InteractUIState.PressQ; // 상호작용 Q 활성화 (놓기)
+            }
+        }
+
+        return InteractUIState.None;
+    }
+
+    // 작업대 근처에서의 상호작용 체크
+    private InteractUIState CheckWorkbenchInteract()
+    {
+        GameObject trashOnWorkbench = playerController.GetTrashOnWorkbench();
+
+        if (trashOnWorkbench == null)
+        {
+            return InteractUIState.None;
+        }
+
+        if (trashOnWorkbench.CompareTag("Box") && !playerController.GetIsUnfolding())
+        {
+            if (Input.GetKey(KeyCode.Q))
+            {
+                return InteractUIState.Holding; // 홀딩바 활성화
+            }
+
+            return InteractUIState.PressQ; // 상호작용 Q 활성화 (재활용 시작)
+        }
+
+        if (trashOnWorkbench.CompareTag("UnfoldedBox"))
+        {
+            return InteractUIState.PressE; // 상호작용 E 활성화 (집기)
+        }
+
+        return InteractUIState.None;
     }
 }
