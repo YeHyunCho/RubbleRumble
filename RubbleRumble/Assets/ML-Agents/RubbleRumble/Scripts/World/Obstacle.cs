@@ -9,6 +9,8 @@ public class Obstacle : MonoBehaviour
     private void OnEnable()
     {
         ParentPool = transform.parent;
+        Collider collider = GetComponent<Collider>();
+        collider.enabled = true;    // 콜라이더 활성화
     }
 
     public void CleanObstacle()
