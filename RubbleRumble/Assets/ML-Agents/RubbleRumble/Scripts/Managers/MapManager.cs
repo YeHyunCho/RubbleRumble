@@ -16,6 +16,7 @@ public class MapManager : SingletonBase<MapManager>
     public List<Obstacle> aiObstacleList;       // 씬에 활성화된 AI의 쓰레기 리스트
 
     [SerializeField] private List<float> spawnTime; // 쓰레기 재생성 하는 시간(반드시 빠른 시간 순으로 정렬)
+    private float curTime;  // 현재 경과 시간
 
     [Header("Pool")]
     [SerializeField] private PoolManager.PoolConfig[] _poolConfigs; // 인스펙터에서 풀 설정
@@ -26,13 +27,17 @@ public class MapManager : SingletonBase<MapManager>
         PoolManager.Instance.AddPools<Obstacle>(_poolConfigs);
 
         SettingMap();   // 맵에 쓰레기 초기 세팅
+        curTime = 0;
     }
 
     private void Update()
     {
         if (!StageManager.Instance.IsPlaying) return;   // 플레이 상태가 아니면 바로 리턴
         if (spawnTime.Count == 0) return; // 더이상 쓰레기를 스폰하지 않아도 되면 리턴
-        if (Time.time >= spawnTime[0])
+
+        curTime += Time.deltaTime;  // 경과 시간 갱신
+
+        if (curTime >= spawnTime[0])    // 쓰레기를 스폰해야 하는 시간이 되면
         {
             SettingMap();   // 쓰레기 생성
             spawnTime.RemoveAt(0);
