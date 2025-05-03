@@ -7,15 +7,12 @@ public class MapManager : SingletonBase<MapManager>
     [SerializeField] private Transform playerMap;
     [SerializeField] private Transform aiMap;
 
-    [Header("Count")]
-    [SerializeField] private int dirtCnt;
-    [SerializeField] private int canCnt;
-    [SerializeField] private int boxCnt;
-
+    [Header("LevelInfo")]
     public List<Obstacle> playerObstacleList;   // 씬에 활성화된 플레이어의 쓰레기 리스트
     public List<Obstacle> aiObstacleList;       // 씬에 활성화된 AI의 쓰레기 리스트
 
-    [SerializeField] private List<float> spawnTime; // 쓰레기 재생성 하는 시간(반드시 빠른 시간 순으로 정렬)
+    [SerializeField] private Level LevelInfo;   // 현재 레벨의 정보
+    [SerializeField] private List<float> spawnTime = new List<float>(); // 쓰레기 재생성 하는 시간(반드시 빠른 시간 순으로 정렬)
     private float curTime;  // 현재 경과 시간
 
     [Header("Pool")]
@@ -26,6 +23,8 @@ public class MapManager : SingletonBase<MapManager>
         base.Awake();
         PoolManager.Instance.AddPools<Obstacle>(_poolConfigs);
 
+        LevelInfo = LevelManager.Instance.GetLevelInfo();   // 현재 레벨 설정 정보 가져오기
+        spawnTime = LevelInfo.spawnCooldowns;   // 쿨타임 리스트 설정
         SettingMap();   // 맵에 쓰레기 초기 세팅
         curTime = 0;
     }
@@ -47,9 +46,10 @@ public class MapManager : SingletonBase<MapManager>
     // 맵에 쓰레기 종류와 개수 설정
     private void SettingMap()
     {
-        SpawnObstacle(playerMap, aiMap, "Dirt", dirtCnt);
-        SpawnObstacle(playerMap, aiMap, "Can", canCnt);
-        SpawnObstacle(playerMap, aiMap, "Box", boxCnt);
+        foreach (var obstacle in LevelInfo.ObstacleDict)
+        {
+            SpawnObstacle(playerMap, aiMap, obstacle.Key, obstacle.Value);
+        }
     }
 
     private void SpawnObstacle(Transform playerMap, Transform aiMap, string name, int count)

@@ -934,14 +934,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMap: {fileID: 524592988}
   aiMap: {fileID: 678012884}
-  dirtCnt: 10
-  canCnt: 3
-  boxCnt: 1
+  LevelInfo:
+    idx: 0
+    ObstacleDict:
+      _serializedList: []
+    spawnCooldowns: []
   playerObstacleList: []
   aiObstacleList: []
-  spawnTime:
-  - 30
-  - 50
+  spawnTime: []
   _poolConfigs:
   - tag: Dirt
     prefab: {fileID: 6306101440815883320, guid: ffc5a96d6b373d84cb7461a6ca19643a,
