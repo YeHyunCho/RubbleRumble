@@ -17,6 +17,8 @@ public class GameOverPopup : UIBase
     [SerializeField] private Button nextBtn;
     [SerializeField] private Button exitBtn;
 
+    private const string menuSceneName = "MenuScene2";
+
     private void Awake()
     {
         if (StageManager.Instance.IsWin)
@@ -34,6 +36,7 @@ public class GameOverPopup : UIBase
             nextBtn.onClick.AddListener(OnNextBtnClicked);
 
         // TODO: exitBtn 누르면 LobbyScene으로 가도록 작성
+        exitBtn.onClick.AddListener(OnExitBtnClicked);  // exit 버튼 누르면 메뉴로 돌아가도록 연결
     }
 
     // 승리 시 게임 종료 팝업 세팅
@@ -58,9 +61,22 @@ public class GameOverPopup : UIBase
         nextBtnTxt.text = "RETRY";
     }
 
+    // Retry 혹은 Next 버튼 눌렀을 때 실행할 내용
     private void OnNextBtnClicked()
     {
         MapManager.Instance.ReturnAllObstacles();   // 씬에 남아있는 모든 쓰레기 오브젝트 풀에 반환
+        
+        if (StageManager.Instance.IsWin)    // 클리어 한 경우
+        {
+            LevelManager.Instance.SelectedLevelIdx++;   // 다음 레벨에서 시작하도록 인덱스 증가
+        }
+        // 클리어 하지 못한 경우 현재 레벨에서 다시 시작
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);   // 현재 활성화된 씬 재로드
+    }
+
+    private void OnExitBtnClicked()
+    {
+        MapManager.Instance.ReturnAllObstacles();   // 씬에 남아있는 모든 쓰레기 오브젝트 풀에 반환
+        SceneManager.LoadScene(menuSceneName);   // 메뉴 화면으로 돌아감
     }
 }

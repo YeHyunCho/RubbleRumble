@@ -6,19 +6,31 @@ using UnityEngine.UI;
 
 public class MenuUIHandler : MonoBehaviour
 {
-    [Header("Level Button")]
-    [SerializeField] Button levelBtn1;
-    [SerializeField] Button levelBtn2;
-    [SerializeField] Button levelBtn3;
+    [SerializeField] GameObject playBtnPrefab;
+    [SerializeField] GameObject lockBtnPrefab;
 
+    [Header("Level Button")]
+    [SerializeField] private List<GameObject> BtnList = new List<GameObject>();
+    [SerializeField] private List<Button> levelBtnList = new List<Button>();
     private const string nextSceneName = "UITestScene"; // 플레이씬 이름
 
-    private void OnEnable()
+    private void Start()
     {
         // 버튼 클릭시 이벤트 연결
-        levelBtn1.onClick.AddListener(() => OnClickedMenuBtn(0));
-        levelBtn2.onClick.AddListener(() => OnClickedMenuBtn(1));
-        levelBtn3.onClick.AddListener(() => OnClickedMenuBtn(2));
+        for (int i = 0; i < levelBtnList.Count; i++)
+        {
+            if (i == 0 || DataManager.Instance.IsLevelCleared(i - 1))
+            {
+                int levelIndex = i;
+                GameObject playBtn = Instantiate(playBtnPrefab, levelBtnList[i].gameObject.transform.parent);
+                Destroy(BtnList[i].gameObject);
+                BtnList.RemoveAt(i);
+                levelBtnList.RemoveAt(i);
+                BtnList.Insert(i, playBtn);
+                levelBtnList.Insert(i, playBtn.GetComponent<Button>());
+                levelBtnList[i].onClick.AddListener(() => OnClickedMenuBtn(levelIndex));
+            }
+        }
     }
 
     public void ClickBackButton()

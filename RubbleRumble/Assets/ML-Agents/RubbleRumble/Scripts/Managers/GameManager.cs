@@ -18,6 +18,8 @@ public class GameManager : SingletonBase<GameManager>
         Time.timeScale = 0f;    // 시간 일시 정지
         StageManager.Instance.IsPlaying = false;    // 플레이하고 있지 않은 상태로 설정
         UIManager.Instance.Show<GameOverPopup>();   // 게임 종료창 팝업
-        // TODO: 플레이 정보 저장 등.. 종료 후 시행해야 할 로직 작성
+
+        if (StageManager.Instance.IsWin)
+            DataManager.Instance.UpdateLevelCleared(LevelManager.Instance.SelectedLevelIdx);
     }
 }
