@@ -60,7 +60,7 @@ public class GameOverPopup : UIBase
 
     private void OnNextBtnClicked()
     {
-        MapManager.Instance.ReturnAllObstacles();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        MapManager.Instance.ReturnAllObstacles();   // 씬에 남아있는 모든 쓰레기 오브젝트 풀에 반환
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);   // 현재 활성화된 씬 재로드
     }
 }

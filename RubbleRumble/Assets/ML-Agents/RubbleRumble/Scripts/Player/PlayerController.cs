@@ -30,8 +30,6 @@ public class PlayerController : MonoBehaviour
 
     private Coroutine recycleCoroutine;
 
-    private int interactUIState;
-
     void Awake()
     {
         // 플레이어의 Animator에서 오른손 뼈(Bone)의 Transform을 가져옴
@@ -118,6 +116,7 @@ public class PlayerController : MonoBehaviour
                         trashOnWorkbench = null; // 작업대에서 원래 박스 참조 제거
                         qKeyHoldTime = 0f; // 홀드 시간 초기화 (코루틴 시작 시)
                     }
+                    trashOnWorkbench = workBench.CheckOnWorkbench(); // 작업대 위 오브젝트 확인
                 }
             }
 
@@ -148,8 +147,6 @@ public class PlayerController : MonoBehaviour
             Debug.Log("E 키 눌림 - 분리수거장 쓰레기 제거");
             ReturnTrashToPool(); // 쓰레기를 분리수거장으로 보내는 함수 호출
         }
-
-        ReturnCurrentInteract();    // 상호작용 UI 상태 갱신
     }
 
     // 트리거 영역 안에 머무르는 동안 호출되는 함수
@@ -282,80 +279,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // 안내할 상호작용 이벤트 판정하는 함수
-    public int ReturnCurrentInteract()
-    {
-         int newState = 0; // 기본 상태: 비활성화
-
-        if (isNearWorkbench)    // 작업장 근처에 있고
-        {
-            if (trashOnWorkbench != null)   // 작업대에 쓰레기가 있고
-            {
-                 if (trashOnWorkbench.CompareTag("Box")) // 접힌 박스
-                 {
-                     if (Input.GetKey(KeyCode.Q)) // Q 누르고 있으면
-                     {
-                         newState = 3;    // 홀딩바 활성화
-                     } else {
-                         newState = 2;    // 상호작용 Q 안내 (놓기/펼치기 시작)
-                     }
-                 }
-                 else if (trashOnWorkbench.CompareTag("UnfoldedBox"))// 작업대 위에 펼친 상자가 있으면
-                 {
-                     newState = 1;    // 상호작용 E 안내 (줍기)
-                 }
-                 // 캔 등 다른 오브젝트가 작업대에 있을 경우 상태 0 유지
-            }
-            else if (isHoldingTrash && heldObject != null) // 작업대는 비었고, 들고 있는 물건이 있으며
-            {
-                 if (heldObject.CompareTag("Box"))    // 접힌 상자를 들고 있으면
-                 {
-                     newState = 2;    // 상호작용 Q 안내 (놓기)
-                 }
-                  // 다른 걸 들고 있을 땐 작업대에서 할 수 있는 상호작용 없음 (상태 0 유지)
-            }
-             // 작업대 근처이고 아무것도 안들고 있고 작업대도 비어있으면 상태 0 유지
-        }
-        else if (isNearRecyclingBin && isHoldingTrash && heldObject != null)   // 분리수거장 근처에 있고 쓰레기를 들고 있는 경우
-        {
-            if (heldObject.CompareTag("Box"))    // 접힌 박스를 들고 있으면 분리수거 불가
-                newState = 0;    // 상호작용 UI 비활성화
-            else if (heldObject.CompareTag("UnfoldedBox") || heldObject.CompareTag("Can")) // 펼쳐진 박스나 캔
-                newState = 1;    // 상호작용 E 안내 (버리기)
-        }
-        else if (!isHoldingTrash && toolManager.currentTool == 0) // 맨손이고 아무것도 안 들고 있을 때
-        {
-           
-             // Collider[] nearbyItems = Physics.OverlapSphere(transform.position, 1.5f, LayerMask.GetMask("Interactable")); // 예시
-             // if (nearbyItems.Length > 0) {
-             //     bool canPickUp = false;
-             //     foreach(var itemCollider in nearbyItems) {
-             //         if (itemCollider.CompareTag("Can") || itemCollider.CompareTag("Box") || itemCollider.CompareTag("UnfoldedBox")) {
-             //              canPickUp = true;
-             //              break;
-             //         }
-             //     }
-             //     if(canPickUp) newState = 1; // 상호작용 E 안내 (줍기)
-             // }
-             // ---> 이 부분은 PlayerInteract 스크립트에서 처리하는 것이 더 적합할 수 있음.
-             // ---> PlayerController는 상태 플래그만 제공하고, PlayerInteract가 최종 UI 상태 결정.
-        }
-
-
-        // 최종 상태 적용
-        if (playerInteract != null)
-        {
-            playerInteract.InteractUIState = newState;
-        }
-        return newState;
-    }
-    public float GetHoldingTime()
-    {
-        return qKeyHoldTime;
-    }
-
-    public float GetUnfoldDuration()
-    {
-        return UNFOLD_DURATION;
-    }
+    public float GetHoldingTime() { return qKeyHoldTime; }
+    public float GetUnfoldDuration() { return UNFOLD_DURATION; }
+    public GameObject GetHeldObject() { return heldObject; }
+    public GameObject GetTrashOnWorkbench() { return trashOnWorkbench; }
+    public bool GetIsHoldingTrash() { return isHoldingTrash; }
+    public bool GetIsNearWorkbench() { return isNearWorkbench; }
+    public bool GetIsNearRecyclingBin() { return isNearRecyclingBin; }
+    public bool GetIsUnfolding() { return isUnfolding; }
 }
