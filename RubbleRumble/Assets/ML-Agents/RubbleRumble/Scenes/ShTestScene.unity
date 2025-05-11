@@ -290,7 +290,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: AIMap
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4851826872027803468, guid: 25c0fe0c4584c004da8a35fe04448964, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
