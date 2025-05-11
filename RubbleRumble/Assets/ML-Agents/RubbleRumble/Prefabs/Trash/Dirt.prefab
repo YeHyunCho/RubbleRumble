@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8435270523377017537}
   - component: {fileID: 1844037604210598006}
   - component: {fileID: 1084064972787565109}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Dirt
   m_TagString: Dust
   m_Icon: {fileID: 0}
@@ -122,3 +122,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Score: 150
   IsPlayer: 0
+  ParentPool: {fileID: 0}
