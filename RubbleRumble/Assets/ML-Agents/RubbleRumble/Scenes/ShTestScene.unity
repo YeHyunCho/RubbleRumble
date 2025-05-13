@@ -617,33 +617,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: InteractCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 3049817126364638637, guid: 20c2126fbcac3f84eb924efd8876b78a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7487324599243935989, guid: 20c2126fbcac3f84eb924efd8876b78a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7791056479103692497, guid: 20c2126fbcac3f84eb924efd8876b78a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8201593487443620559, guid: 20c2126fbcac3f84eb924efd8876b78a,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
-    - target: {fileID: 8973285879672331923, guid: 20c2126fbcac3f84eb924efd8876b78a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5615854670026045571, guid: 20c2126fbcac3f84eb924efd8876b78a, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
