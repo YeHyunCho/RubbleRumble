@@ -12,6 +12,12 @@ public class ToolManager : SingletonBase<ToolManager>
 
     public int currentTool = -1;  // 현재 장착된 도구의 인덱스 (-1은 아무 도구도 장착되지 않음을 의미)
 
+    /*
+    0 : 맨 손 (재활용 쓰레기 등)
+    1 : 빗자루 (먼지)
+    2 : 대걸레 (얼룩)
+     */
+
     void Start()
     {
         playerScript = GameObject.Find("Player").GetComponent<PlayerHand>();

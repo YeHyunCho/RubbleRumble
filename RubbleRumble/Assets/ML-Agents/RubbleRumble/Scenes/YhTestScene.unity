@@ -911,7 +911,6 @@ GameObject:
   - component: {fileID: 876494332}
   - component: {fileID: 876494331}
   - component: {fileID: 876494330}
-  - component: {fileID: 876494334}
   - component: {fileID: 876494335}
   m_Layer: 0
   m_Name: Managers
@@ -927,18 +926,20 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 876494329}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 657cc5b7fc649be418ed7b0573523ed7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerMap: {fileID: 524592988}
   aiMap: {fileID: 678012884}
-  dirtCnt: 10
-  canCnt: 3
-  boxCnt: 1
   playerObstacleList: []
   aiObstacleList: []
+  LevelInfo:
+    idx: 0
+    ObstacleDict:
+      _serializedList: []
+    spawnCooldowns: []
   spawnTime:
   - 30
   - 50
@@ -973,7 +974,7 @@ MonoBehaviour:
   timeLimit: 0
   PlayerObstacleCnt: 0
   AIObstacleCnt: 0
-  IsPlaying: 0
+  IsPlaying: 1
 --- !u!4 &876494332
 Transform:
   m_ObjectHideFlags: 0
@@ -989,21 +990,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &876494334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 876494329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 899fec0f224046949adc3d89aa190a2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trashList: []
-  isHeld: 0
-  readyToRecycle: 0
 --- !u!114 &876494335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1528,7 +1514,7 @@ MonoBehaviour:
   interactRange: 2
   pickupLayerMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 0
   playerController: {fileID: 1537688793}
   playerHand: {fileID: 1537688791}
   mop: {fileID: 0}
