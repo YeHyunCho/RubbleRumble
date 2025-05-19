@@ -79,11 +79,12 @@ public class PlayerInteract : MonoBehaviour
     private InteractUIState CheckMopInteract()
     {
         if (mop == null) mop = FindObjectOfType<Mop>();
+        PlayerController playerController = FindObjectOfType<PlayerController>();
 
-        // 먼지를 닦을 수 있는 상태 체크
-        if (mop.GetNearDust() != null && mop.GetUseCount() < 2)
+       // PlayerController의 nearDust 사용
+        if (playerController.GetNearDust() != null && mop.GetUseCount() < 2)
         {
-            return InteractUIState.PressE; // 상호작용 E 활성화 (닦기)
+            return InteractUIState.PressE;
         }
 
         // 개수대에서 대걸레 세척 관련 체크

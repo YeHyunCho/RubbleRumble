@@ -8,7 +8,7 @@ public class ToolManager : SingletonBase<ToolManager>
     private Transform rightHand;  // 캐릭터 오른손 Transform (도구를 붙일 위치)
 
     public GameObject[] toolPrefabs;  // 1, 2, 3번 키로 장착할 도구 프리팹 배열 (Inspector에서 설정)
-    private GameObject[] tools;  // 실제 생성된 도구 인스턴스를 저장하는 배열
+    public GameObject[] tools;  // 실제 생성된 도구 인스턴스를 저장하는 배열
 
     public int currentTool = -1;  // 현재 장착된 도구의 인덱스 (-1은 아무 도구도 장착되지 않음을 의미)
 

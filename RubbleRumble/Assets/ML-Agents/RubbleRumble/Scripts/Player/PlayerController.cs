@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     private PlayerHand playerHand;
     private PlayerInteract playerInteract;
 
+    private GameObject nearDust; // 플레이어 트리거로 감지된 먼지
+
     private Transform rightHandTransform; // 쓰레기나 도구를 붙일 플레이어의 오른손 위치 (Transform)
 
     public GameObject unfoldedBoxPrefab; // 펼쳐진 박스 프리팹 (Unity Inspector에서 설정 필요)
@@ -38,8 +40,10 @@ public class PlayerController : MonoBehaviour
         if (rightHandTransform != null) // Null 체크 추가
         {
             rightHandTransform.position = rightHandTransform.position + rightHandTransform.forward * 0.15f;
-        } else {
-             Debug.LogError("RightHand Transform을 찾을 수 없습니다. Animator와 HumanBodyBones 설정을 확인하세요.");
+        }
+        else
+        {
+            Debug.LogError("RightHand Transform을 찾을 수 없습니다. Animator와 HumanBodyBones 설정을 확인하세요.");
         }
 
 
@@ -57,7 +61,7 @@ public class PlayerController : MonoBehaviour
         {
             Debug.LogError("PlayerHand 컴포넌트를 찾을 수 없습니다.");
         }
-         if (playerInteract == null)
+        if (playerInteract == null)
         {
             Debug.LogError("PlayerInteract 컴포넌트를 찾을 수 없습니다.");
         }
@@ -72,8 +76,27 @@ public class PlayerController : MonoBehaviour
 
         if (workBench != null) // Null 체크 추가
         {
-             isUnfolding = workBench.IsRecycling;    // 재활용 중인지 상태 갱신
+            isUnfolding = workBench.IsRecycling;    // 재활용 중인지 상태 갱신
         }
+
+
+        if (toolManager.currentTool == 2 && nearDust != null && Input.GetKeyDown(KeyCode.E))
+        {
+            Mop mop = FindObjectOfType<Mop>();
+            if (mop != null && mop.GetUseCount() < 2)
+            {
+                Obstacle dirt = nearDust.GetComponent<Obstacle>();
+                dirt.CleanObstacle();
+                nearDust = null;
+                mop.IncrementUseCount(); // useCount 증가
+                mop.UpdateMaterial(); // 재질 업데이트
+            }
+            else
+            {
+                Debug.Log("대걸레를 세척하세요!");
+            }
+        }
+
 
 
         if (isNearWorkbench && !isUnfolding && workBench != null) // workBench Null 체크 추가
@@ -132,12 +155,13 @@ public class PlayerController : MonoBehaviour
                 //     recycleCoroutine = null;
                 // }
             }
-        } else if (!isNearWorkbench && recycleCoroutine != null) // 작업대 벗어나면 코루틴 중지
+        }
+        else if (!isNearWorkbench && recycleCoroutine != null) // 작업대 벗어나면 코루틴 중지
         {
-             StopCoroutine(recycleCoroutine);
-             recycleCoroutine = null;
-             isUnfolding = false; // 확실히 하기 위해 상태 변경
-             Debug.Log("작업대 벗어나서 펼치기 코루틴 중지");
+            StopCoroutine(recycleCoroutine);
+            recycleCoroutine = null;
+            isUnfolding = false; // 확실히 하기 위해 상태 변경
+            Debug.Log("작업대 벗어나서 펼치기 코루틴 중지");
         }
 
 
@@ -149,25 +173,34 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+
     // 트리거 영역 안에 머무르는 동안 호출되는 함수
     void OnTriggerStay(Collider other)
     {
+        // 대걸레 장착 시 먼지 감지
+        if (toolManager.currentTool == 2 && other.CompareTag("Dust"))
+        {
+            nearDust = other.gameObject;
+            Debug.Log("플레이어가 먼지 감지: " + nearDust.name);
+        }
         // 쓰레기를 들고 있지 않고, 맨손(인덱스 0)일 때만 오브젝트 줍기 가능
         if (!isHoldingTrash && toolManager.currentTool == 0 && (other.CompareTag("Can") || other.CompareTag("Box") || other.CompareTag("UnfoldedBox")))
         {
             // PlayerHand에서 이미 주울 수 있는 오브젝트인지 확인하는 로직이 있을 수 있으므로, 여기서는 감지만 하고 E키 입력은 Update에서 처리하는 것이 더 일반적일 수 있음
             // 만약 여기서 바로 줍는 로직을 유지한다면 heldObject 할당 필요
-             if (Input.GetKey(KeyCode.E)) // E 키를 누르면 줍기 실행
+            if (Input.GetKey(KeyCode.E)) // E 키를 누르면 줍기 실행
             {
-                 heldObject = other.gameObject; // E키 누르는 순간에만 할당
-                 Debug.Log("E 키 눌림 - 오브젝트 줍기: " + heldObject.name);
-                 playerHand.PickUpTrash(heldObject); // 오브젝트를 손에 드는 함수 호출
-                 isHoldingTrash = true;
-                 // 주운 후에는 트리거 내 다른 오브젝트와 상호작용 방지 위해 heldObject를 null로? -> PlayerHand에서 관리하는 것이 좋을 수 있음
-                 // heldObject = null; // 주운 후 초기화 (선택적)
-            } else {
-                 // E키를 누르지 않은 상태에서는 잠재적 대상만 표시 (UI 용도 등)
-                 // playerInteract.ShowInteractHint(other.gameObject); // 예시
+                heldObject = other.gameObject; // E키 누르는 순간에만 할당
+                Debug.Log("E 키 눌림 - 오브젝트 줍기: " + heldObject.name);
+                playerHand.PickUpTrash(heldObject); // 오브젝트를 손에 드는 함수 호출
+                isHoldingTrash = true;
+                // 주운 후에는 트리거 내 다른 오브젝트와 상호작용 방지 위해 heldObject를 null로? -> PlayerHand에서 관리하는 것이 좋을 수 있음
+                // heldObject = null; // 주운 후 초기화 (선택적)
+            }
+            else
+            {
+                // E키를 누르지 않은 상태에서는 잠재적 대상만 표시 (UI 용도 등)
+                // playerInteract.ShowInteractHint(other.gameObject); // 예시
             }
         }
 
@@ -178,14 +211,19 @@ public class PlayerController : MonoBehaviour
             {
                 isNearWorkbench = true; // 작업대 근처 플래그 활성화
                 Debug.Log("작업대 근처 진입");
-                 if (workBench != null) { // null 체크
+                if (workBench != null)
+                { // null 체크
                     trashOnWorkbench = workBench.CheckOnWorkbench(); // 작업대 위 오브젝트 확인
-                 } else {
+                }
+                else
+                {
                     Debug.LogError("WorkBench 참조가 null입니다.");
-                 }
-            } else {
-                 // 계속 머무르는 동안 작업대 위 상태 갱신 (필요 시)
-                 // trashOnWorkbench = workBench?.CheckOnWorkbench(); // Optional chaining
+                }
+            }
+            else
+            {
+                // 계속 머무르는 동안 작업대 위 상태 갱신 (필요 시)
+                // trashOnWorkbench = workBench?.CheckOnWorkbench(); // Optional chaining
             }
         }
 
@@ -194,8 +232,8 @@ public class PlayerController : MonoBehaviour
         {
             if (!isNearRecyclingBin) // 처음 들어왔을 때만 로그 출력
             {
-                 isNearRecyclingBin = true; // 분리수거장 근처 플래그 활성화
-                 Debug.Log("분리수거장 근처 진입");
+                isNearRecyclingBin = true; // 분리수거장 근처 플래그 활성화
+                Debug.Log("분리수거장 근처 진입");
             }
         }
     }
@@ -220,11 +258,17 @@ public class PlayerController : MonoBehaviour
             Debug.Log("작업대 벗어남");
             if (recycleCoroutine != null) // 작업대 벗어날 때 코루틴 실행 중이면 중지
             {
-                 Debug.Log("작업대 벗어나서 펼치기 코루틴 중지 (OnTriggerExit)");
-                 StopCoroutine(recycleCoroutine);
-                 recycleCoroutine = null;
-                 isUnfolding = false; // 상태 확실히 변경
+                Debug.Log("작업대 벗어나서 펼치기 코루틴 중지 (OnTriggerExit)");
+                StopCoroutine(recycleCoroutine);
+                recycleCoroutine = null;
+                isUnfolding = false; // 상태 확실히 변경
             }
+        }
+
+        if (other.CompareTag("Dust") && nearDust == other.gameObject)
+        {
+            nearDust = null;
+            Debug.Log("먼지 감지 해제");
         }
 
         // 분리수거장 영역을 벗어나면 플래그 초기화
@@ -266,15 +310,15 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                 Debug.LogWarning("알 수 없는 태그의 쓰레기: " + heldObject.tag);
-                 // 필요하다면 여기서도 제거 로직 추가
+                Debug.LogWarning("알 수 없는 태그의 쓰레기: " + heldObject.tag);
+                // 필요하다면 여기서도 제거 로직 추가
             }
 
 
             if (removed)
             {
-                 heldObject = null; // 들고 있는 오브젝트 초기화
-                 isHoldingTrash = false; // 쓰레기 들고 있음 플래그 비활성화
+                heldObject = null; // 들고 있는 오브젝트 초기화
+                isHoldingTrash = false; // 쓰레기 들고 있음 플래그 비활성화
             }
         }
     }
@@ -287,4 +331,5 @@ public class PlayerController : MonoBehaviour
     public bool GetIsNearWorkbench() { return isNearWorkbench; }
     public bool GetIsNearRecyclingBin() { return isNearRecyclingBin; }
     public bool GetIsUnfolding() { return isUnfolding; }
+    public GameObject GetNearDust() { return nearDust; } // nearDust getter
 }
