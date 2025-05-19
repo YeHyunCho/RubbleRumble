@@ -6,6 +6,6 @@ using UnityEngine;
 public class TrashData : ScriptableObject
 {
     public string trashName;
-    public string interactTool;
+    public int interactTool;
     public bool readyToThrowAway;
 }

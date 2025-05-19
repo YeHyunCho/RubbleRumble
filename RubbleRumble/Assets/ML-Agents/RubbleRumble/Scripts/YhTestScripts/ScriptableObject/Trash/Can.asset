@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8cb222c427d11a4dad698ea4301c304, type: 3}
-  m_Name: Dust
+  m_Name: Can
   m_EditorClassIdentifier: 
-  trashName: Dust
-  interactTool: Broom
+  trashName: Can
+  interactTool: 2
   readyToThrowAway: 1

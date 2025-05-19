@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Box
   m_EditorClassIdentifier: 
   trashName: Box
-  interactTool: Hand
+  interactTool: 0
+  readyToThrowAway: 0

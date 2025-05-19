@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 
 public class PlayerInputHandler : CleanerBase
 {
-    private void Update()
+    protected void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1)) EquipTool(0);
         else if (Input.GetKeyDown(KeyCode.Alpha2)) EquipTool(1);
@@ -15,7 +15,7 @@ public class PlayerInputHandler : CleanerBase
         // 얼룩 근처, 줍기, 쓰레기 버리기 등
         if (Input.GetKeyDown(KeyCode.E))
         {
-            TryPickUp();
+            UseTool();
             TryThrowAway();
         }
 
@@ -25,7 +25,7 @@ public class PlayerInputHandler : CleanerBase
             TryPlaceTrashOnTheWorkbench();
         }
 
-        // 작업대에서 누르면 상자 분리, 개수대에서 누르면 대걸레 세척
+        // 작업대에서 누르면 상자 분리(대걸레 세척 메서드는 Mop.cs에 위치)
         if (Input.GetKey(KeyCode.Q))
         {
             TryUnfoldBox();
@@ -40,8 +40,17 @@ public class PlayerInputHandler : CleanerBase
 
     protected override void SetRightHand()
     {
+        // 플레이어의 Animator에서 오른손 뼈(Bone)의 Transform을 가져옴
         rightHand = GetComponentInChildren<Animator>().GetBoneTransform(HumanBodyBones.RightHand);
-        rightHand.position = rightHand.position + rightHand.forward * 0.15f;
+        // 오른손 위치를 손바닥 방향으로 약간 조정 (0.15 유닛 이동)
+        if (rightHand != null) // Null 체크 추가
+        {
+            rightHand.position = rightHand.position + rightHand.forward * 0.15f;
+        }
+        else
+        {
+            Debug.LogError("RightHand Transform을 찾을 수 없습니다. Animator와 HumanBodyBones 설정을 확인하세요.");
+        }
     }
 
     protected override void SetToolLocation()

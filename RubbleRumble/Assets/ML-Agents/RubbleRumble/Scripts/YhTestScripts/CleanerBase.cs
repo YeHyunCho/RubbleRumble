@@ -6,6 +6,7 @@ using UnityEngine;
 public class CleanerBase : MonoBehaviour
 {
     protected WorkBench workBench;
+    protected TrashManager heldTrash;
 
     public GameObject nearObject;
     public GameObject unfoldedBox;
@@ -36,50 +37,73 @@ public class CleanerBase : MonoBehaviour
         SetToolLocation();
 
         workBench = FindFirstObjectByType<WorkBench>();
+
+        heldObject = null;
+        nearObject = null;
+        trashOnWorkbench = null;
     }
 
-    public void TryPickUp()
+    // 도구 사용 기능을 담은 함수
+    public void UseTool()
     {
-        if (currentTool == 0 && !isHoldingTrash)
+        if (nearObject != null)
         {
-            if (isNearWorkbench && trashOnWorkbench != null)
-            {
-                nearObject = trashOnWorkbench;
-                trashOnWorkbench = null;
-            }
+            TrashManager nearTrash = nearObject.GetComponent<TrashManager>();
 
-            if (nearObject != null)
+            // if (현재 들고 있는 도구 == 근처에 있는 쓰레기와 상호작용하는 도구)
+            if (currentTool == nearTrash.trashData.interactTool)
             {
-                PickUpTrash(nearObject, rightHand);
-                heldObject = nearObject;
-                isHoldingTrash = true;
-            }
+                // if (아무것도 들고있지 않은 맨손일 때)
+                if (currentTool == 0 && heldObject == null)
+                {
+                    PickUpTrash(nearObject, rightHand);
+
+                    heldObject = nearObject;
+                    heldTrash = heldObject.GetComponent<TrashManager>();
+                } 
+                // if (빗자루)
+                else if (currentTool == 1)
+                {
+                    // 코드 넣어야함.
+                } 
+                // if (대걸레)
+                else if (currentTool == 2)
+                {
+                    Mop mop = FindObjectOfType<Mop>();
+
+                    // if (대걸레의 할당량이 채워지지 않았다면)
+                    if (mop.GetUseCount() < 2)
+                    {
+                        Obstacle dirt = nearObject.GetComponent<Obstacle>();
+                        dirt.CleanObstacle();
+                        nearObject = null;
+                        mop.IncrementUseCount(); // useCount 증가
+                        mop.UpdateMaterial(); // 재질 업데이트
+                    }
+                }
+            } 
         }
     }
 
     public void TryThrowAway()
     {
-        if (isHoldingTrash && isNearRecyclingBin)
+        if (heldObject != null && isNearRecyclingBin)
         {
-            TrashManager trash = heldObject.GetComponent<TrashManager>();
-
-            if (trash.trashData.readyToThrowAway)
+            if (heldTrash.trashData.readyToThrowAway)
             {
                 ThrowTrashAway(heldObject);
                 heldObject = null;
-                isHoldingTrash = false;
             }
         }
     }
 
     public void TryPlaceTrashOnTheWorkbench()
     {
-        if (isHoldingTrash && heldObject.CompareTag("Box"))
+        if (isNearWorkbench && heldObject != null && heldTrash.trashData.trashName == "Box")  
         {
             PlaceTrashOnWorkbench(workBench, heldObject);
             trashOnWorkbench = heldObject;
             heldObject = null;
-            isHoldingTrash = false;
         }
     }
 
@@ -164,7 +188,7 @@ public class CleanerBase : MonoBehaviour
 
     protected void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Can") || other.CompareTag("Box"))
+        if (other.CompareTag("Can") || other.CompareTag("Box") || other.CompareTag("Dust")) // 프리팹 태그 다 Trash로 통일시켜도될듯?
         {
             nearObject = other.gameObject;
         }
@@ -175,6 +199,7 @@ public class CleanerBase : MonoBehaviour
             {
                 isNearWorkbench = true;
             }
+            if (trashOnWorkbench != null) nearObject = trashOnWorkbench;
         }
 
         if (other.CompareTag("RecyclingBin"))

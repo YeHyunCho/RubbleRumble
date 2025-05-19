@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Dirt
   m_EditorClassIdentifier: 
   trashName: Dirt
-  interactTool: Mop
+  interactTool: 2
   readyToThrowAway: 1
