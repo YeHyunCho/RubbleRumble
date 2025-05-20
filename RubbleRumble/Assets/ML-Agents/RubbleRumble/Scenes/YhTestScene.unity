@@ -918,7 +918,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   playerController: {fileID: 0}
-  playerHand: {fileID: 0}
   mop: {fileID: 0}
 --- !u!4 &1113157900 stripped
 Transform:
@@ -938,7 +937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86948f83a7dc4df44b07da38274b668a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unfoldedBox: {fileID: 6208189683626728464, guid: a60f62d401ccf7c46b63f3450b8fb5cd,
+  unfoldedBox: {fileID: 6208189683626728464, guid: b5631f50dabf835499ca674782c4d118,
     type: 3}
   rightHand: {fileID: 0}
   toolPrefabs:

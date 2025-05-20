@@ -18,6 +18,8 @@ public class CleanerBase : MonoBehaviour
     protected bool isTrashOnTheWorkbench = false;
     protected bool isNearWorkbench = false;
     protected bool isNearRecyclingBin = false;
+    protected bool isUnfolding = false;
+    protected bool readyToClean = false;
 
     public GameObject[] toolPrefabs;
     protected GameObject[] tools;
@@ -57,6 +59,8 @@ public class CleanerBase : MonoBehaviour
 
             if (currentTool == nearTrash.trashData.interactTool)
             {
+                readyToClean = false;
+
                 if (currentTool == 0 && !isHoldingTrash)
                 {
                     interact.PickUpTrash(nearObject, rightHand, gameObject);
@@ -85,7 +89,9 @@ public class CleanerBase : MonoBehaviour
                         isNearObject = false;
                     }
                 }
-            } 
+            }
+
+            readyToClean = false;
         }
     }
 
@@ -121,16 +127,21 @@ public class CleanerBase : MonoBehaviour
 
     protected void TryUnfoldBox()
     {
-        qKeyHoldTime += Time.deltaTime;
-
-        if (isNearWorkbench && isTrashOnTheWorkbench && qKeyHoldTime >= UNFOLD_DURATION)
+        if (isNearWorkbench && isTrashOnTheWorkbench)
         {
-            TrashManager box = trashOnWorkbench.GetComponent<TrashManager>();
+            qKeyHoldTime += Time.deltaTime;
+            isUnfolding = true;
 
-            if (!box.trashData.readyToThrowAway)
+            if (qKeyHoldTime >= UNFOLD_DURATION)
             {
-                qKeyHoldTime = 0f;
-                trashOnWorkbench = interact.UnfoldBox(trashOnWorkbench);
+                TrashManager box = trashOnWorkbench.GetComponent<TrashManager>();
+
+                if (!box.trashData.readyToThrowAway)
+                {
+                    qKeyHoldTime = 0f;
+                    trashOnWorkbench = interact.UnfoldBox(trashOnWorkbench);
+                    isUnfolding = false;
+                }
             }
         }
     }
@@ -145,7 +156,7 @@ public class CleanerBase : MonoBehaviour
 
     protected void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Can") || other.CompareTag("Box") || other.CompareTag("Dust")) // 프리팹 태그 다 Trash로 통일시켜도될듯?
+        if (other.CompareTag("Can") || other.CompareTag("Box") || other.CompareTag("Dust") || other.CompareTag("UnfoldedBox")) // 프리팹 태그 다 Trash로 통일시켜도될듯?
         {
             nearObject = other.gameObject;
             isNearObject = true;

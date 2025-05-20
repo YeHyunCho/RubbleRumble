@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 
 public class PlayerInputHandler : CleanerBase
 {
-    protected void Update()
+    protected void LateUpdate()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1)) EquipTool(0);
         else if (Input.GetKeyDown(KeyCode.Alpha2)) EquipTool(1);
@@ -80,6 +80,7 @@ public class PlayerInputHandler : CleanerBase
     public bool GetIsHoldingTrash() { return isHoldingTrash; }
     public bool GetIsNearWorkbench() { return isNearWorkbench; }
     public bool GetIsNearRecyclingBin() { return isNearRecyclingBin; }
-    //public bool GetIsUnfolding() { return isUnfolding; }
-    //public GameObject GetNearDust() { return nearDust; } // nearDust getter
+    public bool GetIsUnfolding() { return isUnfolding; }
+    public int GetCurrentTool() { return currentTool; }
+    public bool GetReadyToClean() { return readyToClean; }
 }

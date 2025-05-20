@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1896821801386087022}
   - component: {fileID: 7104401921925638919}
   - component: {fileID: 7153750591542631253}
+  - component: {fileID: 7024901933792415456}
   m_Layer: 6
   m_Name: UnfoldedBox
   m_TagString: UnfoldedBox
@@ -121,3 +122,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9993494, y: 0.29751307, z: 0.986132}
   m_Center: {x: -0.32468545, y: 0.059577793, z: -0.031836346}
+--- !u!114 &7024901933792415456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6208189683626728464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 899fec0f224046949adc3d89aa190a2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trashData: {fileID: 11400000, guid: edc46bcd88c7e9c43b629a38a9b36d57, type: 2}

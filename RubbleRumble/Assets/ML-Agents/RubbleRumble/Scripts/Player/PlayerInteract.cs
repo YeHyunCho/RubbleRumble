@@ -15,14 +15,17 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] private float interactRange;       // 상호작용 탐지 범위
     [SerializeField] private LayerMask pickupLayerMask; // 상호작용 가능한 레이어 마스크(pickable로 설정)
 
-    [SerializeField] private PlayerController playerController;
-    [SerializeField] private PlayerHand playerHand;
+    //[SerializeField] private PlayerController playerController;
+    //[SerializeField] private PlayerHand playerHand;
+
+    [SerializeField] private PlayerInputHandler playerController;
     [SerializeField] private Mop mop;
     public InteractUIState CurrentUIState { get; private set; }
 
     private void Awake()
     {
         interactRange = 3;
+        playerController = GetComponent<PlayerInputHandler>();
     }
 
     private void Update()
@@ -37,7 +40,7 @@ public class PlayerInteract : MonoBehaviour
         InteractUIState newState = InteractUIState.None;
 
         // 대걸레 사용 관련 상태 체크
-        if (ToolManager.Instance.currentTool == 2) // 도구 인덱스 2가 대걸레인 경우
+        if (playerController.GetCurrentTool() == 2) // 도구 인덱스 2가 대걸레인 경우
         {
             newState = CheckMopInteract();
             CurrentUIState = newState;
@@ -45,7 +48,7 @@ public class PlayerInteract : MonoBehaviour
         }
 
         // 빈 손으로 물건을 집을 수 있는 상태 체크
-        if (ToolManager.Instance.currentTool == 0 && !playerController.GetIsHoldingTrash())
+        if (playerController.GetCurrentTool() == 0 && !playerController.GetIsHoldingTrash())
         {
             newState = CheckHandInteract();
             if (newState != InteractUIState.None)
@@ -56,7 +59,8 @@ public class PlayerInteract : MonoBehaviour
         }
 
         // 쓰레기를 들고 있는 상태에서의 상호작용 체크
-        if (ToolManager.Instance.currentTool == 0 && playerController.GetIsHoldingTrash() && playerController.GetHeldObject() != null)
+        //if (playerController.GetCurrentTool() == 0 && playerController.GetIsHoldingTrash() && playerController.GetHeldObject() != null)
+        if (playerController.GetCurrentTool() == 0 && playerController.GetIsHoldingTrash())
         {
             newState = CheckTrashInteract();
             if (newState != InteractUIState.None)
@@ -79,10 +83,10 @@ public class PlayerInteract : MonoBehaviour
     private InteractUIState CheckMopInteract()
     {
         if (mop == null) mop = FindObjectOfType<Mop>();
-        PlayerController playerController = FindObjectOfType<PlayerController>();
+        PlayerInputHandler playerController = FindObjectOfType<PlayerInputHandler>();
 
        // PlayerController의 nearDust 사용
-        if (playerController.GetNearDust() != null && mop.GetUseCount() < 2)
+        if (playerController.GetReadyToClean() && mop.GetUseCount() < 2)
         {
             return InteractUIState.PressE;
         }
@@ -136,7 +140,7 @@ public class PlayerInteract : MonoBehaviour
         }
 
         // 작업대 근처에서의 상호작용
-        if (playerController.GetIsNearWorkbench() && heldObject.CompareTag("Box"))
+        if (playerController.GetIsNearWorkbench() && playerController.GetTrashOnWorkbench() != null)
         {
             if (playerController.GetIsUnfolding())
             {
