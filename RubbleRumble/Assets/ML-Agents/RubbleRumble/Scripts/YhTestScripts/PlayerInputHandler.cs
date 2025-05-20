@@ -72,4 +72,14 @@ public class PlayerInputHandler : CleanerBase
         tools[2].transform.localPosition += Vector3.forward * 0.1f;
         tools[2].transform.localRotation = Quaternion.Euler(90, 0, 45);
     }
+
+    public float GetHoldingTime() { return qKeyHoldTime; }
+    public float GetUnfoldDuration() { return UNFOLD_DURATION; }
+    public GameObject GetHeldObject() { return heldObject; }
+    public GameObject GetTrashOnWorkbench() { return trashOnWorkbench; }
+    public bool GetIsHoldingTrash() { return isHoldingTrash; }
+    public bool GetIsNearWorkbench() { return isNearWorkbench; }
+    public bool GetIsNearRecyclingBin() { return isNearRecyclingBin; }
+    //public bool GetIsUnfolding() { return isUnfolding; }
+    //public GameObject GetNearDust() { return nearDust; } // nearDust getter
 }

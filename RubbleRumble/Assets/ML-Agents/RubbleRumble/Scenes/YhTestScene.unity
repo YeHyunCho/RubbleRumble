@@ -387,6 +387,7 @@ GameObject:
   - component: {fileID: 876494332}
   - component: {fileID: 876494331}
   - component: {fileID: 876494330}
+  - component: {fileID: 876494333}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -465,6 +466,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &876494333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876494329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be775f56b8cb7ae46a4893ac3551f8ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unfoldedBox: {fileID: 6208189683626728464, guid: a60f62d401ccf7c46b63f3450b8fb5cd,
+    type: 3}
 --- !u!1001 &1113157890
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -893,7 +908,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1113157891}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c12ba975e322a34bb2d5544794cacc5, type: 3}
   m_Name: 
@@ -923,18 +938,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86948f83a7dc4df44b07da38274b668a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nearObject: {fileID: 0}
   unfoldedBox: {fileID: 6208189683626728464, guid: a60f62d401ccf7c46b63f3450b8fb5cd,
     type: 3}
   rightHand: {fileID: 0}
-  isHoldingTrash: 0
-  isNearWorkbench: 0
-  isNearRecyclingBin: 0
   toolPrefabs:
   - {fileID: 5302654603412478328, guid: c797f9bf433e94beca4c5eea883cb530, type: 3}
   - {fileID: 1003549216777774947, guid: bdedcb5f0c3446a4480a7c0f878b6fe2, type: 3}
   - {fileID: 8643713062370499215, guid: 167b144f028021e4ea6d821aad0bbd61, type: 3}
-  currentTool: -1
 --- !u!1 &1302185318
 GameObject:
   m_ObjectHideFlags: 0
@@ -1236,7 +1246,7 @@ PrefabInstance:
     - target: {fileID: 2657528677888606770, guid: 20c2126fbcac3f84eb924efd8876b78a,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2657528677888606770, guid: 20c2126fbcac3f84eb924efd8876b78a,
         type: 3}
