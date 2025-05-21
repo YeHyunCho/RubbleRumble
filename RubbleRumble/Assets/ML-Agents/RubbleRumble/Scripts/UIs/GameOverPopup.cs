@@ -47,6 +47,17 @@ public class GameOverPopup : UIBase
         loserLabel.text = "AI SCORE:";
         winnerScoreTxt.text = StageManager.Instance.PlayerScore.ToString();
         loserScoreTxt.text = StageManager.Instance.AIScore.ToString();
+
+        if (LevelManager.Instance.SelectedLevelIdx == 2)    // 마지막 레벨이면
+        {
+            nextBtn.gameObject.SetActive(false);    // 다음 레벨 버튼 비활성화
+            // Exit 버튼 위치 중앙 하단으로 변경
+            RectTransform exitBtnTransform = exitBtn.gameObject.GetComponent<RectTransform>();
+            if (exitBtnTransform != null)
+            {
+                exitBtnTransform.localPosition = new Vector3(0, -200, 0);
+            }
+        }
         nextBtnTxt.text = "NEXT";    
     }
 
