@@ -55,7 +55,13 @@ public class TrashInteractionManager : MonoBehaviour
 
     public void ThrowTrashAway(GameObject trash)
     {
-        Destroy(trash);
+        //Destroy(trash);
+        // 풀로 반환하며 점수 획득
+        Obstacle obstacle = trash.GetComponent<Obstacle>();
+        if (obstacle != null)
+        {
+            obstacle.CleanObstacle();
+        }
     }
 
     public void CleanDirt(Mop mop, GameObject nearObject)
@@ -68,11 +74,24 @@ public class TrashInteractionManager : MonoBehaviour
 
     public GameObject UnfoldBox(GameObject trashOnWorkbench)
     {
-        GameObject oldBox = trashOnWorkbench;
+        //GameObject oldBox = trashOnWorkbench;
 
-        trashOnWorkbench = Instantiate(unfoldedBox, oldBox.transform.position, oldBox.transform.rotation);
-        Destroy(oldBox);
+        //trashOnWorkbench = Instantiate(unfoldedBox, oldBox.transform.position, oldBox.transform.rotation);
+        //Destroy(oldBox);
 
-        return trashOnWorkbench;
+        //return trashOnWorkbench;
+
+        bool isPlayer = false;  // 박스가 플레이어 소유인지 확인하는 플래그
+        Obstacle foldedBox = trashOnWorkbench.GetComponent<Obstacle>();
+        if (foldedBox != null)
+        {
+            isPlayer = foldedBox.IsPlayer;  // 소유권 설정
+            foldedBox.RemoveObstacle(); // 접힌 박스를 풀로 반환, 점수 부여 X
+        }
+
+        Obstacle unfoldedBox = PoolManager.Instance.SpawnFromPool<Obstacle>("UnfoldedBox"); // 풀에서 펼쳐진 박스 가져오기
+        unfoldedBox.IsPlayer = isPlayer;    // 소유권 설정
+        
+        return unfoldedBox.gameObject;  // 펼쳐진 박스 오브젝트를 반환
     }
 }
