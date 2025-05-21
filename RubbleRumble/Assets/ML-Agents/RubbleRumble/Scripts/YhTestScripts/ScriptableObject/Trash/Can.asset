@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Can
   m_EditorClassIdentifier: 
   trashName: Can
-  interactTool: 2
+  interactTool: 0
   readyToThrowAway: 1
