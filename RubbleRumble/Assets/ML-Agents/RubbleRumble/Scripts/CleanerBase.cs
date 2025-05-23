@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class CleanerBase : MonoBehaviour
 {
-    protected WorkBench workBench;
+    //protected WorkBench workBench;
+    public GameObject workBench;
+    public GameObject sink;
     protected TrashManager heldTrash;
     protected TrashInteractionManager interact;
 
@@ -43,7 +45,7 @@ public class CleanerBase : MonoBehaviour
 
         SetToolLocation();
 
-        workBench = FindFirstObjectByType<WorkBench>();
+        //workBench = FindFirstObjectByType<WorkBench>();
         interact = GameObject.Find("Managers").GetComponent<TrashInteractionManager>();
 
         heldObject = null;

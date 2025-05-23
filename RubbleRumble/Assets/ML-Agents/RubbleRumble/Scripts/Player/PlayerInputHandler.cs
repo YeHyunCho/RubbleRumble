@@ -6,6 +6,15 @@ using UnityEngine.UIElements;
 
 public class PlayerInputHandler : CleanerBase
 {
+    private void Start()
+    {
+        base.Start();
+
+        if (workBench == null)
+            workBench = GameObject.Find("PlayerMap/Workbench");
+        if (sink == null)
+            sink = GameObject.Find("PlayerMap/Sink");
+    }
     protected void LateUpdate()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1)) EquipTool(0);
@@ -83,4 +92,5 @@ public class PlayerInputHandler : CleanerBase
     public bool GetIsUnfolding() { return isUnfolding; }
     public int GetCurrentTool() { return currentTool; }
     public bool GetReadyToClean() { return readyToClean; }
+    public bool GetIsNearObject() { return isNearObject; }
 }

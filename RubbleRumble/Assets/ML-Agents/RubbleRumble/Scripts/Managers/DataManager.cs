@@ -82,7 +82,7 @@ public class DataManager : SingletonBase<DataManager>
 
         for (int i = 0; i < levelCnt; i++)
         {
-            PlayInfoList.Add(false);
+            PlayInfoList.Add(true);
         }
         Debug.Log($"Initialized default data");
         
