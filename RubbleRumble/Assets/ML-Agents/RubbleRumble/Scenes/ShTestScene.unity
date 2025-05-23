@@ -1052,7 +1052,7 @@ MonoBehaviour:
   pickupLayerMask:
     serializedVersion: 2
     m_Bits: 64
-  playerController: {fileID: 0}
+  playerInputHandler: {fileID: 0}
   mop: {fileID: 0}
 --- !u!4 &1113157900 stripped
 Transform:
@@ -1072,6 +1072,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86948f83a7dc4df44b07da38274b668a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  workBench: {fileID: 2049094242}
+  sink: {fileID: 2049094241}
   unfoldedBox: {fileID: 6208189683626728464, guid: b5631f50dabf835499ca674782c4d118,
     type: 3}
   rightHand: {fileID: 0}
@@ -1541,6 +1543,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25c0fe0c4584c004da8a35fe04448964, type: 3}
+--- !u!1 &2049094241 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 417455384383456636, guid: 25c0fe0c4584c004da8a35fe04448964,
+    type: 3}
+  m_PrefabInstance: {fileID: 2049094240}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2049094242 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4874669828199579983, guid: 25c0fe0c4584c004da8a35fe04448964,
+    type: 3}
+  m_PrefabInstance: {fileID: 2049094240}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2073703037
 PrefabInstance:
   m_ObjectHideFlags: 0
