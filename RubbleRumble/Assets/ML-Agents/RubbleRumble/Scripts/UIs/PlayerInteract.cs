@@ -23,7 +23,12 @@ public class PlayerInteract : MonoBehaviour
     private void Awake()
     {
         interactRange = 3;
-        playerInputHandler = GetComponent<PlayerInputHandler>();
+    }
+
+    private void Start()
+    {
+        if (playerInputHandler == null)
+            playerInputHandler = GetComponent<PlayerInputHandler>();
     }
 
     private void Update()

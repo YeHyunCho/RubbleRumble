@@ -6,6 +6,15 @@ using UnityEngine.UIElements;
 
 public class PlayerInputHandler : CleanerBase
 {
+    private void Start()
+    {
+        base.Start();
+
+        if (workBench == null)
+            workBench = GameObject.Find("PlayerMap/Workbench");
+        if (sink == null)
+            sink = GameObject.Find("PlayerMap/Sink");
+    }
     protected void LateUpdate()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1)) EquipTool(0);
