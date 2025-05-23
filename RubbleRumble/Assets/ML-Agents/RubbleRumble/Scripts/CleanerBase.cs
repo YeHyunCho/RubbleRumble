@@ -39,7 +39,7 @@ public class CleanerBase : MonoBehaviour
         SetRightHand();
     }
 
-    protected void Start()
+    protected virtual void Start()
     {
         currentTool = -1;
 

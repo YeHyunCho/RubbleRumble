@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 
 public class PlayerInputHandler : CleanerBase
 {
-    private void Start()
+    protected override void Start()
     {
         base.Start();
 
