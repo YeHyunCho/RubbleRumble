@@ -83,4 +83,5 @@ public class PlayerInputHandler : CleanerBase
     public bool GetIsUnfolding() { return isUnfolding; }
     public int GetCurrentTool() { return currentTool; }
     public bool GetReadyToClean() { return readyToClean; }
+    public bool GetIsNearObject() { return isNearObject; }
 }
