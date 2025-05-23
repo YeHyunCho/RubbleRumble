@@ -11,7 +11,7 @@ public class PlayInfoUI : MonoBehaviour
     {
         if (scoreTxt == null)
         {
-            scoreTxt = GameObject.Find("PlayerInfoCanvas/TopPanel/ScoreBG/ScoreTxt").GetComponent<TextMeshProUGUI>();
+            scoreTxt = GameObject.Find("PlayInfoCanvas/TopPanel/ScoreBG/ScoreTxt").GetComponent<TextMeshProUGUI>();
         }
     }
 
