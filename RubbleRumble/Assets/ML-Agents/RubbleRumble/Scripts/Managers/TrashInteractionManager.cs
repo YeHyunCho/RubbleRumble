@@ -9,27 +9,47 @@ public class TrashInteractionManager : MonoBehaviour
 
     public void PickUpTrash(GameObject trash, Transform rightHand, GameObject player)
     {
-        trash.transform.SetParent(rightHand);
-        trash.transform.localPosition = Vector3.zero;
-        trash.transform.localRotation = Quaternion.identity;
+        trash.transform.SetParent(rightHand); // 쓰레기를 전달받은 rightHand의 자식으로 설정
+
+        // 쓰레기 오브젝트에서 HoldableItem 컴포넌트를 가져옴
+        HoldableItem holdableInfo = trash.GetComponent<HoldableItem>();
+
+        if (holdableInfo != null)
+        {
+            // HoldableItem 컴포넌트가 있다면, 거기에 설정된 오프셋 값들을 적용
+            trash.transform.localPosition = holdableInfo.holdPositionOffset;
+            trash.transform.localRotation = Quaternion.Euler(holdableInfo.holdEulerRotationOffset);
+            // 만약 HoldableItem 스크립트에서 Quaternion을 직접 사용한다면:
+            // trash.transform.localRotation = holdableInfo.holdRotationQuaternionOffset;
+        }
+        else
+        {
+            // HoldableItem 컴포넌트가 없다면, 기존처럼 기본 위치/회전 값 사용
+            // (RightHandProp의 원점에 위치)
+            trash.transform.localPosition = Vector3.zero;
+            trash.transform.localRotation = Quaternion.identity;
+            // 경고 메시지를 출력하여 HoldableItem 추가를 권장할 수 있습니다.
+            Debug.LogWarning($"쓰레기 아이템 '{trash.name}'에 HoldableItem 컴포넌트가 없습니다. 기본 홀드 변환을 사용합니다. 더 나은 시각적 표현을 위해 HoldableItem 추가를 고려하세요.");
+        }
 
         Rigidbody trashRb = trash.GetComponent<Rigidbody>();
         if (trashRb != null)
         {
-            trashRb.isKinematic = true;
+            trashRb.isKinematic = true; // 물리 효과 비활성화 (손에 고정)
             trashRb.velocity = Vector3.zero;
             trashRb.angularVelocity = Vector3.zero;
         }
 
         Collider trashCollider = trash.GetComponent<Collider>();
-        Collider playerCollider = player.GetComponent<Collider>();
+        Collider playerCollider = player.GetComponent<Collider>(); // 'player'는 플레이어 캐릭터 GameObject로 가정
 
         if (trashCollider != null && playerCollider != null)
         {
-            Physics.IgnoreCollision(trashCollider, playerCollider, true);
-            trashCollider.enabled = false;
+            Physics.IgnoreCollision(trashCollider, playerCollider, true); // 들고 있는 동안 플레이어와 충돌 무시
+            trashCollider.enabled = false; // 선택 사항: 들고 있는 동안 콜라이더를 비활성화하여 다른 물리 문제 방지
         }
     }
+
 
     //public void PlaceTrashOnWorkbench(WorkBench workbench, GameObject trash, GameObject player)
     public void PlaceTrashOnWorkbench(GameObject workbench, GameObject trash, GameObject player)

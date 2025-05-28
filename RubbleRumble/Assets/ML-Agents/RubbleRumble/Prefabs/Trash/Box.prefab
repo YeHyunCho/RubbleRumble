@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1209949107499204719}
   - component: {fileID: 3552325867531098694}
   - component: {fileID: -6438393120413167279}
+  - component: {fileID: 1659522962996538664}
   m_Layer: 6
   m_Name: Box
   m_TagString: Box
@@ -32,7 +33,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9.5, y: -0.5, z: 11.1}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1.4, y: 1, z: 1.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -163,3 +164,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashData: {fileID: 11400000, guid: baccc5b573655fd4eb8318ca4791d6e6, type: 2}
+--- !u!114 &1659522962996538664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877813490598406021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3a19d3e1aa284de595fdaec478a6eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holdPositionOffset: {x: -0.1, y: 0.1, z: -0.15}
+  holdEulerRotationOffset: {x: 50, y: 30, z: 50}

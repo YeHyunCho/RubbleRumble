@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5072799886491335342}
   - component: {fileID: 5957719839696953739}
   - component: {fileID: -5344803709127677326}
+  - component: {fileID: -3615816923903655091}
   m_Layer: 6
   m_Name: Can
   m_TagString: Can
@@ -32,7 +33,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1, z: 1.5}
+  m_LocalScale: {x: 1.5, y: 0.7, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6864622257783340278}
@@ -164,6 +165,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashData: {fileID: 11400000, guid: 58db3f561404495499e8f28653897c84, type: 2}
+--- !u!114 &-3615816923903655091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7893994342184916211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3a19d3e1aa284de595fdaec478a6eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holdPositionOffset: {x: -0.1, y: 0.12, z: -0.1}
+  holdEulerRotationOffset: {x: -60, y: 20, z: 60}
 --- !u!1001 &7567645526522610046
 PrefabInstance:
   m_ObjectHideFlags: 0
