@@ -12,6 +12,9 @@ TagManager:
   - WorkbenchArea
   - Dust
   - Can
+  - TBdust
+  - TBpaper
+  - TBcan
   layers:
   - Default
   - TransparentFX

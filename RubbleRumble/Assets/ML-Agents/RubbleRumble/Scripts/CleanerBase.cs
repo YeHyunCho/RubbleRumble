@@ -177,7 +177,7 @@ public class CleanerBase : MonoBehaviour
             }
         }
 
-        if (other.CompareTag("RecyclingBin"))
+        if (other.CompareTag("TBdust") || other.CompareTag("TBpaper") || other.CompareTag("TBcan"))
         {
             if (!isNearRecyclingBin)
             {
