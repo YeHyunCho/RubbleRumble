@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ML-Agents/RubbleRumble/Scenes/YhTestScene.unity
     guid: 6103aec6abd140b4892f28f64daa1f5a
+  - enabled: 1
+    path: Assets/ML-Agents/RubbleRumble/Scenes/YhTestScene.unity
+    guid: 45210f29e04d4db428f5407112278be9
   m_configObjects: {}

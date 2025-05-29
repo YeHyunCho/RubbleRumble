@@ -8,6 +8,18 @@ public class PlayInfoUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI aiScoreTxt;
     [SerializeField] private Image timerBarImg;
 
+
+    private void Awake()
+    {
+        if (playerScoreTxt == null)
+        {
+            playerScoreTxt = GameObject.Find("PlayInfoCanvas/TopPanel/PlayerScoreBG/PlayerScoreTxt").GetComponent<TextMeshProUGUI>();
+        }
+        if (aiScoreTxt == null)
+        {
+            aiScoreTxt = GameObject.Find("PlayInfoCanvas/TopPanel/AIScoreBG/AIScoreTxt").GetComponent<TextMeshProUGUI>();
+        }
+    }
     private void Update()
     {
         // 점수 UI 갱신

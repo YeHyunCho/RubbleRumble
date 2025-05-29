@@ -13,6 +13,7 @@ public class MenuUIHandler : MonoBehaviour
     [SerializeField] private List<GameObject> BtnList = new List<GameObject>();
     [SerializeField] private List<Button> levelBtnList = new List<Button>();
     private const string nextSceneName = "YhTestScene"; // 플레이씬 이름
+    //private const string nextSceneName = "ShTestScene"; // 플레이씬 이름
 
     private void Start()
     {

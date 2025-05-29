@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641263, b: 0.57481724, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -934,11 +934,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMap: {fileID: 524592988}
   aiMap: {fileID: 678012884}
-  dirtCnt: 10
-  canCnt: 3
-  boxCnt: 1
   playerObstacleList: []
   aiObstacleList: []
+  LevelInfo:
+    idx: 0
+    ObstacleDict:
+      _serializedList: []
+    spawnCooldowns: []
   spawnTime:
   - 30
   - 50
@@ -1001,9 +1003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 899fec0f224046949adc3d89aa190a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trashList: []
-  isHeld: 0
-  readyToRecycle: 0
+  trashData: {fileID: 0}
 --- !u!114 &876494335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1528,9 +1528,8 @@ MonoBehaviour:
   interactRange: 2
   pickupLayerMask:
     serializedVersion: 2
-    m_Bits: 128
-  playerController: {fileID: 1537688793}
-  playerHand: {fileID: 1537688791}
+    m_Bits: 0
+  playerInputHandler: {fileID: 0}
   mop: {fileID: 0}
 --- !u!1001 &1697184418
 PrefabInstance:
