@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8435270523377017537}
   - component: {fileID: 1844037604210598006}
   - component: {fileID: 1084064972787565109}
+  - component: {fileID: 1247324277173780595}
   m_Layer: 6
   m_Name: Dirt
   m_TagString: Dust
@@ -123,3 +124,16 @@ MonoBehaviour:
   Score: 150
   IsPlayer: 0
   ParentPool: {fileID: 0}
+--- !u!114 &1247324277173780595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6306101440815883320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 899fec0f224046949adc3d89aa190a2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trashData: {fileID: 11400000, guid: e2475318c1763e8439e43f85c5ddfd7b, type: 2}

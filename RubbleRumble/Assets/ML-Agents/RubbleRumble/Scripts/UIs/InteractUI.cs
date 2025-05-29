@@ -14,7 +14,7 @@ public class InteractUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI interactTxt;
     [SerializeField] private Image holdingBarImg;
 
-    [SerializeField] private PlayerController playerController;
+    [SerializeField] private PlayerInputHandler playerController;
     [SerializeField] private PlayerInteract playerInteract;
     [SerializeField] private Mop mop;
     private float unfoldDuration; // 박스를 펴치는 데 필요한 시간
@@ -34,7 +34,7 @@ public class InteractUI : MonoBehaviour
     {
         GameObject player = GameObject.FindWithTag("Player");
         playerInteract = player.GetComponent<PlayerInteract>();
-        playerController = player.GetComponent<PlayerController>();
+        playerController = player.GetComponent<PlayerInputHandler>();
         unfoldDuration = playerController.GetUnfoldDuration();
     }
 
@@ -73,7 +73,7 @@ public class InteractUI : MonoBehaviour
                     interactTxtObj.SetActive(false);    // 상호작용 텍스트 비활성화
                     holdingBarObj.SetActive(true);      // 홀딩바 활성화
 
-                    if (ToolManager.Instance.currentTool == 0)  // 맨손으로 작업하고 있으면
+                    if (playerController.GetCurrentTool() == 0)  // 맨손으로 작업하고 있으면
                         holdingBarImg.fillAmount = playerController.GetHoldingTime() / unfoldDuration;  // 홀딩바 갱신
                     else    // 대걸레를 세척하고 있으면
                     {

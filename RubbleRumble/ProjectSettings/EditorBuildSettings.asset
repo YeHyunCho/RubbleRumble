@@ -4,5 +4,23 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/ML-Agents/RubbleRumble/Scenes/TitleScene.unity
+    guid: e4946c873abc69341b56c05b66c13cf6
+  - enabled: 1
+    path: Assets/ML-Agents/RubbleRumble/Scenes/MenuScene.unity
+    guid: 48325690bd73d374da22baa32fd56b4f
+  - enabled: 1
+    path: Assets/ML-Agents/RubbleRumble/Scenes/MenuScene2.unity
+    guid: 4a6a40dccc4cd764b98f34f418c3363e
+  - enabled: 0
+    path: Assets/ML-Agents/RubbleRumble/Scenes/ShTestScene.unity
+    guid: 3536a1e90636bd543a3a88a2265b33cf
+  - enabled: 0
+    path: Assets/ML-Agents/RubbleRumble/Scenes/JiyoungTestScene.unity
+    guid: eb13a849a8a34440b8b73d31fbdabd27
+  - enabled: 1
+    path: Assets/ML-Agents/RubbleRumble/Scenes/YhTestScene.unity
+    guid: 6103aec6abd140b4892f28f64daa1f5a
   m_configObjects: {}

@@ -29,13 +29,6 @@ public class MapManager : SingletonBase<MapManager>
         curTime = 0;
     }
 
-    public void ResetEnvironment() //학습 시 에피소드 종료마다 환경 초기화 필요.
-    {
-        PoolManager.Instance.DeleteAllPools(); // 이전 오브젝트 초기화
-
-        SettingMap();
-    }
-
     private void Update()
     {
         if (!StageManager.Instance.IsPlaying) return;   // 플레이 상태가 아니면 바로 리턴

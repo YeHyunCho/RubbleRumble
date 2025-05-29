@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3558615381513031658}
   - component: {fileID: 3186645529417798307}
   - component: {fileID: 1306146843433724947}
+  - component: {fileID: 1386557836662250270}
   m_Layer: 0
   m_Name: Mop3
   m_TagString: Untagged
@@ -119,13 +120,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8a96d5793ad1945adc0fa311aa23dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   sink: {fileID: 0}
   mat:
   - {fileID: 2100000, guid: 500a259652b1ee8439faecf103e2f240, type: 2}
   - {fileID: 2100000, guid: 8b088d577284d4646aeb89b0a9bf7029, type: 2}
   - {fileID: 2100000, guid: 270e819455d19a24ea48e40a3eb013f7, type: 2}
-  triggerDistance: 5
+  sinkInteractionDistance: 5
 --- !u!54 &1306146843433724947
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -153,3 +153,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!65 &1386557836662250270
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8643713062370499215}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}

@@ -9,11 +9,11 @@ public class Mop : MonoBehaviour
 {
     public GameObject player;
     public GameObject sink;
-    private GameObject nearDust;
+    //private GameObject nearDust;
 
     public Material[] mat = new Material[3];
 
-    private bool isTrigger;
+    //private bool isTrigger;
     private Vector3 righthandPos;
     //private Vector3 offset = new Vector3(0.4f, 0.05f, -0.55f);
     private Vector3 offset = new Vector3(0f, 0.1f, 0f);
@@ -34,7 +34,7 @@ public class Mop : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         //isTrigger = false;
-        isTrigger = true;
+        //isTrigger = true;
         useCount = 0;
     }
 
@@ -47,7 +47,7 @@ public class Mop : MonoBehaviour
         transform.localPosition = righthandPos + offset;
         transform.localRotation = Quaternion.Euler(90, 0, 45);
 
-        if (Input.GetKeyDown(KeyCode.E) && nearDust != null)
+        /*if (Input.GetKeyDown(KeyCode.E) && nearDust != null)
         {
             if (useCount < 2)
             {
@@ -62,6 +62,7 @@ public class Mop : MonoBehaviour
                 Debug.Log("Wash Your Mop!");
             }
         }
+        */
 
         if (useCount >= 2)
         {
@@ -69,53 +70,8 @@ public class Mop : MonoBehaviour
         }
     }
 
-     public bool AgentUpdate()
-    {
-        if (nearDust != null && useCount < 2)
-        {
-            Obstacle dirt = nearDust.GetComponent<Obstacle>();
-            dirt.CleanObstacle();
-            nearDust = null;
-            useCount++;
-            GetComponent<MeshRenderer>().material = mat[useCount];
-            return true;
-        }
-        return false;
-    }
-
-    public bool TryWashWithHold(bool qPressed)
-    {
-        // useCount 가 2 이상일 때만 세척 가능
-        if (useCount < 2)
-        {
-            holdTime = 0f;
-            return false;
-        }
-
-        // Q키를 누르는 동안 holdTime 누적
-        if (qPressed)
-        {
-            holdTime += Time.deltaTime;
-            // 2초 이상 홀딩 시 세척 실행
-            if (holdTime >= 2f)
-            {
-                useCount = 0;
-                GetComponent<MeshRenderer>().material = mat[useCount];
-                holdTime = 0f;
-                return true;
-            }
-        }
-        else
-        {
-            // Q 떼면 타이머 초기화
-            holdTime = 0f;
-        }
-
-        return false;
-    }
-
     //private void OnCollisionEnter(Collision collision)
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
         //if (collision.gameObject.CompareTag("Player"))
         //{
@@ -144,6 +100,7 @@ public class Mop : MonoBehaviour
             nearDust = null;
         }
     }
+    */
 
     private void WashMopNearSink()
     {
@@ -178,7 +135,16 @@ public class Mop : MonoBehaviour
         }
     }
 
+    // PlayerController용 헬퍼 메서드
+    public void IncrementUseCount()
+    {
+        useCount++;
+    }
+    public void UpdateMaterial()
+    {
+        gameObject.GetComponent<MeshRenderer>().material = mat[useCount];
+    }
     public float GetHoldingTime() { return holdTime; }
     public int GetUseCount() { return useCount; }
-    public GameObject GetNearDust() { return nearDust; }
+    //public GameObject GetNearDust() { return nearDust; }
 }
