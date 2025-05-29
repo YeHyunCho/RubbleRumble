@@ -12,6 +12,7 @@ TagManager:
   - WorkbenchArea
   - Dust
   - Can
+  - Agent
   layers:
   - Default
   - TransparentFX

@@ -7,8 +7,8 @@ public class AgentController : MonoBehaviour
 {
     private ToolManager toolManager;
     private WorkBench workBench;
-    private PlayerHand playerHand;
-    private PlayerInteract playerInteract;
+    private AgentHand agentHand;
+    private AgentInteract agentInteract;
 
     private Transform rightHandTransform; // 쓰레기나 도구를 붙일 플레이어의 오른손 위치 (Transform)
 
@@ -46,20 +46,20 @@ public class AgentController : MonoBehaviour
         toolManager = GameObject.Find("Managers").GetComponent<ToolManager>();
         //workBench = GameObject.Find("Workbench").GetComponent<WorkBench>();
         workBench = FindFirstObjectByType<WorkBench>();
-        playerHand = GameObject.Find("Player").GetComponent<PlayerHand>();
-        playerInteract = GameObject.Find("Player").GetComponent<PlayerInteract>();
+        agentHand = GameObject.Find("Agent").GetComponent<AgentHand>();
+        agentInteract = GameObject.Find("Agent").GetComponent<AgentInteract>();
 
         if (workBench == null)
         {
             Debug.LogError("WorkBench 컴포넌트를 찾을 수 없습니다.");
         }
-        if (playerHand == null)
+        if (agentHand == null)
         {
-            Debug.LogError("PlayerHand 컴포넌트를 찾을 수 없습니다.");
+            Debug.LogError("AgentHand 컴포넌트를 찾을 수 없습니다.");
         }
-         if (playerInteract == null)
+         if (agentInteract == null)
         {
-            Debug.LogError("PlayerInteract 컴포넌트를 찾을 수 없습니다.");
+            Debug.LogError("AgentInteract 컴포넌트를 찾을 수 없습니다.");
         }
     }
 
@@ -108,7 +108,7 @@ public class AgentController : MonoBehaviour
         // 1) 작업대 위 펼쳐진 박스 줍기
         if (isNearWorkbench && trashOnWorkbench != null && !isHoldingTrash)
         {
-            playerHand.PickUpTrash(trashOnWorkbench);
+            agentHand.PickUpTrash(trashOnWorkbench);
             heldObject = trashOnWorkbench;
             trashOnWorkbench = null;
             isHoldingTrash = true;
@@ -147,9 +147,9 @@ public class AgentController : MonoBehaviour
             if (trashOnWorkbench != null && Input.GetKeyDown(KeyCode.E) && !isHoldingTrash)
             {
                 Debug.Log("E 키 눌림 - 펼쳐진 박스 줍기");
-                //playerHand.PickUpTrash(heldObject); // 펼쳐진 박스를 손에 드는 함수 호출
-                playerHand.PickUpTrash(trashOnWorkbench); // 펼쳐진 박스를 손에 드는 함수 호출
-                heldObject = trashOnWorkbench; // trashOnWorkbench의 gameObject가 아니라 trashOnWorkbench 자체를 할당해야 할 수 있습니다. PlayerHand 로직 확인 필요
+                //agentHand.PickUpTrash(heldObject); // 펼쳐진 박스를 손에 드는 함수 호출
+                agentHand.PickUpTrash(trashOnWorkbench); // 펼쳐진 박스를 손에 드는 함수 호출
+                heldObject = trashOnWorkbench; // trashOnWorkbench의 gameObject가 아니라 trashOnWorkbench 자체를 할당해야 할 수 있습니다. AgentHand 로직 확인 필요
                 trashOnWorkbench = null; // 작업대에서 제거
                 isHoldingTrash = true;
             }
@@ -158,7 +158,7 @@ public class AgentController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Q) && isHoldingTrash && heldObject != null && heldObject.CompareTag("Box") && trashOnWorkbench == null)
             {
                 Debug.Log("Q 키 눌림 - 박스를 작업대에 올림");
-                playerHand.PlaceTrashOnWorkbench(workBench, heldObject); // 박스를 작업대 위에 올리는 함수 호출
+                agentHand.PlaceTrashOnWorkbench(workBench, heldObject); // 박스를 작업대 위에 올리는 함수 호출
                 trashOnWorkbench = heldObject; // 작업대 위 오브젝트로 설정
                 heldObject = null; // 손에서 제거
                 isHoldingTrash = false;
@@ -217,19 +217,19 @@ public class AgentController : MonoBehaviour
         // 쓰레기를 들고 있지 않고, 맨손(인덱스 0)일 때만 오브젝트 줍기 가능
         if (!isHoldingTrash && toolManager.currentTool == 0 && (other.CompareTag("Can") || other.CompareTag("Box") || other.CompareTag("UnfoldedBox")))
         {
-            // PlayerHand에서 이미 주울 수 있는 오브젝트인지 확인하는 로직이 있을 수 있으므로, 여기서는 감지만 하고 E키 입력은 Update에서 처리하는 것이 더 일반적일 수 있음
+            // AgentHand에서 이미 주울 수 있는 오브젝트인지 확인하는 로직이 있을 수 있으므로, 여기서는 감지만 하고 E키 입력은 Update에서 처리하는 것이 더 일반적일 수 있음
             // 만약 여기서 바로 줍는 로직을 유지한다면 heldObject 할당 필요
              if (Input.GetKey(KeyCode.E)) // E 키를 누르면 줍기 실행
             {
                  heldObject = other.gameObject; // E키 누르는 순간에만 할당
                  Debug.Log("E 키 눌림 - 오브젝트 줍기: " + heldObject.name);
-                 playerHand.PickUpTrash(heldObject); // 오브젝트를 손에 드는 함수 호출
+                 agentHand.PickUpTrash(heldObject); // 오브젝트를 손에 드는 함수 호출
                  isHoldingTrash = true;
-                 // 주운 후에는 트리거 내 다른 오브젝트와 상호작용 방지 위해 heldObject를 null로? -> PlayerHand에서 관리하는 것이 좋을 수 있음
+                 // 주운 후에는 트리거 내 다른 오브젝트와 상호작용 방지 위해 heldObject를 null로? -> AgentHand에서 관리하는 것이 좋을 수 있음
                  // heldObject = null; // 주운 후 초기화 (선택적)
             } else {
                  // E키를 누르지 않은 상태에서는 잠재적 대상만 표시 (UI 용도 등)
-                 // playerInteract.ShowInteractHint(other.gameObject); // 예시
+                 // agentInteract.ShowInteractHint(other.gameObject); // 예시
             }
         }
 

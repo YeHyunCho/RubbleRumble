@@ -64,10 +64,10 @@ public class Mop : MonoBehaviour
         }
         */
 
-        if (useCount >= 2)
-        {
-            WashMopNearSink();
-        }
+        // if (useCount >= 2)
+        // {
+        //     WashMopNearSink();
+        // }
     }
 
     //private void OnCollisionEnter(Collision collision)
@@ -102,37 +102,32 @@ public class Mop : MonoBehaviour
     }
     */
 
-    private void WashMopNearSink()
+    public void WashMopNearSink(bool qhold, float qholdtime)
     {
         float distance = Vector3.Distance(transform.position, sink.transform.position);
 
         if (distance <= triggerDistance)
         {
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (qhold)
             {
-                holdTime = 0f;
-            }
+                // holdTime += Time.deltaTime;
 
-            if (Input.GetKey(KeyCode.Q))
-            {
-                holdTime += Time.deltaTime;
-
-                if (holdTime >= 2f)
+                if (qholdtime >= 2f)
                 {
                     useCount = 0;
                     gameObject.GetComponent<MeshRenderer>().material = mat[useCount];
                 }
             }
 
-            if (Input.GetKeyUp(KeyCode.Q))
-            {
-                holdTime = 0f;
-            }
+            // if (!qhold)
+            // {
+            //     holdTime = 0f;
+            // }
         }
-        else
-        {
-            holdTime = 0f;
-        }
+        // else
+        // {
+        //     holdTime = 0f;
+        // }
     }
 
     // PlayerController용 헬퍼 메서드
@@ -145,6 +140,8 @@ public class Mop : MonoBehaviour
         gameObject.GetComponent<MeshRenderer>().material = mat[useCount];
     }
     public float GetHoldingTime() { return holdTime; }
+    public void SetHoldingTime(float holdingtime) { holdTime = holdingtime; }
+
     public int GetUseCount() { return useCount; }
     //public GameObject GetNearDust() { return nearDust; }
 }

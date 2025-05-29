@@ -8,65 +8,75 @@ using Unity.MLAgents.Actuators;
 
 public class TestAgent : Agent
 {
-    private ToolManager toolManager;
-    private Mop mop;
+    private Rigidbody rBody;
+    private Vector3 startPosition = new Vector3(-43.5f, -0.007575989f, -9f);
 
-    AgentController agentController;
+    private AgentMotor agents;
+    private ToolManager toolManager;
+    private StageManager stageManager;
+    private MapManager mapManager;
+    private Mop mop;
+    private AgentInputHandler agentInputHandler;
+
+    private int score = 0;
+    private int old_score = 0;
     private float previousTimeLeft;
-    private bool sink_True;
+    private Vector3 Sink_xz = Vector3.zero;
+
+    // Observation scratch variables
+    private Vector3 relSink;
+    private int toolIdx;
+    private float tNorm;
+    // Action reception scratch variables
+    private float moveX;
+    private float moveZ;
+    private bool isShiftDown;
+    private int numkey;
+    private bool qPressed;
+    private bool ePressed;
+    private bool qhold;
+    private bool ehold;
+    private float cur;
+    private float delta;
 
     // Start is called before the first frame update
-    Rigidbody rBody;
 
-    void Start()
+    private float qHoldTime = 0f;
+    private const float Q_HOLD_THRESHOLD = 2f; // 2초
+
+
+    protected override void Awake()
     {
+        base.Awake();
         rBody = GetComponent<Rigidbody>();
-        if (rBody == null)
-            Debug.LogError("TestAgent: Rigidbody 컴포넌트를 찾을 수 없습니다.");
+
+        agents = FindObjectOfType<AgentMotor>();
+        agentInputHandler = GetComponent<AgentInputHandler>();
 
         var mgr = GameObject.Find("Managers");
         toolManager = mgr.GetComponent<ToolManager>();
-        toolManager.EquipTool(2);
+        stageManager = mgr.GetComponent<StageManager>();
+        mapManager = mgr.GetComponent<MapManager>();
+        
+        Sink_xz = new Vector3(5.6f, -15.66089f, 5.458333f);
 
-        mop = FindObjectOfType<Mop>();
-        if (mop == null)
-            Debug.LogError("TestAgent: 씬에 Mop 스크립트가 붙은 오브젝트가 없습니다.");
-
-
-        if (toolManager == null)
-            Debug.LogError("TestAgent: Managers 오브젝트 또는 ToolManager 컴포넌트를 찾을 수 없습니다.");
-
-        agentController = GetComponent<AgentController>();
-        if (agentController == null)
-            Debug.LogError("TestAgent: AgentController 컴포넌트를 찾을 수 없습니다.");
     }
-
-    //public Transform Target;
-
+    
     public override void OnEpisodeBegin() //에피소드 자동 실행
     {
-        MapManager.Instance.ResetEnvironment(); //환경 초기화
+        transform.position = startPosition;
+        mapManager.ResetEnvironment(); //환경 초기화
+               
         //속도 초기화
         this.rBody.velocity = Vector3.zero;
         this.rBody.angularVelocity = Vector3.zero;
 
         this.transform.localPosition = new Vector3(14.09f, -0.76f, -10.71f); //위치 초기화
         this.transform.localRotation = Quaternion.Euler(0f, 180f, 0f); //회전 초기화
-        //처음 잔여시간
-        if (StageManager.Instance != null)
-                {
-                    previousTimeLeft = StageManager.Instance.TimeLeft;
-                }
-                else
-                {
-                    Debug.LogError("TestAgent: StageManager 싱글톤이 존재하지 않습니다.");
-                    previousTimeLeft = 0f;
-                }
-
-        // 싱크대 체크
-        bool sink_True = mop != null && mop.sink != null 
-                        ? mop.sink.transform 
-                        : null; 
+        
+        //잔여시간 초기화
+        stageManager.TimeReset();
+        previousTimeLeft = stageManager.TimeLeft;
     }
 
     public override void CollectObservations(VectorSensor sensor) //환경관찰(행동에 필요한 데이터 수집) 벡터형
@@ -77,8 +87,8 @@ public class TestAgent : Agent
         sensor.AddObservation(rBody.velocity); //속도
         sensor.AddObservation(rBody.angularVelocity); //각속도
 
-         List<Obstacle> obstacles = MapManager.Instance.aiObstacleList; //쓰레기 리스트??
-
+        List<Obstacle> obstacles = MapManager.Instance.aiObstacleList; //쓰레기 리스트??
+        
         foreach (var obs in obstacles) //에이전트와 쓰레기들 상대 위치
         {
             if (obs == null) continue; //제거된 쓰레기 건너뜀
@@ -89,98 +99,72 @@ public class TestAgent : Agent
 
         //쓰레기통들 위치 
         //작업대, 싱크대, 분리수거함 위치 
-
-        // 싱크대 상대 위치 관측 (널 체크 포함)
-        Vector3 relSink = Vector3.zero;
-
-        if (sink_True)
-            relSink = mop.sink.transform.localPosition - transform.localPosition;
+        relSink = Sink_xz - transform.localPosition;
         sensor.AddObservation(relSink.x);
         sensor.AddObservation(relSink.z);
 
         //현재 선택된 도구 (One-Hot 또는 정규화)
-        int toolIdx = toolManager.currentTool;   // 0=맨손, 1=빗자루, 2=대걸레
+        toolIdx = agentInputHandler.GetCurrentTool();  // 0=맨손, 1=빗자루, 2=대걸레
         // 정규화 0, 0.5, 1.0
         sensor.AddObservation(toolIdx / 2f);
 
-        //대걸레 세탁 필요 여부
-        bool mopDirty = (toolManager.currentTool == 2) &&
-                    (mop != null && mop.GetUseCount() >= 2);
-        sensor.AddObservation(mopDirty ? 1f : 0f);
-
-
         //남은 시간 정규화된 값
-        float tNorm = StageManager.Instance.TimeLeft / StageManager.Instance.TimeLimit;
+        tNorm = StageManager.Instance.TimeLeft / StageManager.Instance.TimeLimit;
         sensor.AddObservation(tNorm);
     }
-
-    public float forceMultiplier = 10; //이속
-    public float AgentRunSpeedMultiplier = 1.8f; //달리기 시 이속증가배율
-
+    
     public override void OnActionReceived(ActionBuffers actionBuffers) // 행동을 수신하고 보상을 할당
     {
-        //1) 이동
-        float moveX = actionBuffers.ContinuousActions[0];
-        float moveZ = actionBuffers.ContinuousActions[1];
+        old_score = score;
 
-        // 2) Q 홀드 여부 (Branch 0)
-        bool qPressed = actionBuffers.DiscreteActions[0] == 1;
-        agentController.SetQPressed(qPressed);
+        moveX = actionBuffers.ContinuousActions[0];
+        moveZ = actionBuffers.ContinuousActions[1];
+        // Shift 확인 (달리기 상태 감지)
+        isShiftDown = (actionBuffers.DiscreteActions[0] == 1); // Shift?
 
-        // 2) 대걸레 세척 시도
-        if (mop.TryWashWithHold(qPressed))
+        agents.move_update(moveX, moveZ, isShiftDown);
+
+        numkey = actionBuffers.DiscreteActions[3];
+        qPressed = (actionBuffers.DiscreteActions[1] == 1);
+        ePressed = (actionBuffers.DiscreteActions[2] == 1);
+        qhold = false;
+        ehold = false;
+
+        // 2) Q 홀드 여부 
+        if (qPressed)
         {
-            AddReward(+0.4f);
-        }
-
-         // 3) Shift 홀드 여부 (Branch 1)
-        bool shiftPressed = actionBuffers.DiscreteActions[1] == 1;
-        agentController.SetShiftPressed(shiftPressed);
-
-        // 이동 속도 계산
-        float speedMult = shiftPressed
-            ? AgentRunSpeedMultiplier
-            : 1f;
-        rBody.AddForce(new Vector3(moveX, 0, moveZ) * forceMultiplier * speedMult);
-
-        // // 4) 분리수거 시? E 키 (Branch 2) 
-        // if (actionBuffers.DiscreteActions[2] == 1)
-        //     agentController.HandleEKey();
-
-        // 대걸레 사용 E 키
-        int toolIdx = toolManager.currentTool;
-        if (toolIdx == 2 && actionBuffers.DiscreteActions[2] == 1)
-        {
-            // mop.TryCleanDust()가 true면 보상
-            if (mop.AgentUpdate())
+            qHoldTime += Time.deltaTime;
+            if (qHoldTime >= Q_HOLD_THRESHOLD)
             {
-                SetReward(+1.0f);
-            }
-
-             // 단, 만약 대걸레가 더러운 상태인데도 청소 시도하면 페널티
-            if (mop.GetUseCount() >= 2)
-            {
-                SetReward(-0.5f);
+                // 2초 이상 Q가 눌려졌을 때 실행할 동작
+                qhold = true;
+                qHoldTime = 0f; // 한 번 실행 후 타이머 초기화
             }
         }
-
-        // 5) 숫자키 (Branch 3)
-        int numKey = actionBuffers.DiscreteActions[3]; // 0,1,2
-        switch (numKey)
+        else
         {
-            case 1: toolManager.EquipTool(0); break;
-            case 2: toolManager.EquipTool(1); break;
-            case 3: toolManager.EquipTool(2); break;
+            qhold = false;
+            qHoldTime = 0f; // Q를 뗐으면 누적 시간 리셋
         }
+        //mop.SetHoldingTime(qHoldTime);
+        //mop.WashMopNearSink(qhold, qHoldTime)
+
+        agentInputHandler.HandleInput(numkey, qPressed, ePressed, qhold, ehold);
+        
+        score = stageManager.AIScore;
+
+        // 점수 획득 시
+        if (old_score < score)
+            SetReward(1f);
+
         //남은 시간 변화량만큼 패널티
-        float cur = StageManager.Instance.TimeLeft;
-        float delta = previousTimeLeft - cur;
+        cur = stageManager.TimeLeft;
+        delta = previousTimeLeft - cur;
         if (delta > 0f)
             SetReward(-0.05f * delta);
         previousTimeLeft = cur;
 
         //쓰레기 종류별로 설정
-        
         if (cur <= 0f)
             EndEpisode(); // 에피소드 종료
     }

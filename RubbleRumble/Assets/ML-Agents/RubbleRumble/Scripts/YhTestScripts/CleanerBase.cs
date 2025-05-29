@@ -9,7 +9,7 @@ public class CleanerBase : MonoBehaviour
     protected TrashManager heldTrash;
     protected TrashInteractionManager interact;
 
-    protected GameObject nearObject;
+    public GameObject nearObject;
     public GameObject unfoldedBox;
     public Transform rightHand;
 
@@ -75,7 +75,7 @@ public class CleanerBase : MonoBehaviour
                 } 
                 else if (currentTool == 1)
                 {
-                    // ÄÚµå ³Ö¾î¾ßÇÔ.
+                    // ï¿½Úµï¿½ ï¿½Ö¾ï¿½ï¿½ï¿½ï¿?.
                 } 
                 else if (currentTool == 2)
                 {
@@ -97,12 +97,15 @@ public class CleanerBase : MonoBehaviour
 
     protected void TryThrowAway()
     {
+        Debug.Log("in TryThrowAway");
         if (isHoldingTrash && isNearRecyclingBin)
         {
+            Debug.Log("in TryThrowAway2");
             if (heldTrash.trashData.readyToThrowAway)
             {
+                Debug.Log("in TryThrowAway3");
                 interact.ThrowTrashAway(heldObject);
-                
+
                 heldObject = null;
                 isHoldingTrash = false;
             }
@@ -156,7 +159,7 @@ public class CleanerBase : MonoBehaviour
 
     protected void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Can") || other.CompareTag("Box") || other.CompareTag("Dust") || other.CompareTag("UnfoldedBox")) // ÇÁ¸®ÆÕ ÅÂ±× ´Ù Trash·Î ÅëÀÏ½ÃÄÑµµµÉµí?
+        if (other.CompareTag("Can") || other.CompareTag("Box") || other.CompareTag("Dust") || other.CompareTag("UnfoldedBox")) // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Â±ï¿½ ï¿½ï¿½ Trashï¿½ï¿½ ï¿½ï¿½ï¿½Ï½ï¿½ï¿½Ñµï¿½ï¿½Éµï¿½?
         {
             nearObject = other.gameObject;
             isNearObject = true;
