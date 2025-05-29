@@ -9,10 +9,9 @@ using Unity.MLAgents.Actuators;
 public class TestAgent : Agent
 {
     private Rigidbody rBody;
-    private Vector3 startPosition = new Vector3(-43.5f, -0.007575989f, -9f);
+    private Vector3 startPosition = new Vector3(-21.3f, -0.007575989f, -12.6f);
 
     private AgentMotor agents;
-    private ToolManager toolManager;
     private StageManager stageManager;
     private MapManager mapManager;
     private Mop mop;
@@ -27,7 +26,7 @@ public class TestAgent : Agent
     private Vector3 relSink;
     private int toolIdx;
     private float tNorm;
-    // Action reception scratch variables
+
     private float moveX;
     private float moveZ;
     private bool isShiftDown;
@@ -39,41 +38,38 @@ public class TestAgent : Agent
     private float cur;
     private float delta;
 
-    // Start is called before the first frame update
-
     private float qHoldTime = 0f;
     private const float Q_HOLD_THRESHOLD = 2f; // 2초
-
 
     protected override void Awake()
     {
         base.Awake();
         rBody = GetComponent<Rigidbody>();
-
-        agents = FindObjectOfType<AgentMotor>();
+        Debug.Log("in Awake!!!");
+        agents = FindObjectOfType<AgentMotor>(); 
         agentInputHandler = GetComponent<AgentInputHandler>();
 
-        var mgr = GameObject.Find("Managers");
-        toolManager = mgr.GetComponent<ToolManager>();
-        stageManager = mgr.GetComponent<StageManager>();
-        mapManager = mgr.GetComponent<MapManager>();
-        
+        stageManager = StageManager.Instance;
+        mapManager = MapManager.Instance; 
+
         Sink_xz = new Vector3(5.6f, -15.66089f, 5.458333f);
 
     }
-    
+
     public override void OnEpisodeBegin() //에피소드 자동 실행
     {
+        Debug.Log("in OnEpisodeBegin!!!");
+        //RetryTestBtn.OnRetryTestButtonCliked();
         transform.position = startPosition;
         mapManager.ResetEnvironment(); //환경 초기화
-               
+
         //속도 초기화
         this.rBody.velocity = Vector3.zero;
         this.rBody.angularVelocity = Vector3.zero;
 
-        this.transform.localPosition = new Vector3(14.09f, -0.76f, -10.71f); //위치 초기화
+        this.transform.localPosition = new Vector3(-21.3f, -0.007575989f, -12.6f); //위치 초기화
         this.transform.localRotation = Quaternion.Euler(0f, 180f, 0f); //회전 초기화
-        
+
         //잔여시간 초기화
         stageManager.TimeReset();
         previousTimeLeft = stageManager.TimeLeft;
@@ -82,13 +78,15 @@ public class TestAgent : Agent
     public override void CollectObservations(VectorSensor sensor) //환경관찰(행동에 필요한 데이터 수집) 벡터형
     {
         Vector3 agentPos = transform.localPosition;
-        
+        Debug.Log("agentPos: " + agentPos);
+        Debug.Log("rBody.velocity: " + rBody.velocity);
+        Debug.Log("rBody.angularVelocity: " + rBody.angularVelocity);
         sensor.AddObservation(agentPos); //에이전트 위치
         sensor.AddObservation(rBody.velocity); //속도
         sensor.AddObservation(rBody.angularVelocity); //각속도
 
-        List<Obstacle> obstacles = MapManager.Instance.aiObstacleList; //쓰레기 리스트??
-        
+        List<Obstacle> obstacles = mapManager.aiObstacleList; //쓰레기 리스트??
+
         foreach (var obs in obstacles) //에이전트와 쓰레기들 상대 위치
         {
             if (obs == null) continue; //제거된 쓰레기 건너뜀
@@ -112,9 +110,10 @@ public class TestAgent : Agent
         tNorm = StageManager.Instance.TimeLeft / StageManager.Instance.TimeLimit;
         sensor.AddObservation(tNorm);
     }
-    
+
     public override void OnActionReceived(ActionBuffers actionBuffers) // 행동을 수신하고 보상을 할당
     {
+        Debug.Log("in OnActionReceived!!!!");
         old_score = score;
 
         moveX = actionBuffers.ContinuousActions[0];
@@ -150,7 +149,7 @@ public class TestAgent : Agent
         //mop.WashMopNearSink(qhold, qHoldTime)
 
         agentInputHandler.HandleInput(numkey, qPressed, ePressed, qhold, ehold);
-        
+
         score = stageManager.AIScore;
 
         // 점수 획득 시
@@ -158,14 +157,18 @@ public class TestAgent : Agent
             SetReward(1f);
 
         //남은 시간 변화량만큼 패널티
-        cur = stageManager.TimeLeft;
+        cur = StageManager.Instance.TimeLeft;
         delta = previousTimeLeft - cur;
         if (delta > 0f)
             SetReward(-0.05f * delta);
         previousTimeLeft = cur;
 
-        //쓰레기 종류별로 설정
         if (cur <= 0f)
+        {
+            Debug.Log("episode ending");
             EndEpisode(); // 에피소드 종료
+        
+        }
+
     }
 }
