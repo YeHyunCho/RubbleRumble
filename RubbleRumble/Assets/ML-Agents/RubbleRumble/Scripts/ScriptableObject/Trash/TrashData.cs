@@ -8,4 +8,5 @@ public class TrashData : ScriptableObject
     public string trashName;
     public int interactTool;
     public bool readyToThrowAway;
+    public string trashbin;
 }

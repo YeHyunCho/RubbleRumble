@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: UnfoldedBox
   m_EditorClassIdentifier: 
   trashName: Box
-  interactTool: Hand
+  interactTool: 0
   readyToThrowAway: 1
+  trashbin: TBpaper

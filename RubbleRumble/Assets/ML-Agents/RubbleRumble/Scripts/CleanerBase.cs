@@ -28,6 +28,7 @@ public class CleanerBase : MonoBehaviour
 
     protected GameObject heldObject;
     protected GameObject trashOnWorkbench;
+    protected GameObject currentRecyclebin;
 
     protected int currentTool = -1;
 
@@ -101,7 +102,7 @@ public class CleanerBase : MonoBehaviour
     {
         if (isHoldingTrash && isNearRecyclingBin)
         {
-            if (heldTrash.trashData.readyToThrowAway)
+            if (heldTrash.trashData.readyToThrowAway && currentRecyclebin.CompareTag(heldTrash.trashData.trashbin))
             {
                 interact.ThrowTrashAway(heldObject);
                 
@@ -182,6 +183,7 @@ public class CleanerBase : MonoBehaviour
             if (!isNearRecyclingBin)
             {
                 isNearRecyclingBin = true;
+                currentRecyclebin = other.gameObject; 
             }
         }
     }
@@ -194,9 +196,10 @@ public class CleanerBase : MonoBehaviour
             qKeyHoldTime = 0f;
         }
 
-        if (other.CompareTag("RecyclingBin"))
+        if (other.CompareTag("TBdust") || other.CompareTag("TBpaper") || other.CompareTag("TBcan"))
         {
             isNearRecyclingBin = false;
+            currentRecyclebin = null;
         }
     }
 
