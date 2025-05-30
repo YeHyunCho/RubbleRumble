@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7104401921925638919}
   - component: {fileID: 7153750591542631253}
   - component: {fileID: 7024901933792415456}
+  - component: {fileID: -2338804087461368626}
   m_Layer: 6
   m_Name: UnfoldedBox
   m_TagString: UnfoldedBox
@@ -135,3 +136,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashData: {fileID: 11400000, guid: edc46bcd88c7e9c43b629a38a9b36d57, type: 2}
+--- !u!114 &-2338804087461368626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6208189683626728464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3a19d3e1aa284de595fdaec478a6eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holdPositionOffset: {x: -0.1, y: 0.1, z: -0.05}
+  holdEulerRotationOffset: {x: 40, y: 0, z: 180}

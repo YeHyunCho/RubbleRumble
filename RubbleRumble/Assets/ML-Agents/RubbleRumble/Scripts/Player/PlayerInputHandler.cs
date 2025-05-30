@@ -47,18 +47,50 @@ public class PlayerInputHandler : CleanerBase
         }
     }
 
+    /// 재귀적으로 자식 트랜스폼을 이름으로 찾기.
+    private Transform FindDeepChild(Transform parent, string childName)
+    {
+        foreach (Transform child in parent)
+        {
+            if (child.name == childName)
+                return child;
+            Transform result = FindDeepChild(child, childName);
+            if (result != null)
+                return result;
+        }
+        return null;
+    }
+
     protected override void SetRightHand()
     {
-        // 플레이어의 Animator에서 오른손 뼈(Bone)의 Transform을 가져옴
-        rightHand = GetComponentInChildren<Animator>().GetBoneTransform(HumanBodyBones.RightHand);
-        // 오른손 위치를 손바닥 방향으로 약간 조정 (0.15 유닛 이동)
-        if (rightHand != null) // Null 체크 추가
+        Animator animator = GetComponentInChildren<Animator>();
+        if (animator == null)
         {
-            rightHand.position = rightHand.position + rightHand.forward * 0.15f;
+            Debug.LogError("Animator 컴포넌트를 찾을 수 없습니다. 자식 오브젝트에 Animator가 있는지 확인하세요.");
+            this.rightHand = null; // rightHand를 null로 명확히 설정하여 오류 방지
+            return;
+        }
+
+        Transform mainHandBone = animator.GetBoneTransform(HumanBodyBones.RightHand);
+        if (mainHandBone == null)
+        {
+            Debug.LogError("HumanBodyBones.RightHand Transform을 찾을 수 없습니다. Animator의 Humanoid Rig 설정을 확인하세요.");
+            this.rightHand = null;
+            return;
+        }
+
+        // "RightHandProp" 뼈를 mainHandBone의 자식 중에서 탐색 
+        Transform propBone = FindDeepChild(mainHandBone, "RightHandProp");
+
+        if (propBone != null)
+        {
+            this.rightHand = propBone; // 찾았다면 RightHandProp을 사용
+            Debug.Log("아이템 부착을 위해 RightHandProp 뼈를 사용합니다.");
         }
         else
         {
-            Debug.LogError("RightHand Transform을 찾을 수 없습니다. Animator와 HumanBodyBones 설정을 확인하세요.");
+            this.rightHand = mainHandBone; // 못 찾았다면 기존 방식대로 손목 뼈를 사용
+            Debug.LogWarning("RightHandProp 뼈를 찾지 못했습니다. HumanBodyBones.RightHand를 사용합니다. 아이템 위치가 어색할 수 있습니다.");
         }
     }
 
@@ -72,7 +104,7 @@ public class PlayerInputHandler : CleanerBase
             if (toolPrefabs[i] != null)
             {
                 tools[i] = Instantiate(toolPrefabs[i], rightHand.position, rightHand.rotation, rightHand);
-                tools[i].transform.localRotation = Quaternion.Euler(30, 20, -60);
+                tools[i].transform.localRotation = Quaternion.Euler(60, 20, 0);
                 tools[i].SetActive(false);
             }
         }
