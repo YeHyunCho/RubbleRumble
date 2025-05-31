@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MapManager : SingletonBase<MapManager>
 {
@@ -18,21 +19,36 @@ public class MapManager : SingletonBase<MapManager>
     [Header("Pool")]
     [SerializeField] private PoolManager.PoolConfig[] _poolConfigs; // 인스펙터에서 풀 설정
 
+    // 씬 로드 오류 있을시 본인 테스트씬 주석해제하고 사용
+    //private const string TestSceneName = "TestScene";
+    //private const string TestSceneName = "JiyoungTestScene 2";
+    //private const string TestSceneName = "SwTestScene";
+    //private const string TestSceneName = "YhTestScene2";
+    //private const string TestSceneName = "ShTestScene";
+
     protected override void Awake()
     {
-        base.Awake();
-        PoolManager.Instance.AddPools<Obstacle>(_poolConfigs);
+        // 플레이씬이 아닌 씬에서 활성화되면 삭제
+        //if (SceneManager.GetActiveScene().name != TestSceneName)
+        //{
+        //    Destroy(gameObject);
+        //    return;
+        //}
 
-        LevelInfo = LevelManager.Instance.GetLevelInfo();   // 현재 레벨 설정 정보 가져오기
-        spawnTime = LevelInfo.spawnCooldowns;   // 쿨타임 리스트 설정
-        SettingMap();   // 맵에 쓰레기 초기 세팅
-        curTime = 0;
+        base.Awake();
+        //PoolManager.Instance.AddPools<Obstacle>(_poolConfigs);
+
+        //LevelInfo = LevelManager.Instance.GetLevelInfo();   // 현재 레벨 설정 정보 가져오기
+        //spawnTime = LevelInfo.spawnCooldowns;   // 쿨타임 리스트 설정
+        //SettingMap();   // 맵에 쓰레기 초기 세팅
+        //curTime = 0;
+        //ResetEnvironment();
     }
     //장성우 추가
     public void ResetEnvironment() //학습 시 에피소드 종료마다 환경 초기화 필요.
     {
-        PoolManager.Instance.DeleteAllPools(); // 이전 오브젝트 초기화
-        
+        //PoolManager.Instance.DeleteAllPools(); // 이전 오브젝트 초기화
+
         PoolManager.Instance.AddPools<Obstacle>(_poolConfigs);
         LevelInfo = LevelManager.Instance.GetLevelInfo();
         spawnTime = LevelInfo.spawnCooldowns;
@@ -123,6 +139,7 @@ public class MapManager : SingletonBase<MapManager>
             if (playerObstacle.isActiveAndEnabled)
                 PoolManager.Instance.ReturnToPool(playerObstacle.name, playerObstacle);
             playerObstacleList.Remove(playerObstacle);
+            StageManager.Instance.PlayerObstacleCnt = 0;
         }
         for (int i = aiObstacleList.Count; i > 0; i--)
         {
@@ -130,6 +147,7 @@ public class MapManager : SingletonBase<MapManager>
             if (aiObstacle.isActiveAndEnabled)
                 PoolManager.Instance.ReturnToPool(aiObstacle.name, aiObstacle);
             aiObstacleList.Remove(aiObstacle);
+            StageManager.Instance.AIObstacleCnt = 0;
         }
     }
 }
