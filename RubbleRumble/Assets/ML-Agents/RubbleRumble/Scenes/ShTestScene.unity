@@ -548,7 +548,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c12ba975e322a34bb2d5544794cacc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactRange: 2
+  pickupLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
   playerInputHandler: {fileID: 298097961}
+  mop: {fileID: 0}
 --- !u!114 &298097961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1639,21 +1644,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
-    - target: {fileID: 3155744716328469433, guid: 25c0fe0c4584c004da8a35fe04448964,
-        type: 3}
-      propertyPath: m_Convex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3155744716328469433, guid: 25c0fe0c4584c004da8a35fe04448964,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3155744716328469433, guid: 25c0fe0c4584c004da8a35fe04448964,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3287376421060560785, guid: 25c0fe0c4584c004da8a35fe04448964,
         type: 3}
       propertyPath: m_LocalScale.y
@@ -1708,21 +1698,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 3787576068408131848, guid: 25c0fe0c4584c004da8a35fe04448964,
-        type: 3}
-      propertyPath: m_Convex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3787576068408131848, guid: 25c0fe0c4584c004da8a35fe04448964,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3787576068408131848, guid: 25c0fe0c4584c004da8a35fe04448964,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4042146098984548159, guid: 25c0fe0c4584c004da8a35fe04448964,
         type: 3}
@@ -1819,16 +1794,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5302377121456056477, guid: 25c0fe0c4584c004da8a35fe04448964,
-        type: 3}
-      propertyPath: m_Convex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5302377121456056477, guid: 25c0fe0c4584c004da8a35fe04448964,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5535731553895986427, guid: 25c0fe0c4584c004da8a35fe04448964,
         type: 3}
       propertyPath: m_Name
@@ -1844,16 +1809,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1.7
       objectReference: {fileID: 0}
-    - target: {fileID: 6218761203546607676, guid: 25c0fe0c4584c004da8a35fe04448964,
-        type: 3}
-      propertyPath: m_Convex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6218761203546607676, guid: 25c0fe0c4584c004da8a35fe04448964,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6528648539194525770, guid: 25c0fe0c4584c004da8a35fe04448964,
         type: 3}
       propertyPath: m_LocalScale.y
@@ -1864,16 +1819,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1.7
       objectReference: {fileID: 0}
-    - target: {fileID: 6773772188249881520, guid: 25c0fe0c4584c004da8a35fe04448964,
-        type: 3}
-      propertyPath: m_Convex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6773772188249881520, guid: 25c0fe0c4584c004da8a35fe04448964,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6869810761076348123, guid: 25c0fe0c4584c004da8a35fe04448964,
         type: 3}
       propertyPath: m_LocalScale.y
@@ -1883,16 +1828,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 1.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7112699317291207573, guid: 25c0fe0c4584c004da8a35fe04448964,
-        type: 3}
-      propertyPath: m_Convex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7112699317291207573, guid: 25c0fe0c4584c004da8a35fe04448964,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7147524659114695697, guid: 25c0fe0c4584c004da8a35fe04448964,
         type: 3}
@@ -1959,7 +1894,6 @@ PrefabInstance:
     - {fileID: 3881283576171580755, guid: 25c0fe0c4584c004da8a35fe04448964, type: 3}
     - {fileID: 626270114044613915, guid: 25c0fe0c4584c004da8a35fe04448964, type: 3}
     - {fileID: 417455384383456636, guid: 25c0fe0c4584c004da8a35fe04448964, type: 3}
-    - {fileID: 5124544609459531760, guid: 25c0fe0c4584c004da8a35fe04448964, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 205185801028485308, guid: 25c0fe0c4584c004da8a35fe04448964,
         type: 3}
@@ -2563,16 +2497,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
       objectReference: {fileID: 0}
-    - target: {fileID: 3155744716328469433, guid: 25c0fe0c4584c004da8a35fe04448964,
-        type: 3}
-      propertyPath: m_Convex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3155744716328469433, guid: 25c0fe0c4584c004da8a35fe04448964,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3287376421060560785, guid: 25c0fe0c4584c004da8a35fe04448964,
         type: 3}
       propertyPath: m_LocalScale.y
@@ -2632,16 +2556,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 3787576068408131848, guid: 25c0fe0c4584c004da8a35fe04448964,
-        type: 3}
-      propertyPath: m_Convex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3787576068408131848, guid: 25c0fe0c4584c004da8a35fe04448964,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4042146098984548159, guid: 25c0fe0c4584c004da8a35fe04448964,
         type: 3}
@@ -2753,16 +2667,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5302377121456056477, guid: 25c0fe0c4584c004da8a35fe04448964,
-        type: 3}
-      propertyPath: m_Convex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5302377121456056477, guid: 25c0fe0c4584c004da8a35fe04448964,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5535731553895986427, guid: 25c0fe0c4584c004da8a35fe04448964,
         type: 3}
       propertyPath: m_Name
@@ -2778,16 +2682,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6218761203546607676, guid: 25c0fe0c4584c004da8a35fe04448964,
-        type: 3}
-      propertyPath: m_Convex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6218761203546607676, guid: 25c0fe0c4584c004da8a35fe04448964,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6528648539194525770, guid: 25c0fe0c4584c004da8a35fe04448964,
         type: 3}
       propertyPath: m_LocalScale.y
@@ -2798,16 +2692,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1.7
       objectReference: {fileID: 0}
-    - target: {fileID: 6773772188249881520, guid: 25c0fe0c4584c004da8a35fe04448964,
-        type: 3}
-      propertyPath: m_Convex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6773772188249881520, guid: 25c0fe0c4584c004da8a35fe04448964,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6869810761076348123, guid: 25c0fe0c4584c004da8a35fe04448964,
         type: 3}
       propertyPath: m_LocalScale.y
@@ -2817,16 +2701,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 1.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7112699317291207573, guid: 25c0fe0c4584c004da8a35fe04448964,
-        type: 3}
-      propertyPath: m_Convex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7112699317291207573, guid: 25c0fe0c4584c004da8a35fe04448964,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7147524659114695697, guid: 25c0fe0c4584c004da8a35fe04448964,
         type: 3}
@@ -2890,7 +2764,6 @@ PrefabInstance:
     - {fileID: 4359797019311009023, guid: 25c0fe0c4584c004da8a35fe04448964, type: 3}
     - {fileID: 626270114044613915, guid: 25c0fe0c4584c004da8a35fe04448964, type: 3}
     - {fileID: 417455384383456636, guid: 25c0fe0c4584c004da8a35fe04448964, type: 3}
-    - {fileID: 5124544609459531760, guid: 25c0fe0c4584c004da8a35fe04448964, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 205185801028485308, guid: 25c0fe0c4584c004da8a35fe04448964,
         type: 3}
