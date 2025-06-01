@@ -125,4 +125,6 @@ public class PlayerInputHandler : CleanerBase
     public int GetCurrentTool() { return currentTool; }
     public bool GetReadyToClean() { return readyToClean; }
     public bool GetIsNearObject() { return isNearObject; }
+    public GameObject GetNearObject() { return nearObject; }
+    public GameObject GetCurRecycleBin() { return currentRecyclebin; }
 }
