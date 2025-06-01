@@ -18,11 +18,7 @@ public class StageManager : SingletonBase<StageManager>
     {
         base.Awake();
 
-        // 점수 및 제한 시간 초기화
-        PlayerScore = 0;
-        AIScore = 0;
-        timeLimit = 120f;
-        TimeLeft = TimeLimit;
+        //TimeReset();
 
         /* TestCode */
         //timeLimit = 10f;
@@ -33,7 +29,11 @@ public class StageManager : SingletonBase<StageManager>
     //episode 자동 실행 및 초기화 위한 시간 리셋
     public void TimeReset()
     {
-        Awake();
+        // 점수 및 제한 시간 초기화
+        PlayerScore = 0;
+        AIScore = 0;
+        timeLimit = 120f;
+        TimeLeft = TimeLimit;
     }
 
     private void Start()

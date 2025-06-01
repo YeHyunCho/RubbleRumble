@@ -15,3 +15,4 @@ MonoBehaviour:
   trashName: Dirt
   interactTool: 2
   readyToThrowAway: 1
+  trashbin: TBdust

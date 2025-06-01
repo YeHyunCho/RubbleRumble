@@ -28,6 +28,7 @@ public class CleanerBase : MonoBehaviour
 
     protected GameObject heldObject;
     protected GameObject trashOnWorkbench;
+    protected GameObject currentRecyclebin;
 
     protected int currentTool = -1;
 
@@ -55,6 +56,12 @@ public class CleanerBase : MonoBehaviour
 
     protected void UseTool()
     {
+        if (isNearObject && nearObject == null)
+        {
+            Debug.Log("[UseTool] isNearObject=true인데 nearObject가 null입니다!");
+            isNearObject = false;
+        }
+    
         if (isNearObject)
         {
             TrashManager nearTrash = nearObject.GetComponent<TrashManager>();
@@ -70,15 +77,22 @@ public class CleanerBase : MonoBehaviour
                     heldObject = nearObject;
                     heldTrash = heldObject.GetComponent<TrashManager>();
 
-                    if (isNearWorkbench) isTrashOnTheWorkbench = false;
-                    
+                    if (isNearWorkbench)    // 작업대 근처에서 쓰레기를 주운 경우
+                    {
+                        // 들고 있는 쓰레기가 박스라면
+                        if (heldObject.CompareTag("Box") || heldObject.CompareTag("UnfoldedBox"))
+                            // 작업대 위에 박스가 없는 상태로 설정
+                            isTrashOnTheWorkbench = false;
+                        trashOnWorkbench = null;
+                    }
+
                     isNearObject = false;
                     isHoldingTrash = true;
-                } 
+                }
                 else if (currentTool == 1)
                 {
                     // 코드 넣어야함.
-                } 
+                }
                 else if (currentTool == 2)
                 {
                     Mop mop = FindObjectOfType<Mop>();
@@ -101,7 +115,7 @@ public class CleanerBase : MonoBehaviour
     {
         if (isHoldingTrash && isNearRecyclingBin)
         {
-            if (heldTrash.trashData.readyToThrowAway)
+            if (heldTrash.trashData.readyToThrowAway && currentRecyclebin.CompareTag(heldTrash.trashData.trashbin))
             {
                 interact.ThrowTrashAway(heldObject);
                 
@@ -154,6 +168,7 @@ public class CleanerBase : MonoBehaviour
 
         tools[index].SetActive(true);
         currentTool = index;
+        Debug.Log("currentTool: " + index);
     }
 
     protected void OnTriggerStay(Collider other)
@@ -177,11 +192,12 @@ public class CleanerBase : MonoBehaviour
             }
         }
 
-        if (other.CompareTag("RecyclingBin"))
+        if (other.CompareTag("TBdust") || other.CompareTag("TBpaper") || other.CompareTag("TBcan"))
         {
             if (!isNearRecyclingBin)
             {
                 isNearRecyclingBin = true;
+                currentRecyclebin = other.gameObject; 
             }
         }
     }
@@ -194,9 +210,10 @@ public class CleanerBase : MonoBehaviour
             qKeyHoldTime = 0f;
         }
 
-        if (other.CompareTag("RecyclingBin"))
+        if (other.CompareTag("TBdust") || other.CompareTag("TBpaper") || other.CompareTag("TBcan"))
         {
             isNearRecyclingBin = false;
+            currentRecyclebin = null;
         }
     }
 
