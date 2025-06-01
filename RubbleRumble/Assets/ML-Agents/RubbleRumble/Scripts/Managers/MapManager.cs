@@ -28,6 +28,18 @@ public class MapManager : SingletonBase<MapManager>
         SettingMap();   // 맵에 쓰레기 초기 세팅
         curTime = 0;
     }
+    //장성우 추가
+    public void ResetEnvironment() //학습 시 에피소드 종료마다 환경 초기화 필요.
+    {
+        PoolManager.Instance.DeleteAllPools(); // 이전 오브젝트 초기화
+        
+        PoolManager.Instance.AddPools<Obstacle>(_poolConfigs);
+        LevelInfo = LevelManager.Instance.GetLevelInfo();
+        spawnTime = LevelInfo.spawnCooldowns;
+        SettingMap();
+        curTime = 0;
+    }
+
 
     private void Update()
     {

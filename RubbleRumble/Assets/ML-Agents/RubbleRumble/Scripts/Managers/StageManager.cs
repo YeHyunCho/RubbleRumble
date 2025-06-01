@@ -29,6 +29,13 @@ public class StageManager : SingletonBase<StageManager>
         //TimeLeft = TimeLimit;
     }
 
+    // 5.21 장성우
+    //episode 자동 실행 및 초기화 위한 시간 리셋
+    public void TimeReset()
+    {
+        Awake();
+    }
+
     private void Start()
     {
         Time.timeScale = 1.0f;
