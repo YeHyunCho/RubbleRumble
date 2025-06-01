@@ -71,14 +71,7 @@ public class CleanerBase : MonoBehaviour
                     heldObject = nearObject;
                     heldTrash = heldObject.GetComponent<TrashManager>();
 
-                    if (isNearWorkbench)    // 작업대 근처에서 쓰레기를 주운 경우
-                    {
-                        // 들고 있는 쓰레기가 박스라면
-                        if (heldObject.CompareTag("Box") || heldObject.CompareTag("UnfoldedBox"))
-                        // 작업대 위에 박스가 없는 상태로 설정
-                        isTrashOnTheWorkbench = false;
-                        trashOnWorkbench = null;
-                    }
+                    if (isNearWorkbench) isTrashOnTheWorkbench = false;
                     
                     isNearObject = false;
                     isHoldingTrash = true;

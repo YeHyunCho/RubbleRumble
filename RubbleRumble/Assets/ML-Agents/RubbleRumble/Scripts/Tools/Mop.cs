@@ -8,10 +8,8 @@ using UnityEngine.SocialPlatforms.Impl;
 public class Mop : MonoBehaviour
 {
     public GameObject player;
-    public GameObject agent;
     public GameObject sink;
     //private GameObject nearDust;
-    public bool isPlayer;
 
     public Material[] mat = new Material[3];
 
@@ -29,27 +27,12 @@ public class Mop : MonoBehaviour
     private void Awake()
     {
         righthandPos = gameObject.GetComponentInParent<Transform>().localPosition;
-        //sink = GameObject.FindWithTag("Sink");
+        sink = GameObject.FindWithTag("Sink");
     }
 
     private void Start()
     {
         player = GameObject.FindWithTag("Player");
-        agent = GameObject.FindWithTag("Agent");
-
-        // mop에서 플레이어 위치가 agent 위치보다 가까우면
-        // 해당 mop이 플레이어가 들고 있는 것으므로 sink를 플레이어 맵의 sink와 연결
-        if (Vector3.Distance(player.transform.position, transform.position) < Vector3.Distance(agent.transform.position, transform.position))
-        {
-            isPlayer = true;
-            sink = GameObject.Find("PlayerMap/Sink");
-        }
-        
-        else
-        {
-            isPlayer = false;
-            sink = GameObject.Find("AIMap/Sink");
-        }
         //isTrigger = false;
         //isTrigger = true;
         useCount = 0;
