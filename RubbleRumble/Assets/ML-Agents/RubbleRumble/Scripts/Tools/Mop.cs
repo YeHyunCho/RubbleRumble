@@ -16,7 +16,9 @@ public class Mop : MonoBehaviour
     //private bool isTrigger;
     private Vector3 righthandPos;
     //private Vector3 offset = new Vector3(0.4f, 0.05f, -0.55f);
-    private Vector3 offset = new Vector3(0f, 0.1f, 0f);
+
+    //Mop ÇÁ¸®ÆÕÀÇ ¿ÀÇÁ¼Â ¼öÁ¤
+    private Vector3 offset = new Vector3(0.02f, -0.1f, 0.04f);
 
     private int useCount;
     //public float triggerDistance = 0.1f;
@@ -45,7 +47,9 @@ public class Mop : MonoBehaviour
         //    transform.position = player.transform.position - offset;
         //}
         transform.localPosition = righthandPos + offset;
-        transform.localRotation = Quaternion.Euler(90, 0, 45);
+        
+        //Mop ÇÁ¸®ÆÕÀÇ °¢µµ ¼öÁ¤
+        transform.localRotation = Quaternion.Euler(60, 20, 40);
 
         /*if (Input.GetKeyDown(KeyCode.E) && nearDust != null)
         {
@@ -135,7 +139,7 @@ public class Mop : MonoBehaviour
         }
     }
 
-    // PlayerController¿ë ÇïÆÛ ¸Þ¼­µå
+    // PlayerControllerï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½
     public void IncrementUseCount()
     {
         useCount++;
