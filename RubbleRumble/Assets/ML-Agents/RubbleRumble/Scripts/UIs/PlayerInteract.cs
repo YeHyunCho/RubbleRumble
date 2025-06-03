@@ -146,7 +146,7 @@ public class PlayerInteract : MonoBehaviour
         if (playerInputHandler.GetIsNearRecyclingBin())
         {
             // 들고 있는 쓰레기를 버릴 수 있고 버릴 수 있는 쓰레기통이 근처에 있으면
-            if (heldTrash.trashData.readyToThrowAway && playerInputHandler.GetCurRecycleBin().CompareTag(heldTrash.trashData.trashbin))
+            if (heldTrash.trashData.readyToThrowAway && playerInputHandler.GetCurRecycleBin().CompareTag(heldTrash.trashData.interactTrashbin))
             {
                 return InteractUIState.PressE; // 상호작용 E 활성화 (버리기)
             }

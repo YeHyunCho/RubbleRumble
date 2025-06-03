@@ -15,6 +15,9 @@ TagManager:
   - TBdust
   - TBpaper
   - TBcan
+  - Agent
+  - Water
+  - TrashBag
   layers:
   - Default
   - TransparentFX
