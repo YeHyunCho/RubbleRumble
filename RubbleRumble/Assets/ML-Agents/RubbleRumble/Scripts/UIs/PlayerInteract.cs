@@ -12,17 +12,10 @@ public enum InteractUIState
 
 public class PlayerInteract : MonoBehaviour
 {
-    //[SerializeField] private float interactRange;       // 상호작용 탐지 범위
-    //[SerializeField] private LayerMask pickupLayerMask; // 상호작용 가능한 레이어 마스크(pickable로 설정)
-
     [SerializeField] private PlayerInputHandler playerInputHandler;
     public Mop mop { get; private set; }
     public InteractUIState CurrentUIState { get; private set; }
 
-    private void Awake()
-    {
-        //interactRange = 3;
-    }
 
     private void Start()
     {
@@ -40,6 +33,14 @@ public class PlayerInteract : MonoBehaviour
     {
         // 기본 상태: 비활성화
         InteractUIState newState = InteractUIState.None;
+
+        // 빗자루 사용 관련 상태 체크
+        if (playerInputHandler.GetCurrentTool() == 1) // 도구 인덱스 1이 빗자루인 경우
+        {
+            newState = CheckBroomInteract();
+            CurrentUIState = newState;
+            return;
+        }
 
         // 대걸레 사용 관련 상태 체크
         if (playerInputHandler.GetCurrentTool() == 2) // 도구 인덱스 2가 대걸레인 경우
@@ -76,6 +77,20 @@ public class PlayerInteract : MonoBehaviour
         CurrentUIState = newState;
     }
 
+    private InteractUIState CheckBroomInteract()
+    {
+        // 플레이어 근처에 먼지가 있으면 상호작용 E 활성화
+        if (playerInputHandler.GetIsNearObject())
+        {
+            if (playerInputHandler.GetNearObject().CompareTag("Dust"))
+            {
+                return InteractUIState.PressE;
+            }
+        }
+
+        return InteractUIState.None;
+    }
+
     // 대걸레 관련 상호작용 체크
     private InteractUIState CheckMopInteract()
     {
@@ -99,9 +114,11 @@ public class PlayerInteract : MonoBehaviour
             return InteractUIState.PressQ; // 상호작용 Q 활성화 (세척)
         }
 
-        // 플레이어 근처에 먼지가 있고, 대걸레 사용할 수 있으면 상호작용 E 활성화 
+        // 플레이어 근처에 물얼룩이 있고, 대걸레 사용할 수 있으면 상호작용 E 활성화 
         if (playerInputHandler.GetIsNearObject())
         {
+            // TODO: 나중에 Water prefab 태그 변경 시 주석 해제하고 변경 사항 적용
+            //if (playerInputHandler.GetNearObject().CompareTag("Water") && mop.GetUseCount() < 2)
             if (playerInputHandler.GetNearObject().CompareTag("Dust") && mop.GetUseCount() < 2)
             {
                 return InteractUIState.PressE;
