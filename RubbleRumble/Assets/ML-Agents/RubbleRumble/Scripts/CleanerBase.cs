@@ -61,7 +61,7 @@ public class CleanerBase : MonoBehaviour
             Debug.Log("[UseTool] isNearObject=true인데 nearObject가 null입니다!");
             isNearObject = false;
         }
-    
+
         if (isNearObject)
         {
             TrashManager nearTrash = nearObject.GetComponent<TrashManager>();
@@ -118,7 +118,7 @@ public class CleanerBase : MonoBehaviour
             if (heldTrash.trashData.readyToThrowAway && currentRecyclebin.CompareTag(heldTrash.trashData.trashbin))
             {
                 interact.ThrowTrashAway(heldObject);
-                
+
                 heldObject = null;
                 isHoldingTrash = false;
             }
@@ -127,7 +127,7 @@ public class CleanerBase : MonoBehaviour
 
     protected void TryPlaceTrashOnTheWorkbench()
     {
-        if (isNearWorkbench && isHoldingTrash)  
+        if (isNearWorkbench && isHoldingTrash)
         {
             if (heldTrash.trashData.trashName == "Box")
             {
@@ -168,7 +168,6 @@ public class CleanerBase : MonoBehaviour
 
         tools[index].SetActive(true);
         currentTool = index;
-        Debug.Log("currentTool: " + index);
     }
 
     protected void OnTriggerStay(Collider other)
@@ -197,7 +196,7 @@ public class CleanerBase : MonoBehaviour
             if (!isNearRecyclingBin)
             {
                 isNearRecyclingBin = true;
-                currentRecyclebin = other.gameObject; 
+                currentRecyclebin = other.gameObject;
             }
         }
     }
@@ -220,4 +219,21 @@ public class CleanerBase : MonoBehaviour
     protected virtual void SetRightHand() { }
 
     protected virtual void SetToolLocation() { }
+    public bool GetisHoldingTrash() { return isHoldingTrash; }
+    public int GetHoldingTrashName()
+    {
+        if (heldTrash == null)
+        {
+            return 0;
+        }
+        else if (heldTrash.trashData.trashName == "Can")
+        {
+            return 1;
+        }
+        else if (heldTrash.trashData.trashName == "Box")
+        {
+            return 2;
+        }
+        return 0;
+    }
 }

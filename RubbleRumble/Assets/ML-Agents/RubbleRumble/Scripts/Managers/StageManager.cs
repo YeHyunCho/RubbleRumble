@@ -32,7 +32,7 @@ public class StageManager : SingletonBase<StageManager>
         // 점수 및 제한 시간 초기화
         PlayerScore = 0;
         AIScore = 0;
-        timeLimit = 120f;
+        timeLimit = 200f;
         TimeLeft = TimeLimit;
     }
 
