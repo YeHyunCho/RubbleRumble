@@ -5,8 +5,14 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Trash", menuName = "Trashes/TrashData")]
 public class TrashData : ScriptableObject
 {
+    [Header ("Trash Data")]
     public string trashName;
-    public int interactTool;
     public bool readyToThrowAway;
-    public string trashbin;
+
+    [Space (10f)]
+    public string interactTrashbin;
+
+    [Space(10f)]
+    public int interactTool;
+    public int toolMaxUsage;
 }

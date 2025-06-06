@@ -108,10 +108,12 @@ public class PlayerInputHandler : CleanerBase
                 tools[i].SetActive(false);
             }
         }
-        // Mop3 프리팹 위치 조정
-        tools[2].transform.localPosition += Vector3.up * 0.1f;
+        // Mop3 프리팹 위치 조정 코드 <- 사용하지 않아서 주석처리
+        /*tools[2].transform.localPosition += Vector3.up * 0.1f;
         tools[2].transform.localPosition += Vector3.forward * 0.1f;
         tools[2].transform.localRotation = Quaternion.Euler(90, 0, 45);
+        */
+
     }
 
     public float GetHoldingTime() { return qKeyHoldTime; }

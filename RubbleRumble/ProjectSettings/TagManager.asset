@@ -12,11 +12,12 @@ TagManager:
   - WorkbenchArea
   - Dust
   - Can
-  - Agent
   - TBdust
   - TBpaper
   - TBcan
-  - Wall
+  - Agent
+  - Water
+  - TrashBag
   layers:
   - Default
   - TransparentFX
