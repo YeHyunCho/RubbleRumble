@@ -94,8 +94,8 @@ MonoBehaviour:
     y: 0
     width: 259
     height: 440
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -125,7 +125,11 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 0
+<<<<<<< HEAD
   controlID: 117
+=======
+  controlID: 131
+>>>>>>> parent of f308852 (default-2022.dwlt)
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -298,7 +302,11 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
+<<<<<<< HEAD
   controlID: 116
+=======
+  controlID: 130
+>>>>>>> parent of f308852 (default-2022.dwlt)
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -462,23 +470,29 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
       m_SelectedIDs: 26620000
       m_LastClickedID: 0
       m_ExpandedIDs: 46f8fffff4faffff
+=======
+      m_SelectedIDs: 94a10100
+      m_LastClickedID: 0
+      m_ExpandedIDs: 74b0fdff7eb0fdff88b0fdff90b0fdffa2b0fdffa4b0fdff44befdff6ebefdff34bffdff92c2fdff26c3fdffda4effff7651ffffaef3ffff92f9fffffaf9ffff16faffff1afaffff1efaffff22faffff6afaffff6efaffff92faffff96fafffff4faffff34a0010074a001007ca00100
+>>>>>>> parent of f308852 (default-2022.dwlt)
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: PlayerMap2
+        m_OriginalName: PlayerMap2
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -49804
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 4}
       m_SearchString: 
@@ -871,9 +885,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.6741547, y: 6.1951795, z: -9.688907}
+    m_Target: {x: 1593.887, y: 440.80084, z: 185.44128}
     speed: 2
-    m_Value: {x: -0.6741547, y: 6.1951795, z: -9.688907}
+    m_Value: {x: 1593.887, y: 440.80084, z: 185.44128}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -919,13 +933,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.14944936, y: 0.05282894, z: -0.0076894285, w: 0.98671013}
+    m_Target: {x: 0.012293173, y: -0.008047973, z: 0.00032784956, w: 0.9992846}
     speed: 2
-    m_Value: {x: 0.14954045, y: 0.052861143, z: -0.0076941154, w: 0.98731154}
+    m_Value: {x: 0.012300643, y: -0.008052863, z: 0.00032804877, w: 0.9998919}
   m_Size:
-    m_Target: 3.8132591
+    m_Target: 578.00494
     speed: 2
-    m_Value: 3.8132591
+    m_Value: 578.00494
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -996,7 +1010,11 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
     - Assets/ML-Agents/RubbleRumble/Scenes
+=======
+    - Assets/ML-Agents/RubbleRumble/Sprites
+>>>>>>> parent of f308852 (default-2022.dwlt)
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1013,7 +1031,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 80640000
     m_LastClickedID: 25728
+<<<<<<< HEAD
     m_ExpandedIDs: 000000001a6100001c6100001e61000020610000226100002461000026610000286100002a6100002c6100002e61000030610000326100003461000036610000386100003a6100003c6100003e61000040610000426100004461000046610000486100004a6100004c6100004e61000050610000526100005461000056610000586100005a6100005c6100005e61000060610000626100006461000066610000686100006a610000
+=======
+    m_ExpandedIDs: 00000000166a0000186a00001a6a00001c6a00001e6a0000206a0000226a0000246a0000266a0000286a00002a6a00002c6a00002e6a0000306a0000326a0000346a0000366a0000386a00003a6a00003c6a00003e6a0000406a0000426a0000446a0000466a0000486a00004a6a00004c6a00004e6a0000506a0000526a0000
+>>>>>>> parent of f308852 (default-2022.dwlt)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1038,24 +1060,31 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
     m_ExpandedIDs: ffffffff000000001a6100001c6100001e61000020610000226100002461000026610000286100002a6100002c6100002e61000030610000326100003461000036610000386100003a6100003c6100003e61000040610000426100004461000046610000486100004a6100004c6100004e61000050610000526100005461000056610000586100005a6100005c6100005e61000060610000626100006461000066610000686100006a610000
+=======
+    scrollPos: {x: 0, y: 912}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: ffffffff000000007a690000166a0000186a00001a6a00001c6a00001e6a0000206a0000226a0000246a0000266a0000286a00002a6a00002c6a00002e6a0000306a0000346a0000366a0000386a00003a6a00003c6a00003e6a0000426a0000446a0000466a0000486a00004a6a00004c6a00004e6a0000506a0000526a0000d46a0000d66a0000d86a0000e46a0000f26a0000f66a0000f86a0000fa6a000046300100623001009a980100909a0100
+>>>>>>> parent of f308852 (default-2022.dwlt)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: dungeonImage
+      m_OriginalName: dungeonImage
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 106898
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 4
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 2}
     m_SearchString: 

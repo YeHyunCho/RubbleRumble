@@ -26,14 +26,19 @@ EditorUserSettings:
     RecentlyUsedSceneGuid-6:
       value: 0505560051010f5a585a5e7b1676064412164e737d702332787d4563b3b0306a
       flags: 0
+<<<<<<< HEAD
     RecentlyUsedSceneGuid-7:
       value: 560456045c035058590d557314220e44454e4b282e2d2035797e4d60bbb0623e
+=======
+    RecentlyUsedSceneGuid-8:
+      value: 53030204060d595d585e5b7415205944141641722a7027342f7b4865e6b36069
+>>>>>>> parent of f308852 (default-2022.dwlt)
       flags: 0
     RecentlyUsedSceneGuid-8:
       value: 5750020751050d580e0d582114740944144e402c7f7c20647c711e60b1b6673d
       flags: 0
     RecentlyUsedSceneGuid-9:
-      value: 53030204060d595d585e5b7415205944141641722a7027342f7b4865e6b36069
+      value: 560456045c035058590d557314220e44454e4b282e2d2035797e4d60bbb0623e
       flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650
