@@ -12,8 +12,6 @@ public enum InteractUIState
 
 public class PlayerInteract : MonoBehaviour
 {
-    //[SerializeField] private float interactRange;       // 상호작용 탐지 범위
-    //[SerializeField] private LayerMask pickupLayerMask; // 상호작용 가능한 레이어 마스크(pickable로 설정)
 
     [SerializeField] private PlayerInputHandler playerInputHandler;
     public Mop mop { get; private set; }
@@ -40,6 +38,14 @@ public class PlayerInteract : MonoBehaviour
     {
         // 기본 상태: 비활성화
         InteractUIState newState = InteractUIState.None;
+
+        // 빗자루 사용 관련 상태 체크
+        if (playerInputHandler.GetCurrentTool() == 1) // 도구 인덱스 1이 빗자루인 경우
+        {
+            newState = CheckBroomInteract();
+            CurrentUIState = newState;
+            return;
+        }
 
         // 대걸레 사용 관련 상태 체크
         if (playerInputHandler.GetCurrentTool() == 2) // 도구 인덱스 2가 대걸레인 경우
@@ -76,6 +82,21 @@ public class PlayerInteract : MonoBehaviour
         CurrentUIState = newState;
     }
 
+
+    // 빗자루 관련 상호작용 체크
+    private InteractUIState CheckBroomInteract()
+    {
+        // 플레이어 근처에 먼지가 있고, 빗자루 사용할 수 있으면 상호작용 E 활성화 
+        if (playerInputHandler.GetIsNearObject())
+        {
+            if (playerInputHandler.GetNearObject().CompareTag("Dust"))
+            {
+                return InteractUIState.PressE;
+            }
+        }
+
+        return InteractUIState.None;
+    }
     // 대걸레 관련 상호작용 체크
     private InteractUIState CheckMopInteract()
     {
@@ -99,9 +120,11 @@ public class PlayerInteract : MonoBehaviour
             return InteractUIState.PressQ; // 상호작용 Q 활성화 (세척)
         }
 
-        // 플레이어 근처에 먼지가 있고, 대걸레 사용할 수 있으면 상호작용 E 활성화 
+        // 플레이어 근처에 물얼룩이 있고, 대걸레 사용할 수 있으면 상호작용 E 활성화 
         if (playerInputHandler.GetIsNearObject())
         {
+            // TODO: Water prefab 태그 Water로 변경 시 주석 해제 후 사용
+            //if (playerInputHandler.GetNearObject().CompareTag("Water") && mop.GetUseCount() < 2)
             if (playerInputHandler.GetNearObject().CompareTag("Dust") && mop.GetUseCount() < 2)
             {
                 return InteractUIState.PressE;
@@ -114,16 +137,6 @@ public class PlayerInteract : MonoBehaviour
     // 빈 손일 때 상호작용 체크
     private InteractUIState CheckHandInteract()
     {
-        //Ray ray = new Ray(transform.position + Vector3.up, transform.forward * interactRange);
-        //RaycastHit hit;
-
-        //if (Physics.Raycast(ray, out hit, interactRange, pickupLayerMask))
-        //{
-        //    // 집기 가능한 오브젝트 확인
-        //    if (hit.collider.CompareTag("Can") || hit.collider.CompareTag("Box") || hit.collider.CompareTag("UnfoldedBox"))
-        //        return InteractUIState.PressE; // 상호작용 E 활성화
-        //}
-
         GameObject nearObject = playerInputHandler.GetNearObject();
         if (nearObject != null)
         {
