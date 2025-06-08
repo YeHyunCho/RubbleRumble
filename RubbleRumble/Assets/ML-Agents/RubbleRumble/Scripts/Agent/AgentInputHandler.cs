@@ -6,6 +6,7 @@ using UnityEngine.UIElements;
 
 public class AgentInputHandler : CleanerBase
 {
+    private float addscore = 0f;
     private bool qPressed, ePressed, qHold, eHold;
     public void HandleInput(int key, bool q, bool e, bool qhold, bool ehold)
     {
@@ -24,6 +25,7 @@ public class AgentInputHandler : CleanerBase
             // Debug.Log("in e");
             UseTool();
             TryThrowAway();
+            addscore = 3f;
         }
 
         // 박스를 작업대에 올림
@@ -31,12 +33,14 @@ public class AgentInputHandler : CleanerBase
         {
             // Debug.Log("in q");
             TryPlaceTrashOnTheWorkbench();
+            addscore = 1f;
         }
 
         // 작업대에서 누르면 상자 분리(대걸레 세척 메서드는 Mop.cs에 위치)
         if (qhold)
         {
             TryUnfoldBox();
+            addscore = 5f;
         }
     }
 
@@ -90,4 +94,7 @@ public class AgentInputHandler : CleanerBase
     public bool GetEPressed() { return ePressed; }
     public bool GetQHold() { return qHold; }
     public bool GetEHold() { return eHold; }
+    
+    public float GetAddScore() { return addscore; }
+    public void Clear_Addscore() { addscore = 0f; }
 }

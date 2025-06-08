@@ -5,6 +5,7 @@ using UnityEngine;
 using Unity.MLAgents;
 using Unity.MLAgents.Sensors;
 using Unity.MLAgents.Actuators;
+using UnityEngine.SceneManagement;
 
 public class TestAgent : Agent
 {
@@ -46,10 +47,10 @@ public class TestAgent : Agent
     private bool ehold;
     private float cur;
     private float delta;
-
     private float qHoldTime = 0f;
     private const float Q_HOLD_THRESHOLD = 2f; // 2초
     private GameObject[] walls;
+    private int i = 0;
 
     protected override void Awake()
     {
@@ -77,8 +78,14 @@ public class TestAgent : Agent
         Debug.Log("in OnEpisodeBegin!!!");
         //RetryTestBtn.OnRetryTestButtonCliked();
         transform.position = startPosition;
-        mapManager.ResetEnvironment(); //환경 초기화
-
+        if (i == 0)
+            mapManager.ResetEnvironment(); //환경 초기화
+        else if (i > 0)
+        {
+            Debug.Log(i);
+            RetryTestBtn.OnRetryTestButtonCliked();
+        }
+            
         //속도 초기화
         this.rBody.velocity = Vector3.zero;
         this.rBody.angularVelocity = Vector3.zero;
@@ -90,6 +97,8 @@ public class TestAgent : Agent
         //잔여시간 초기화
         stageManager.TimeReset();
         previousTimeLeft = stageManager.TimeLeft;
+
+        i++;
     }
 
     public override void CollectObservations(VectorSensor sensor) //환경관찰(행동에 필요한 데이터 수집) 벡터형
@@ -145,19 +154,22 @@ public class TestAgent : Agent
         sensor.AddObservation(toolIdx == 2 ? 1f : 0f);
 
         //대걸레 세척 가능 유무
-
+        sensor.AddObservation(agentInputHandler.GetMopUseCount());
 
         //쓰레기 소유
         bool isHoldingTrash = agentInputHandler.GetisHoldingTrash();
         sensor.AddObservation(isHoldingTrash);
+        //쓰레기 종류
         int HoldingTrashName = agentInputHandler.GetHoldingTrashName();
-        bool holds0 = (HoldingTrashName == 0);
-        bool holds1 = (HoldingTrashName == 1);
-        bool holds2 = (HoldingTrashName == 2);
+        bool holds0 = (HoldingTrashName == 0); //can
+        bool holds1 = (HoldingTrashName == 0); //can
+        bool holds2 = (HoldingTrashName == 1); //box
+        bool holds3 = (HoldingTrashName == 2); //unfoldebox
         sensor.AddObservation(holds0 ? 1f : 0f);
         sensor.AddObservation(holds1 ? 1f : 0f);
         sensor.AddObservation(holds2 ? 1f : 0f);
-
+        sensor.AddObservation(holds3 ? 1f : 0f);
+        
         //남은 시간 정규화된 값
         tNorm = StageManager.Instance.TimeLeft / StageManager.Instance.TimeLimit;
         sensor.AddObservation(tNorm);
@@ -189,7 +201,7 @@ public class TestAgent : Agent
             qHoldTime += Time.deltaTime;
             if (qHoldTime >= Q_HOLD_THRESHOLD)
             {
-                // 2초 이상 Q가 눌려졌을 때 실행할 동작
+                // 2초 이상 Q가 눌리면
                 qhold = true;
                 qHoldTime = 0f; // 한 번 실행 후 타이머 초기화
             }
@@ -202,26 +214,45 @@ public class TestAgent : Agent
 
         agentInputHandler.HandleInput(numkey, qPressed, ePressed, qhold, ehold);
 
-        score = stageManager.AIScore;
+        score = stageManager.GetAiSocre();
 
         // 점수 획득 시
         if (old_score < score)
-            AddReward(5f);
+        {
+            int c = score - old_score;
+
+            switch (c)
+            {
+                case 100:
+                    AddReward(3f);
+                    break;
+                case 220:
+                    AddReward(6.5f);
+                    break;
+                case 200:
+                    AddReward(6f);
+                    break;
+                case 150:
+                    AddReward(5f);
+                    break;
+            }
+        }
+
+        AddReward(agentInputHandler.GetAddScore());
 
         //남은 시간 변화량만큼 패널티
-        cur = StageManager.Instance.TimeLeft;
+        cur = stageManager.TimeLeft;
         delta = previousTimeLeft - cur;
         if (delta > 0f)
             AddReward(-0.05f * delta);
         previousTimeLeft = cur;
 
-        Debug.Log($"Current Reward: {GetCumulativeReward()}");
+        agentInputHandler.Clear_Addscore();
 
-        if (cur <= 0f)
+        if (cur <= 0.1f)
         {
             Debug.Log("episode ending");
             EndEpisode(); // 에피소드 종료
-
         }
 
     }

@@ -16,11 +16,11 @@ EditorBuildSettings:
     guid: 4a6a40dccc4cd764b98f34f418c3363e
   - enabled: 0
     path: Assets/ML-Agents/RubbleRumble/Scenes/ShTestScene.unity
-    guid: dcd8118e76a0c894ea380d0dcc40a897
+    guid: d286efae0df902c4bb1ff5aa70afe270
   - enabled: 0
     path: Assets/ML-Agents/RubbleRumble/Scenes/JiyoungTestScene.unity
     guid: eb13a849a8a34440b8b73d31fbdabd27
   - enabled: 1
     path: Assets/ML-Agents/RubbleRumble/Scenes/SwTestScene.unity
-    guid: 45210f29e04d4db428f5407112278be9
+    guid: a9d637ccbb7b94e9a9c469b355db80c3
   m_configObjects: {}
