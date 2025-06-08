@@ -18,7 +18,11 @@ public class StageManager : SingletonBase<StageManager>
     {
         base.Awake();
 
+<<<<<<< HEAD
         TimeReset();
+=======
+        //TimeReset();
+>>>>>>> seunghee
 
         /* TestCode */
         //timeLimit = 10f;

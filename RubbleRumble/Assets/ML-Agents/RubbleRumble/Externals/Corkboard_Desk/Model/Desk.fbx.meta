@@ -1,7 +1,11 @@
 fileFormatVersion: 2
 guid: 6004018dc8fac6845a45708218df655f
 ModelImporter:
+<<<<<<< HEAD
   serializedVersion: 21300
+=======
+  serializedVersion: 22200
+>>>>>>> seunghee
   internalIDToNameTable: []
   externalObjects: {}
   materials:
@@ -32,7 +36,11 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
+<<<<<<< HEAD
     isReadable: 0
+=======
+    isReadable: 1
+>>>>>>> seunghee
   meshes:
     lODScreenPercentages: []
     globalScale: 1
@@ -40,6 +48,10 @@ ModelImporter:
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
+<<<<<<< HEAD
+=======
+    importPhysicalCameras: 1
+>>>>>>> seunghee
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -67,6 +79,10 @@ ModelImporter:
     secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
+<<<<<<< HEAD
+=======
+    strictVertexDataChecks: 0
+>>>>>>> seunghee
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -99,6 +115,10 @@ ModelImporter:
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+<<<<<<< HEAD
+=======
+  importBlendShapeDeformPercent: 0
+>>>>>>> seunghee
   remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
   userData: 

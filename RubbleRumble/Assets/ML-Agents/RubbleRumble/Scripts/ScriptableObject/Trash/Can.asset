@@ -13,6 +13,13 @@ MonoBehaviour:
   m_Name: Can
   m_EditorClassIdentifier: 
   trashName: Can
+<<<<<<< HEAD
   interactTool: 0
   readyToThrowAway: 1
   trashbin: TBcan
+=======
+  readyToThrowAway: 1
+  interactTrashbin: TBcan
+  interactTool: 0
+  toolMaxUsage: 0
+>>>>>>> seunghee

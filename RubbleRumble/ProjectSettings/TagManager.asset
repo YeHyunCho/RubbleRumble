@@ -16,10 +16,15 @@ TagManager:
   - TBpaper
   - TBcan
   - Agent
+<<<<<<< HEAD
   - Wall
   - WorkBench
   - Desk
   - AIMap
+=======
+  - Water
+  - TrashBag
+>>>>>>> seunghee
   layers:
   - Default
   - TransparentFX

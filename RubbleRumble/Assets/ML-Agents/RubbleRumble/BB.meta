@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:RubbleRumble/Assets/ML-Agents/RubbleRumble/BB.meta
 guid: 5e52b638707585f48bb477932231be9c
+========
+guid: 6db288379517043ceaf236a8ea3151bf
+>>>>>>>> seunghee:RubbleRumble/Assets/ML-Agents/RubbleRumble/Externals.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

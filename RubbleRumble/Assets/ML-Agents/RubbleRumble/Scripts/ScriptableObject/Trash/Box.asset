@@ -13,6 +13,13 @@ MonoBehaviour:
   m_Name: Box
   m_EditorClassIdentifier: 
   trashName: Box
+<<<<<<< HEAD
   interactTool: 0
   readyToThrowAway: 0
   trashbin: 
+=======
+  readyToThrowAway: 0
+  interactTrashbin: TBpaper
+  interactTool: 0
+  toolMaxUsage: 0
+>>>>>>> seunghee

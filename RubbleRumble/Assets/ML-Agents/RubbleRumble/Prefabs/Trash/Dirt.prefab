@@ -1,6 +1,14 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD
+<<<<<<<< HEAD:RubbleRumble/Assets/ML-Agents/RubbleRumble/Prefabs/Trash/Dirt.prefab
 --- !u!1 &6306101440815883320
+========
+--- !u!1 &3426642231563738100
+>>>>>>>> seunghee:RubbleRumble/Assets/ML-Agents/RubbleRumble/Prefabs/Trash/Water.prefab
+=======
+--- !u!1 &6306101440815883320
+>>>>>>> seunghee
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,6 +16,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
+<<<<<<<< HEAD:RubbleRumble/Assets/ML-Agents/RubbleRumble/Prefabs/Trash/Dirt.prefab
+=======
+>>>>>>> seunghee
   - component: {fileID: 1990594973945612245}
   - component: {fileID: 4634316404822573857}
   - component: {fileID: 8435270523377017537}
@@ -16,41 +28,106 @@ GameObject:
   - component: {fileID: 1247324277173780595}
   m_Layer: 6
   m_Name: Dirt
+<<<<<<< HEAD
+========
+  - component: {fileID: 708747173201330105}
+  - component: {fileID: 5111838233690926107}
+  - component: {fileID: 1357246790248024791}
+  - component: {fileID: 349795334813455668}
+  - component: {fileID: 8987806732707617772}
+  - component: {fileID: 1655687595809068899}
+  m_Layer: 0
+  m_Name: Water
+>>>>>>>> seunghee:RubbleRumble/Assets/ML-Agents/RubbleRumble/Prefabs/Trash/Water.prefab
+=======
+>>>>>>> seunghee
   m_TagString: Dust
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
+<<<<<<<< HEAD:RubbleRumble/Assets/ML-Agents/RubbleRumble/Prefabs/Trash/Dirt.prefab
 --- !u!4 &1990594973945612245
+========
+--- !u!4 &708747173201330105
+>>>>>>>> seunghee:RubbleRumble/Assets/ML-Agents/RubbleRumble/Prefabs/Trash/Water.prefab
+=======
+--- !u!4 &1990594973945612245
+>>>>>>> seunghee
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+<<<<<<<< HEAD:RubbleRumble/Assets/ML-Agents/RubbleRumble/Prefabs/Trash/Dirt.prefab
   m_GameObject: {fileID: 6306101440815883320}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 13.42, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 0.1, z: 1.5}
+========
+  m_GameObject: {fileID: 3426642231563738100}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.41, y: 0.06, z: -13.52}
+  m_LocalScale: {x: 1.5, y: 1, z: 1.5}
+>>>>>>>> seunghee:RubbleRumble/Assets/ML-Agents/RubbleRumble/Prefabs/Trash/Water.prefab
+=======
+  m_GameObject: {fileID: 6306101440815883320}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.42, y: 1.02, z: 0}
+  m_LocalScale: {x: 1, y: 0.1, z: 1}
+>>>>>>> seunghee
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+<<<<<<<< HEAD:RubbleRumble/Assets/ML-Agents/RubbleRumble/Prefabs/Trash/Dirt.prefab
 --- !u!33 &4634316404822573857
+========
+--- !u!33 &5111838233690926107
+>>>>>>>> seunghee:RubbleRumble/Assets/ML-Agents/RubbleRumble/Prefabs/Trash/Water.prefab
+=======
+--- !u!33 &4634316404822573857
+>>>>>>> seunghee
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+<<<<<<<< HEAD:RubbleRumble/Assets/ML-Agents/RubbleRumble/Prefabs/Trash/Dirt.prefab
   m_GameObject: {fileID: 6306101440815883320}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &8435270523377017537
+========
+  m_GameObject: {fileID: 3426642231563738100}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1357246790248024791
+>>>>>>>> seunghee:RubbleRumble/Assets/ML-Agents/RubbleRumble/Prefabs/Trash/Water.prefab
+=======
+  m_GameObject: {fileID: 6306101440815883320}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &8435270523377017537
+>>>>>>> seunghee
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+<<<<<<<< HEAD:RubbleRumble/Assets/ML-Agents/RubbleRumble/Prefabs/Trash/Dirt.prefab
   m_GameObject: {fileID: 6306101440815883320}
+========
+  m_GameObject: {fileID: 3426642231563738100}
+>>>>>>>> seunghee:RubbleRumble/Assets/ML-Agents/RubbleRumble/Prefabs/Trash/Water.prefab
+=======
+  m_GameObject: {fileID: 6306101440815883320}
+>>>>>>> seunghee
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -64,7 +141,15 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
+<<<<<<< HEAD
+<<<<<<<< HEAD:RubbleRumble/Assets/ML-Agents/RubbleRumble/Prefabs/Trash/Dirt.prefab
   - {fileID: 2100000, guid: 983bda21c7fa0d04ab9372e3ee9bdd4a, type: 2}
+========
+  - {fileID: 2100000, guid: 66301e3c0ad7681408e87181cd044189, type: 2}
+>>>>>>>> seunghee:RubbleRumble/Assets/ML-Agents/RubbleRumble/Prefabs/Trash/Water.prefab
+=======
+  - {fileID: 2100000, guid: 983bda21c7fa0d04ab9372e3ee9bdd4a, type: 2}
+>>>>>>> seunghee
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -86,13 +171,31 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+<<<<<<< HEAD
+<<<<<<<< HEAD:RubbleRumble/Assets/ML-Agents/RubbleRumble/Prefabs/Trash/Dirt.prefab
 --- !u!136 &1844037604210598006
 CapsuleCollider:
+========
+--- !u!135 &349795334813455668
+SphereCollider:
+>>>>>>>> seunghee:RubbleRumble/Assets/ML-Agents/RubbleRumble/Prefabs/Trash/Water.prefab
+=======
+--- !u!136 &1844037604210598006
+CapsuleCollider:
+>>>>>>> seunghee
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+<<<<<<<< HEAD:RubbleRumble/Assets/ML-Agents/RubbleRumble/Prefabs/Trash/Dirt.prefab
   m_GameObject: {fileID: 6306101440815883320}
+========
+  m_GameObject: {fileID: 3426642231563738100}
+>>>>>>>> seunghee:RubbleRumble/Assets/ML-Agents/RubbleRumble/Prefabs/Trash/Water.prefab
+=======
+  m_GameObject: {fileID: 6306101440815883320}
+>>>>>>> seunghee
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -104,18 +207,39 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
+<<<<<<< HEAD
+<<<<<<<< HEAD:RubbleRumble/Assets/ML-Agents/RubbleRumble/Prefabs/Trash/Dirt.prefab
+=======
+>>>>>>> seunghee
   serializedVersion: 2
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!114 &1084064972787565109
+<<<<<<< HEAD
+========
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8987806732707617772
+>>>>>>>> seunghee:RubbleRumble/Assets/ML-Agents/RubbleRumble/Prefabs/Trash/Water.prefab
+=======
+>>>>>>> seunghee
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+<<<<<<<< HEAD:RubbleRumble/Assets/ML-Agents/RubbleRumble/Prefabs/Trash/Dirt.prefab
   m_GameObject: {fileID: 6306101440815883320}
+========
+  m_GameObject: {fileID: 3426642231563738100}
+>>>>>>>> seunghee:RubbleRumble/Assets/ML-Agents/RubbleRumble/Prefabs/Trash/Water.prefab
+=======
+  m_GameObject: {fileID: 6306101440815883320}
+>>>>>>> seunghee
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5148f8e8dfcc95149919db006b63abb1, type: 3}
@@ -124,13 +248,29 @@ MonoBehaviour:
   Score: 150
   IsPlayer: 0
   ParentPool: {fileID: 0}
+<<<<<<< HEAD
+<<<<<<<< HEAD:RubbleRumble/Assets/ML-Agents/RubbleRumble/Prefabs/Trash/Dirt.prefab
 --- !u!114 &1247324277173780595
+========
+--- !u!114 &1655687595809068899
+>>>>>>>> seunghee:RubbleRumble/Assets/ML-Agents/RubbleRumble/Prefabs/Trash/Water.prefab
+=======
+--- !u!114 &1247324277173780595
+>>>>>>> seunghee
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+<<<<<<<< HEAD:RubbleRumble/Assets/ML-Agents/RubbleRumble/Prefabs/Trash/Dirt.prefab
   m_GameObject: {fileID: 6306101440815883320}
+========
+  m_GameObject: {fileID: 3426642231563738100}
+>>>>>>>> seunghee:RubbleRumble/Assets/ML-Agents/RubbleRumble/Prefabs/Trash/Water.prefab
+=======
+  m_GameObject: {fileID: 6306101440815883320}
+>>>>>>> seunghee
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 899fec0f224046949adc3d89aa190a2d, type: 3}

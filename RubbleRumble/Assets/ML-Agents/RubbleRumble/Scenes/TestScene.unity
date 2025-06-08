@@ -38,7 +38,11 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+<<<<<<< HEAD
   m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+=======
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641263, b: 0.57481724, a: 1}
+>>>>>>> seunghee
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -229,7 +233,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c12ba975e322a34bb2d5544794cacc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   playerInputHandler: {fileID: 55420674}
+=======
+  interactRange: 2
+  pickupLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  playerInputHandler: {fileID: 55420674}
+  mop: {fileID: 0}
+>>>>>>> seunghee
 --- !u!114 &55420674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,12 +325,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 58685301}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!224 &75562180 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1888528494546595295, guid: 20c2126fbcac3f84eb924efd8876b78a,
     type: 3}
   m_PrefabInstance: {fileID: 564513166}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> seunghee
 --- !u!1 &193146190
 GameObject:
   m_ObjectHideFlags: 0
@@ -1141,6 +1157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 --- !u!1001 &564513166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1269,6 +1286,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20c2126fbcac3f84eb924efd8876b78a, type: 3}
+=======
+>>>>>>> seunghee
 --- !u!1001 &571040849
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5184,6 +5203,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 45.97, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1001 &1793311295
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5650,6 +5670,8 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1993898917}
   m_SourcePrefab: {fileID: 100100000, guid: 662b64018d8fb804b83ade0500639ff9, type: 3}
+=======
+>>>>>>> seunghee
 --- !u!1 &1882523853
 GameObject:
   m_ObjectHideFlags: 0
@@ -6056,6 +6078,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1989738513}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1 &1993898916 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 564008150529913243, guid: 662b64018d8fb804b83ade0500639ff9,
@@ -6291,6 +6314,8 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1793311295}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> seunghee
 --- !u!1001 &2036797461
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6792,4 +6817,7 @@ SceneRoots:
   - {fileID: 386541382}
   - {fileID: 773106191}
   - {fileID: 7357892603715885248}
+<<<<<<< HEAD
   - {fileID: 1793311295}
+=======
+>>>>>>> seunghee

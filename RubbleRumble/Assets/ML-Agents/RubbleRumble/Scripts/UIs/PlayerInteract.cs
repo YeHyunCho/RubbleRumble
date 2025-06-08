@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+using UnityEditor.EditorTools;
+>>>>>>> seunghee
 using UnityEngine;
 
 // 상호작용 UI 상태를 열거형으로 정의
@@ -11,8 +15,11 @@ public enum InteractUIState
 
 public class PlayerInteract : MonoBehaviour
 {
+<<<<<<< HEAD
     //[SerializeField] private float interactRange;       // 상호작용 탐지 범위
     //[SerializeField] private LayerMask pickupLayerMask; // 상호작용 가능한 레이어 마스크(pickable로 설정)
+=======
+>>>>>>> seunghee
 
     [SerializeField] private PlayerInputHandler playerInputHandler;
     public Mop mop { get; private set; }
@@ -40,6 +47,17 @@ public class PlayerInteract : MonoBehaviour
         // 기본 상태: 비활성화
         InteractUIState newState = InteractUIState.None;
 
+<<<<<<< HEAD
+=======
+        // 빗자루 사용 관련 상태 체크
+        if (playerInputHandler.GetCurrentTool() == 1) // 도구 인덱스 1이 빗자루인 경우
+        {
+            newState = CheckBroomInteract();
+            CurrentUIState = newState;
+            return;
+        }
+
+>>>>>>> seunghee
         // 대걸레 사용 관련 상태 체크
         if (playerInputHandler.GetCurrentTool() == 2) // 도구 인덱스 2가 대걸레인 경우
         {
@@ -75,6 +93,24 @@ public class PlayerInteract : MonoBehaviour
         CurrentUIState = newState;
     }
 
+<<<<<<< HEAD
+=======
+
+    // 빗자루 관련 상호작용 체크
+    private InteractUIState CheckBroomInteract()
+    {
+        // 플레이어 근처에 먼지가 있고, 빗자루 사용할 수 있으면 상호작용 E 활성화 
+        if (playerInputHandler.GetIsNearObject())
+        {
+            if (playerInputHandler.GetNearObject().CompareTag("Dust"))
+            {
+                return InteractUIState.PressE;
+            }
+        }
+
+        return InteractUIState.None;
+    }
+>>>>>>> seunghee
     // 대걸레 관련 상호작용 체크
     private InteractUIState CheckMopInteract()
     {
@@ -98,9 +134,17 @@ public class PlayerInteract : MonoBehaviour
             return InteractUIState.PressQ; // 상호작용 Q 활성화 (세척)
         }
 
+<<<<<<< HEAD
         // 플레이어 근처에 먼지가 있고, 대걸레 사용할 수 있으면 상호작용 E 활성화 
         if (playerInputHandler.GetIsNearObject())
         {
+=======
+        // 플레이어 근처에 물얼룩이 있고, 대걸레 사용할 수 있으면 상호작용 E 활성화 
+        if (playerInputHandler.GetIsNearObject())
+        {
+            // TODO: Water prefab 태그 Water로 변경 시 주석 해제 후 사용
+            //if (playerInputHandler.GetNearObject().CompareTag("Water") && mop.GetUseCount() < 2)
+>>>>>>> seunghee
             if (playerInputHandler.GetNearObject().CompareTag("Dust") && mop.GetUseCount() < 2)
             {
                 return InteractUIState.PressE;
@@ -113,6 +157,7 @@ public class PlayerInteract : MonoBehaviour
     // 빈 손일 때 상호작용 체크
     private InteractUIState CheckHandInteract()
     {
+<<<<<<< HEAD
         //Ray ray = new Ray(transform.position + Vector3.up, transform.forward * interactRange);
         //RaycastHit hit;
 
@@ -123,6 +168,8 @@ public class PlayerInteract : MonoBehaviour
         //        return InteractUIState.PressE; // 상호작용 E 활성화
         //}
 
+=======
+>>>>>>> seunghee
         GameObject nearObject = playerInputHandler.GetNearObject();
         if (nearObject != null)
         {
@@ -145,7 +192,11 @@ public class PlayerInteract : MonoBehaviour
         if (playerInputHandler.GetIsNearRecyclingBin())
         {
             // 들고 있는 쓰레기를 버릴 수 있고 버릴 수 있는 쓰레기통이 근처에 있으면
+<<<<<<< HEAD
             if (heldTrash.trashData.readyToThrowAway && playerInputHandler.GetCurRecycleBin().CompareTag(heldTrash.trashData.trashbin))
+=======
+            if (heldTrash.trashData.readyToThrowAway && playerInputHandler.GetCurRecycleBin().CompareTag(heldTrash.trashData.interactTrashbin))
+>>>>>>> seunghee
             {
                 return InteractUIState.PressE; // 상호작용 E 활성화 (버리기)
             }

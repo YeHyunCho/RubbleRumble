@@ -85,14 +85,49 @@ public class TrashInteractionManager : MonoBehaviour
         }
     }
 
+<<<<<<< HEAD
     public void CleanDirt(Mop mop, GameObject nearObject)
     {
         Obstacle dirt = nearObject.GetComponent<Obstacle>();
         dirt.CleanObstacle();
+=======
+    public void CleanWaterSpot(Mop mop, GameObject nearObject)
+    {
+        Obstacle WaterSpot = nearObject.GetComponent<Obstacle>();
+        WaterSpot.CleanObstacle();
+>>>>>>> seunghee
         mop.IncrementUseCount(); // useCount 증가
         mop.UpdateMaterial(); // 재질 업데이트
     }
 
+<<<<<<< HEAD
+=======
+    public bool ThrowDustInTrashBag(GameObject trash, GameObject trashBag, int broomUsage)
+    {
+        bool readyToThrowTrashBag = false;
+
+        Vector3 trashBagScale = trashBag.transform.localScale;
+        trashBag.transform.localScale = new Vector3(trashBagScale.x, trashBagScale.y + 1, trashBagScale.z);
+
+        Obstacle obstacle = trash.GetComponent<Obstacle>();
+        if (obstacle != null)
+        {
+            if (broomUsage < 3)
+            {
+                obstacle.RemoveObstacle();
+                readyToThrowTrashBag = false;
+            }
+            else
+            {
+                obstacle.CleanObstacle();
+                readyToThrowTrashBag = true;
+            }
+        }
+
+        return readyToThrowTrashBag;
+    }
+
+>>>>>>> seunghee
     public GameObject UnfoldBox(GameObject trashOnWorkbench)
     {
         //GameObject oldBox = trashOnWorkbench;

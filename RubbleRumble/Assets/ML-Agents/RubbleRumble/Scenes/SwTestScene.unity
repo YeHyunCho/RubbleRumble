@@ -229,12 +229,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c12ba975e322a34bb2d5544794cacc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   interactRange: 2
   pickupLayerMask:
     serializedVersion: 2
     m_Bits: 64
   playerInputHandler: {fileID: 55420674}
   mop: {fileID: 0}
+=======
+  playerInputHandler: {fileID: 55420674}
+>>>>>>> seunghee
 --- !u!114 &55420674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5629,12 +5633,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1d207fe087364f63bea7a7df96178d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   interactRange: 2
   pickupLayerMask:
     serializedVersion: 2
     m_Bits: 64
   agentInputHandler: {fileID: 0}
   mop: {fileID: 0}
+=======
+  agentInputHandler: {fileID: 0}
+>>>>>>> seunghee
 --- !u!114 &1829129521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5686,7 +5694,11 @@ MonoBehaviour:
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 2
+<<<<<<< HEAD
       BranchSizes: 02000000020000000200000002000000
+=======
+      BranchSizes: 02000000020000000200000004000000
+>>>>>>> seunghee
     VectorActionSize: 
     VectorActionDescriptions: []
     VectorActionSpaceType: 0

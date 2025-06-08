@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:RubbleRumble/Assets/ML-Agents/RubbleRumble/Externals/Dumpster_Garbage/Meshes/bottle_2.fbx.meta
 guid: a73488fc210faa34ab0f555658ca4841
+========
+guid: 1ab62b936f8e5864380fc1520c451dcd
+>>>>>>>> seunghee:RubbleRumble/Assets/ML-Agents/RubbleRumble/Externals/Dumpster_Garbage/Meshes/bottle_2_broken.fbx.meta
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []

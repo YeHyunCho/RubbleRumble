@@ -10,12 +10,21 @@ using UnityEditor;
 #endif
 
 public class TitleUIHandler : MonoBehaviour
+<<<<<<< HEAD
 {
     public void ClickStartButton()
     {
         SceneManager.LoadScene(1);
     }
 
+=======
+{
+    public void ClickStartButton()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+>>>>>>> seunghee
     public void ClickExitButton()
     {
 #if UNITY_EDITOR
