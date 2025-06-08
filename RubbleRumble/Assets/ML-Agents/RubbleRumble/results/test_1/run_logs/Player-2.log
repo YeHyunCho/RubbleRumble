@@ -1,0 +1,2933 @@
+Mono path[0] = 'C:/RubbleRumble/test/UnityEnvironment_Data/Managed'
+Mono config path = 'C:/RubbleRumble/test/MonoBleedingEdge/etc'
+[Physics::Module] Initialized MultithreadedJobDispatcher with 11 workers.
+Initialize engine version: 2022.3.17f1 (4fc78088f837)
+[Subsystems] Discovering subsystems at path C:/RubbleRumble/test/UnityEnvironment_Data/UnitySubsystems
+GfxDevice: creating device client; threaded=1; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 4070 Ti SUPER (ID=0x2689)
+    Vendor:   NVIDIA
+    VRAM:     16063 MB
+    Driver:   32.0.15.6636
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  1.959 seconds
+- Finished resetting the current domain, in  0.001 seconds
+<RI> Initializing input.
+New input system (experimental) initialized
+Using Windows.Gaming.Input
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 0.664100 ms
+Registered Communicator in Agent.
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Game data loaded.
+C:/Users/kang/AppData/LocalLow/Unity Technologies/UnityEnvironment\PlayData.json
+Game data saved
+Level 2 cleared status updated.
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 11.019000 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 2934.
+Total: 2.415600 ms (FindLiveObjects: 0.170000 ms CreateObjectMapping: 0.045700 ms MarkObjects: 2.159200 ms  DeleteObjects: 0.040600 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.406900 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3260.
+Total: 1.552600 ms (FindLiveObjects: 0.113000 ms CreateObjectMapping: 0.051200 ms MarkObjects: 1.364600 ms  DeleteObjects: 0.023700 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.119600 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3260.
+Total: 2.040000 ms (FindLiveObjects: 0.115900 ms CreateObjectMapping: 0.045800 ms MarkObjects: 1.847800 ms  DeleteObjects: 0.030300 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.125700 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3260.
+Total: 2.076700 ms (FindLiveObjects: 0.179700 ms CreateObjectMapping: 0.084100 ms MarkObjects: 1.790300 ms  DeleteObjects: 0.022600 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.799900 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3260.
+Total: 1.399100 ms (FindLiveObjects: 0.106300 ms CreateObjectMapping: 0.043700 ms MarkObjects: 1.227300 ms  DeleteObjects: 0.021500 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 2.660400 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3260.
+Total: 1.542500 ms (FindLiveObjects: 0.110500 ms CreateObjectMapping: 0.046900 ms MarkObjects: 1.363900 ms  DeleteObjects: 0.021000 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.123700 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3260.
+Total: 2.016200 ms (FindLiveObjects: 0.118800 ms CreateObjectMapping: 0.060500 ms MarkObjects: 1.805000 ms  DeleteObjects: 0.031800 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.546400 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3260.
+Total: 1.854200 ms (FindLiveObjects: 0.170100 ms CreateObjectMapping: 0.051400 ms MarkObjects: 1.607700 ms  DeleteObjects: 0.024900 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.426400 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0008a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3232.
+Total: 1.738900 ms (FindLiveObjects: 0.196000 ms CreateObjectMapping: 0.085600 ms MarkObjects: 1.434600 ms  DeleteObjects: 0.022700 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.297500 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3232.
+Total: 2.050300 ms (FindLiveObjects: 0.162900 ms CreateObjectMapping: 0.071200 ms MarkObjects: 1.793800 ms  DeleteObjects: 0.022400 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.381100 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0005a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3391.
+Total: 1.512600 ms (FindLiveObjects: 0.117500 ms CreateObjectMapping: 0.044300 ms MarkObjects: 1.331200 ms  DeleteObjects: 0.019500 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.997900 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3391.
+Total: 2.456900 ms (FindLiveObjects: 0.154300 ms CreateObjectMapping: 0.108100 ms MarkObjects: 2.162500 ms  DeleteObjects: 0.031900 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.661000 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0008a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3381.
+Total: 1.925500 ms (FindLiveObjects: 0.138700 ms CreateObjectMapping: 0.053100 ms MarkObjects: 1.710400 ms  DeleteObjects: 0.023000 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.997400 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3381.
+Total: 1.582600 ms (FindLiveObjects: 0.164000 ms CreateObjectMapping: 0.051200 ms MarkObjects: 1.344600 ms  DeleteObjects: 0.022700 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.158200 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3381.
+Total: 1.789400 ms (FindLiveObjects: 0.206600 ms CreateObjectMapping: 0.074400 ms MarkObjects: 1.485900 ms  DeleteObjects: 0.022400 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.919200 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3381.
+Total: 2.118400 ms (FindLiveObjects: 0.156400 ms CreateObjectMapping: 0.050300 ms MarkObjects: 1.885400 ms  DeleteObjects: 0.026200 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.065500 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3381.
+Total: 1.967800 ms (FindLiveObjects: 0.180400 ms CreateObjectMapping: 0.078000 ms MarkObjects: 1.688800 ms  DeleteObjects: 0.020400 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.975900 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0008a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3353.
+Total: 2.181200 ms (FindLiveObjects: 0.221300 ms CreateObjectMapping: 0.124000 ms MarkObjects: 1.813200 ms  DeleteObjects: 0.022600 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.621900 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3353.
+Total: 1.802400 ms (FindLiveObjects: 0.164100 ms CreateObjectMapping: 0.057000 ms MarkObjects: 1.554500 ms  DeleteObjects: 0.026500 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.643900 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3353.
+Total: 1.538000 ms (FindLiveObjects: 0.111800 ms CreateObjectMapping: 0.050800 ms MarkObjects: 1.354900 ms  DeleteObjects: 0.020300 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.007200 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3353.
+Total: 1.886600 ms (FindLiveObjects: 0.112000 ms CreateObjectMapping: 0.059900 ms MarkObjects: 1.690700 ms  DeleteObjects: 0.023900 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.105400 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0005a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3325.
+Total: 2.006900 ms (FindLiveObjects: 0.166100 ms CreateObjectMapping: 0.084900 ms MarkObjects: 1.718500 ms  DeleteObjects: 0.037200 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.028300 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3325.
+Total: 1.936200 ms (FindLiveObjects: 0.111500 ms CreateObjectMapping: 0.049100 ms MarkObjects: 1.755500 ms  DeleteObjects: 0.020100 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.137700 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0005a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3297.
+Total: 1.676900 ms (FindLiveObjects: 0.115000 ms CreateObjectMapping: 0.060100 ms MarkObjects: 1.480700 ms  DeleteObjects: 0.020900 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 2.030400 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3297.
+Total: 1.910000 ms (FindLiveObjects: 0.114000 ms CreateObjectMapping: 0.053500 ms MarkObjects: 1.709800 ms  DeleteObjects: 0.032600 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.000400 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3297.
+Total: 1.498300 ms (FindLiveObjects: 0.121300 ms CreateObjectMapping: 0.049000 ms MarkObjects: 1.308500 ms  DeleteObjects: 0.019400 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.941300 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3297.
+Total: 2.063300 ms (FindLiveObjects: 0.192100 ms CreateObjectMapping: 0.075900 ms MarkObjects: 1.769900 ms  DeleteObjects: 0.025200 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.953600 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3297.
+Total: 1.997900 ms (FindLiveObjects: 0.126200 ms CreateObjectMapping: 0.048400 ms MarkObjects: 1.799200 ms  DeleteObjects: 0.024000 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Game data saved
+Level 2 cleared status updated.
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.155500 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3297.
+Total: 2.350900 ms (FindLiveObjects: 0.174000 ms CreateObjectMapping: 0.069800 ms MarkObjects: 2.083700 ms  DeleteObjects: 0.023200 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.985300 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3297.
+Total: 1.730400 ms (FindLiveObjects: 0.185900 ms CreateObjectMapping: 0.078800 ms MarkObjects: 1.445600 ms  DeleteObjects: 0.019900 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.944600 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0008a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3269.
+Total: 1.624400 ms (FindLiveObjects: 0.119200 ms CreateObjectMapping: 0.057000 ms MarkObjects: 1.427900 ms  DeleteObjects: 0.020300 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.957000 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3269.
+Total: 1.816100 ms (FindLiveObjects: 0.174700 ms CreateObjectMapping: 0.066700 ms MarkObjects: 1.554200 ms  DeleteObjects: 0.020400 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.325100 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3269.
+Total: 1.955200 ms (FindLiveObjects: 0.190500 ms CreateObjectMapping: 0.084400 ms MarkObjects: 1.655200 ms  DeleteObjects: 0.024900 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.125800 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0005a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3241.
+Total: 2.628500 ms (FindLiveObjects: 0.176000 ms CreateObjectMapping: 0.078700 ms MarkObjects: 2.339400 ms  DeleteObjects: 0.033900 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.954900 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3241.
+Total: 1.891400 ms (FindLiveObjects: 0.205600 ms CreateObjectMapping: 0.075400 ms MarkObjects: 1.582600 ms  DeleteObjects: 0.027600 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.878600 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3241.
+Total: 1.574000 ms (FindLiveObjects: 0.107400 ms CreateObjectMapping: 0.046600 ms MarkObjects: 1.392600 ms  DeleteObjects: 0.027400 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.062000 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0005a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3381.
+Total: 1.536300 ms (FindLiveObjects: 0.114300 ms CreateObjectMapping: 0.046600 ms MarkObjects: 1.357100 ms  DeleteObjects: 0.018300 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 2.020600 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3381.
+Total: 1.807900 ms (FindLiveObjects: 0.174500 ms CreateObjectMapping: 0.070000 ms MarkObjects: 1.521300 ms  DeleteObjects: 0.041900 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.338000 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3381.
+Total: 2.591100 ms (FindLiveObjects: 0.253700 ms CreateObjectMapping: 0.119100 ms MarkObjects: 2.134300 ms  DeleteObjects: 0.083800 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.165200 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0005a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3372.
+Total: 1.688800 ms (FindLiveObjects: 0.162000 ms CreateObjectMapping: 0.048900 ms MarkObjects: 1.453900 ms  DeleteObjects: 0.023800 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.977900 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3372.
+Total: 1.898200 ms (FindLiveObjects: 0.183800 ms CreateObjectMapping: 0.074100 ms MarkObjects: 1.615700 ms  DeleteObjects: 0.024400 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.329500 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3372.
+Total: 1.976800 ms (FindLiveObjects: 0.117500 ms CreateObjectMapping: 0.047500 ms MarkObjects: 1.783300 ms  DeleteObjects: 0.028400 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.909200 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0008a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3344.
+Total: 2.200400 ms (FindLiveObjects: 0.137500 ms CreateObjectMapping: 0.049100 ms MarkObjects: 1.987400 ms  DeleteObjects: 0.026400 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.962200 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3344.
+Total: 1.775100 ms (FindLiveObjects: 0.165400 ms CreateObjectMapping: 0.058900 ms MarkObjects: 1.528900 ms  DeleteObjects: 0.021800 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.001200 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3344.
+Total: 1.867900 ms (FindLiveObjects: 0.197500 ms CreateObjectMapping: 0.101800 ms MarkObjects: 1.546500 ms  DeleteObjects: 0.022100 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.073700 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3344.
+Total: 1.626200 ms (FindLiveObjects: 0.148200 ms CreateObjectMapping: 0.043000 ms MarkObjects: 1.414100 ms  DeleteObjects: 0.020700 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.132600 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3344.
+Total: 1.873200 ms (FindLiveObjects: 0.190300 ms CreateObjectMapping: 0.080000 ms MarkObjects: 1.572800 ms  DeleteObjects: 0.030000 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.983800 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3344.
+Total: 1.852000 ms (FindLiveObjects: 0.194700 ms CreateObjectMapping: 0.072500 ms MarkObjects: 1.562800 ms  DeleteObjects: 0.021800 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.003500 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0005a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3335.
+Total: 1.864000 ms (FindLiveObjects: 0.255300 ms CreateObjectMapping: 0.074500 ms MarkObjects: 1.512300 ms  DeleteObjects: 0.021800 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.371200 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3335.
+Total: 2.358000 ms (FindLiveObjects: 0.130100 ms CreateObjectMapping: 0.066100 ms MarkObjects: 2.125300 ms  DeleteObjects: 0.036500 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.087000 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3353.
+Total: 1.638700 ms (FindLiveObjects: 0.117600 ms CreateObjectMapping: 0.047900 ms MarkObjects: 1.425500 ms  DeleteObjects: 0.047600 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.943600 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3353.
+Total: 2.318300 ms (FindLiveObjects: 0.161700 ms CreateObjectMapping: 0.085200 ms MarkObjects: 2.043800 ms  DeleteObjects: 0.027500 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.459800 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0005a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3344.
+Total: 1.812200 ms (FindLiveObjects: 0.204000 ms CreateObjectMapping: 0.085500 ms MarkObjects: 1.499500 ms  DeleteObjects: 0.023000 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Game data saved
+Level 2 cleared status updated.
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.929400 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3344.
+Total: 1.918800 ms (FindLiveObjects: 0.144000 ms CreateObjectMapping: 0.149500 ms MarkObjects: 1.604700 ms  DeleteObjects: 0.020400 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.233500 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3344.
+Total: 1.878000 ms (FindLiveObjects: 0.151600 ms CreateObjectMapping: 0.058900 ms MarkObjects: 1.644800 ms  DeleteObjects: 0.022500 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.908500 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3344.
+Total: 2.139600 ms (FindLiveObjects: 0.120400 ms CreateObjectMapping: 0.053200 ms MarkObjects: 1.940100 ms  DeleteObjects: 0.025900 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.993400 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0005a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3335.
+Total: 1.997100 ms (FindLiveObjects: 0.132300 ms CreateObjectMapping: 0.075500 ms MarkObjects: 1.765300 ms  DeleteObjects: 0.024000 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.154600 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0005a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3307.
+Total: 1.676300 ms (FindLiveObjects: 0.191700 ms CreateObjectMapping: 0.059800 ms MarkObjects: 1.403200 ms  DeleteObjects: 0.021500 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.954200 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3307.
+Total: 1.873700 ms (FindLiveObjects: 0.191700 ms CreateObjectMapping: 0.069900 ms MarkObjects: 1.590500 ms  DeleteObjects: 0.021400 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.990800 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3325.
+Total: 2.011400 ms (FindLiveObjects: 0.122400 ms CreateObjectMapping: 0.072700 ms MarkObjects: 1.790200 ms  DeleteObjects: 0.025900 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.074000 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3325.
+Total: 1.934900 ms (FindLiveObjects: 0.142600 ms CreateObjectMapping: 0.096200 ms MarkObjects: 1.670400 ms  DeleteObjects: 0.025500 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.947500 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0008a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3297.
+Total: 1.667500 ms (FindLiveObjects: 0.151900 ms CreateObjectMapping: 0.062300 ms MarkObjects: 1.432500 ms  DeleteObjects: 0.020700 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.156600 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3297.
+Total: 1.925800 ms (FindLiveObjects: 0.183600 ms CreateObjectMapping: 0.085500 ms MarkObjects: 1.635600 ms  DeleteObjects: 0.020800 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.999100 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3297.
+Total: 1.846500 ms (FindLiveObjects: 0.179600 ms CreateObjectMapping: 0.073500 ms MarkObjects: 1.571800 ms  DeleteObjects: 0.021200 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.999800 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3297.
+Total: 1.627800 ms (FindLiveObjects: 0.121900 ms CreateObjectMapping: 0.045900 ms MarkObjects: 1.437900 ms  DeleteObjects: 0.022000 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.962000 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0005a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3288.
+Total: 2.160600 ms (FindLiveObjects: 0.146800 ms CreateObjectMapping: 0.047800 ms MarkObjects: 1.943100 ms  DeleteObjects: 0.022700 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.927700 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3288.
+Total: 1.775600 ms (FindLiveObjects: 0.179600 ms CreateObjectMapping: 0.071900 ms MarkObjects: 1.503000 ms  DeleteObjects: 0.020900 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.479100 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3288.
+Total: 1.917400 ms (FindLiveObjects: 0.114800 ms CreateObjectMapping: 0.055400 ms MarkObjects: 1.715600 ms  DeleteObjects: 0.031500 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.938800 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3288.
+Total: 1.798200 ms (FindLiveObjects: 0.168500 ms CreateObjectMapping: 0.064000 ms MarkObjects: 1.540400 ms  DeleteObjects: 0.025200 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.908400 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3288.
+Total: 1.499400 ms (FindLiveObjects: 0.113100 ms CreateObjectMapping: 0.047000 ms MarkObjects: 1.317700 ms  DeleteObjects: 0.021500 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.329700 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3288.
+Total: 2.224500 ms (FindLiveObjects: 0.237300 ms CreateObjectMapping: 0.058200 ms MarkObjects: 1.904200 ms  DeleteObjects: 0.024600 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.947700 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3288.
+Total: 1.515800 ms (FindLiveObjects: 0.112200 ms CreateObjectMapping: 0.041400 ms MarkObjects: 1.340400 ms  DeleteObjects: 0.021600 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.076300 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0008a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3260.
+Total: 1.843500 ms (FindLiveObjects: 0.183900 ms CreateObjectMapping: 0.071200 ms MarkObjects: 1.563300 ms  DeleteObjects: 0.025000 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.363500 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3260.
+Total: 2.138900 ms (FindLiveObjects: 0.228800 ms CreateObjectMapping: 0.088000 ms MarkObjects: 1.792200 ms  DeleteObjects: 0.029700 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.932000 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3260.
+Total: 1.948300 ms (FindLiveObjects: 0.127000 ms CreateObjectMapping: 0.045200 ms MarkObjects: 1.752600 ms  DeleteObjects: 0.023300 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Game data saved
+Level 2 cleared status updated.
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.274000 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0005a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3232.
+Total: 1.957600 ms (FindLiveObjects: 0.121900 ms CreateObjectMapping: 0.061400 ms MarkObjects: 1.752200 ms  DeleteObjects: 0.021900 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.380900 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3232.
+Total: 1.794300 ms (FindLiveObjects: 0.162900 ms CreateObjectMapping: 0.062700 ms MarkObjects: 1.546000 ms  DeleteObjects: 0.022600 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.492400 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3400.
+Total: 1.945100 ms (FindLiveObjects: 0.154600 ms CreateObjectMapping: 0.052600 ms MarkObjects: 1.714000 ms  DeleteObjects: 0.023900 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.249600 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0005a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3372.
+Total: 2.447100 ms (FindLiveObjects: 0.142300 ms CreateObjectMapping: 0.050100 ms MarkObjects: 2.230500 ms  DeleteObjects: 0.024200 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.100700 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3372.
+Total: 1.659800 ms (FindLiveObjects: 0.114700 ms CreateObjectMapping: 0.042600 ms MarkObjects: 1.461700 ms  DeleteObjects: 0.040600 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.077300 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3372.
+Total: 2.245500 ms (FindLiveObjects: 0.155600 ms CreateObjectMapping: 0.098500 ms MarkObjects: 1.965000 ms  DeleteObjects: 0.026200 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.071100 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0005a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3363.
+Total: 2.643600 ms (FindLiveObjects: 0.193100 ms CreateObjectMapping: 0.100600 ms MarkObjects: 2.318100 ms  DeleteObjects: 0.031600 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.968900 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3363.
+Total: 1.836400 ms (FindLiveObjects: 0.146900 ms CreateObjectMapping: 0.083000 ms MarkObjects: 1.579500 ms  DeleteObjects: 0.026700 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.302900 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0008a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3353.
+Total: 1.959200 ms (FindLiveObjects: 0.163300 ms CreateObjectMapping: 0.068700 ms MarkObjects: 1.700700 ms  DeleteObjects: 0.026300 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.161800 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3353.
+Total: 1.823900 ms (FindLiveObjects: 0.147100 ms CreateObjectMapping: 0.061300 ms MarkObjects: 1.591500 ms  DeleteObjects: 0.023800 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.724800 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3353.
+Total: 1.589800 ms (FindLiveObjects: 0.129300 ms CreateObjectMapping: 0.059400 ms MarkObjects: 1.376300 ms  DeleteObjects: 0.024700 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 2.159000 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0005a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3344.
+Total: 1.817900 ms (FindLiveObjects: 0.138600 ms CreateObjectMapping: 0.052500 ms MarkObjects: 1.604100 ms  DeleteObjects: 0.022600 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.167700 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0005a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3316.
+Total: 2.016000 ms (FindLiveObjects: 0.273600 ms CreateObjectMapping: 0.059100 ms MarkObjects: 1.659900 ms  DeleteObjects: 0.023400 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.998800 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3316.
+Total: 1.703200 ms (FindLiveObjects: 0.201300 ms CreateObjectMapping: 0.058000 ms MarkObjects: 1.412100 ms  DeleteObjects: 0.031800 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.022000 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3316.
+Total: 1.729500 ms (FindLiveObjects: 0.146500 ms CreateObjectMapping: 0.072300 ms MarkObjects: 1.487800 ms  DeleteObjects: 0.022800 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.978300 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3316.
+Total: 1.725600 ms (FindLiveObjects: 0.151700 ms CreateObjectMapping: 0.054500 ms MarkObjects: 1.496400 ms  DeleteObjects: 0.022800 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.359900 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3316.
+Total: 2.252400 ms (FindLiveObjects: 0.121200 ms CreateObjectMapping: 0.069400 ms MarkObjects: 2.036300 ms  DeleteObjects: 0.025300 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.003700 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3316.
+Total: 2.209100 ms (FindLiveObjects: 0.220700 ms CreateObjectMapping: 0.077600 ms MarkObjects: 1.884100 ms  DeleteObjects: 0.026500 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.187700 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3316.
+Total: 1.889800 ms (FindLiveObjects: 0.126500 ms CreateObjectMapping: 0.051600 ms MarkObjects: 1.682600 ms  DeleteObjects: 0.028700 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.171000 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0005a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3307.
+Total: 2.144700 ms (FindLiveObjects: 0.124800 ms CreateObjectMapping: 0.052100 ms MarkObjects: 1.932300 ms  DeleteObjects: 0.035300 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.146000 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3307.
+Total: 1.835100 ms (FindLiveObjects: 0.130300 ms CreateObjectMapping: 0.070400 ms MarkObjects: 1.610000 ms  DeleteObjects: 0.024400 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.178000 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3325.
+Total: 1.710300 ms (FindLiveObjects: 0.211800 ms CreateObjectMapping: 0.054000 ms MarkObjects: 1.421700 ms  DeleteObjects: 0.022800 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.324400 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3325.
+Total: 2.182000 ms (FindLiveObjects: 0.191300 ms CreateObjectMapping: 0.088700 ms MarkObjects: 1.872400 ms  DeleteObjects: 0.029300 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.932400 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0005a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3316.
+Total: 1.993700 ms (FindLiveObjects: 0.195000 ms CreateObjectMapping: 0.083600 ms MarkObjects: 1.686900 ms  DeleteObjects: 0.028200 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.995800 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3316.
+Total: 1.829500 ms (FindLiveObjects: 0.159100 ms CreateObjectMapping: 0.103900 ms MarkObjects: 1.540600 ms  DeleteObjects: 0.025700 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.411800 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3316.
+Total: 1.846300 ms (FindLiveObjects: 0.154100 ms CreateObjectMapping: 0.110400 ms MarkObjects: 1.557100 ms  DeleteObjects: 0.024600 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.749000 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0005a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3307.
+Total: 2.548400 ms (FindLiveObjects: 0.240900 ms CreateObjectMapping: 0.102900 ms MarkObjects: 2.167400 ms  DeleteObjects: 0.037000 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.261900 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3307.
+Total: 1.759600 ms (FindLiveObjects: 0.145700 ms CreateObjectMapping: 0.092300 ms MarkObjects: 1.498400 ms  DeleteObjects: 0.022900 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.604600 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0005a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3297.
+Total: 2.170100 ms (FindLiveObjects: 0.222900 ms CreateObjectMapping: 0.152000 ms MarkObjects: 1.762200 ms  DeleteObjects: 0.032900 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.347400 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0005a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3269.
+Total: 2.478800 ms (FindLiveObjects: 0.330700 ms CreateObjectMapping: 0.109400 ms MarkObjects: 2.008600 ms  DeleteObjects: 0.029900 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.174400 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3269.
+Total: 2.017500 ms (FindLiveObjects: 0.181900 ms CreateObjectMapping: 0.068600 ms MarkObjects: 1.740300 ms  DeleteObjects: 0.026500 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.348200 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3269.
+Total: 1.964200 ms (FindLiveObjects: 0.206500 ms CreateObjectMapping: 0.089800 ms MarkObjects: 1.642500 ms  DeleteObjects: 0.025100 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.075100 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3269.
+Total: 1.777800 ms (FindLiveObjects: 0.168600 ms CreateObjectMapping: 0.066500 ms MarkObjects: 1.516200 ms  DeleteObjects: 0.026500 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.440800 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0008a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3241.
+Total: 1.925100 ms (FindLiveObjects: 0.320000 ms CreateObjectMapping: 0.108800 ms MarkObjects: 1.466400 ms  DeleteObjects: 0.029800 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.536800 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3241.
+Total: 2.484900 ms (FindLiveObjects: 0.252700 ms CreateObjectMapping: 0.121400 ms MarkObjects: 2.082900 ms  DeleteObjects: 0.027800 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.967400 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3409.
+Total: 1.956600 ms (FindLiveObjects: 0.163500 ms CreateObjectMapping: 0.069400 ms MarkObjects: 1.700700 ms  DeleteObjects: 0.022900 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.481600 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3409.
+Total: 2.088900 ms (FindLiveObjects: 0.143600 ms CreateObjectMapping: 0.055100 ms MarkObjects: 1.858400 ms  DeleteObjects: 0.031700 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.195600 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3409.
+Total: 2.345000 ms (FindLiveObjects: 0.271600 ms CreateObjectMapping: 0.096100 ms MarkObjects: 1.950200 ms  DeleteObjects: 0.027000 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.303000 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3409.
+Total: 2.219300 ms (FindLiveObjects: 0.184900 ms CreateObjectMapping: 0.047300 ms MarkObjects: 1.954300 ms  DeleteObjects: 0.032600 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.827400 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3409.
+Total: 1.516100 ms (FindLiveObjects: 0.161100 ms CreateObjectMapping: 0.044300 ms MarkObjects: 1.292500 ms  DeleteObjects: 0.018100 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.866900 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3409.
+Total: 1.828100 ms (FindLiveObjects: 0.192300 ms CreateObjectMapping: 0.074200 ms MarkObjects: 1.538600 ms  DeleteObjects: 0.022900 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.422600 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0005a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3381.
+Total: 1.898000 ms (FindLiveObjects: 0.208500 ms CreateObjectMapping: 0.075600 ms MarkObjects: 1.577200 ms  DeleteObjects: 0.036500 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Game data saved
+Level 2 cleared status updated.
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.263400 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3381.
+Total: 1.812700 ms (FindLiveObjects: 0.138800 ms CreateObjectMapping: 0.068400 ms MarkObjects: 1.579300 ms  DeleteObjects: 0.026000 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.239900 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3381.
+Total: 2.140300 ms (FindLiveObjects: 0.229400 ms CreateObjectMapping: 0.092300 ms MarkObjects: 1.781900 ms  DeleteObjects: 0.036600 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.193300 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3381.
+Total: 1.753400 ms (FindLiveObjects: 0.157200 ms CreateObjectMapping: 0.054000 ms MarkObjects: 1.519100 ms  DeleteObjects: 0.022900 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.246400 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0005a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3353.
+Total: 1.921500 ms (FindLiveObjects: 0.156200 ms CreateObjectMapping: 0.078800 ms MarkObjects: 1.654700 ms  DeleteObjects: 0.031700 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.980000 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3353.
+Total: 1.924900 ms (FindLiveObjects: 0.136700 ms CreateObjectMapping: 0.064100 ms MarkObjects: 1.700700 ms  DeleteObjects: 0.023300 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.300400 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3353.
+Total: 2.329200 ms (FindLiveObjects: 0.226600 ms CreateObjectMapping: 0.113300 ms MarkObjects: 1.963700 ms  DeleteObjects: 0.025600 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.490900 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0005a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3325.
+Total: 2.357200 ms (FindLiveObjects: 0.205900 ms CreateObjectMapping: 0.071300 ms MarkObjects: 2.054300 ms  DeleteObjects: 0.025600 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.317800 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3325.
+Total: 2.482700 ms (FindLiveObjects: 0.225100 ms CreateObjectMapping: 0.205700 ms MarkObjects: 2.028800 ms  DeleteObjects: 0.023100 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.152400 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3325.
+Total: 1.746600 ms (FindLiveObjects: 0.123400 ms CreateObjectMapping: 0.054800 ms MarkObjects: 1.539500 ms  DeleteObjects: 0.028700 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.382800 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3325.
+Total: 1.758200 ms (FindLiveObjects: 0.125000 ms CreateObjectMapping: 0.056300 ms MarkObjects: 1.553500 ms  DeleteObjects: 0.023300 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.519600 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3325.
+Total: 2.730100 ms (FindLiveObjects: 0.275700 ms CreateObjectMapping: 0.115900 ms MarkObjects: 2.313000 ms  DeleteObjects: 0.025400 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.339700 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3325.
+Total: 2.066700 ms (FindLiveObjects: 0.158000 ms CreateObjectMapping: 0.099600 ms MarkObjects: 1.783000 ms  DeleteObjects: 0.026000 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.203100 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0008a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3297.
+Total: 2.115900 ms (FindLiveObjects: 0.139200 ms CreateObjectMapping: 0.056800 ms MarkObjects: 1.897000 ms  DeleteObjects: 0.022700 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.406300 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3297.
+Total: 2.137600 ms (FindLiveObjects: 0.122500 ms CreateObjectMapping: 0.066700 ms MarkObjects: 1.921900 ms  DeleteObjects: 0.026500 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.331700 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3297.
+Total: 1.613000 ms (FindLiveObjects: 0.114700 ms CreateObjectMapping: 0.048300 ms MarkObjects: 1.427100 ms  DeleteObjects: 0.022800 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.145000 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3297.
+Total: 1.873900 ms (FindLiveObjects: 0.162500 ms CreateObjectMapping: 0.071300 ms MarkObjects: 1.608800 ms  DeleteObjects: 0.031000 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.037700 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0005a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3269.
+Total: 2.057700 ms (FindLiveObjects: 0.213400 ms CreateObjectMapping: 0.113600 ms MarkObjects: 1.705400 ms  DeleteObjects: 0.025000 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.132900 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0005a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3241.
+Total: 1.974500 ms (FindLiveObjects: 0.160200 ms CreateObjectMapping: 0.055400 ms MarkObjects: 1.733700 ms  DeleteObjects: 0.025000 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.938500 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3241.
+Total: 1.705400 ms (FindLiveObjects: 0.127200 ms CreateObjectMapping: 0.066800 ms MarkObjects: 1.487500 ms  DeleteObjects: 0.023900 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.263000 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3409.
+Total: 2.000100 ms (FindLiveObjects: 0.190000 ms CreateObjectMapping: 0.106500 ms MarkObjects: 1.681800 ms  DeleteObjects: 0.021700 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.111400 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0005a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3381.
+Total: 2.014500 ms (FindLiveObjects: 0.195400 ms CreateObjectMapping: 0.085500 ms MarkObjects: 1.710800 ms  DeleteObjects: 0.022600 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.763000 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3381.
+Total: 1.805000 ms (FindLiveObjects: 0.116300 ms CreateObjectMapping: 0.051800 ms MarkObjects: 1.607100 ms  DeleteObjects: 0.029700 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.182700 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3381.
+Total: 2.089700 ms (FindLiveObjects: 0.230300 ms CreateObjectMapping: 0.134000 ms MarkObjects: 1.701500 ms  DeleteObjects: 0.023700 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.179000 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3381.
+Total: 1.666500 ms (FindLiveObjects: 0.135300 ms CreateObjectMapping: 0.058400 ms MarkObjects: 1.448800 ms  DeleteObjects: 0.023900 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.087600 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3381.
+Total: 1.712000 ms (FindLiveObjects: 0.118200 ms CreateObjectMapping: 0.045500 ms MarkObjects: 1.517800 ms  DeleteObjects: 0.030400 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.700100 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0005a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3353.
+Total: 1.643900 ms (FindLiveObjects: 0.119000 ms CreateObjectMapping: 0.046200 ms MarkObjects: 1.455100 ms  DeleteObjects: 0.023500 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.611400 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3353.
+Total: 2.151600 ms (FindLiveObjects: 0.142600 ms CreateObjectMapping: 0.056400 ms MarkObjects: 1.920000 ms  DeleteObjects: 0.032400 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.789300 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0005a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3325.
+Total: 2.121500 ms (FindLiveObjects: 0.184600 ms CreateObjectMapping: 0.067400 ms MarkObjects: 1.842300 ms  DeleteObjects: 0.026900 ms)
+
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.251600 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3325.
+Total: 1.947000 ms (FindLiveObjects: 0.182700 ms CreateObjectMapping: 0.084100 ms MarkObjects: 1.658200 ms  DeleteObjects: 0.022000 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.426300 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3325.
+Total: 2.159000 ms (FindLiveObjects: 0.146900 ms CreateObjectMapping: 0.064300 ms MarkObjects: 1.921200 ms  DeleteObjects: 0.026400 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 0.975400 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3325.
+Total: 1.818100 ms (FindLiveObjects: 0.118200 ms CreateObjectMapping: 0.048700 ms MarkObjects: 1.622000 ms  DeleteObjects: 0.029000 ms)
+
+Setting linear velocity of a kinematic body is not supported.
+Setting angular velocity of a kinematic body is not supported.
+Game data saved
+Level 2 cleared status updated.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Fewer observations (0) made than vector observation size (10). The observations will be padded.
+UnloadTime: 1.494700 ms
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+  at PoolManager+<>c__4`1[T].<CreatePool>b__4_1 (T obj) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00068] in <ab14d35a27c043688812ae199c64b5aa>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag) [0x000f8] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at PoolManager.SpawnFromPool[T] (System.String tag, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) [0x00000] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SpawnObstacle (UnityEngine.Transform playerMap, UnityEngine.Transform aiMap, System.String name, System.Int32 count) [0x0005a] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.SettingMap () [0x00036] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at MapManager.ResetEnvironment () [0x00031] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at AITrashCleaner.OnEpisodeBegin () [0x0005e] in <2d654d0692ac4023a99b78735a95efb3>:0 
+  at Unity.MLAgents.Agent.LazyInitialize () [0x00177] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+  at Unity.MLAgents.Agent.OnEnable () [0x00000] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.MLAgents.Areas.TrainingAreaReplicator.Awake () [0x00006] in <3463c34d079a47b98a2730ba620e0f6c>:0 
+
+아이템 부착을 위해 RightHandProp 뼈를 사용합니다.
+AgentMotor: 먼지 효과(Dust Effect)가 설정되지 않았습니다.
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3316.
+Total: 2.677200 ms (FindLiveObjects: 0.366500 ms CreateObjectMapping: 0.117800 ms MarkObjects: 2.163500 ms  DeleteObjects: 0.029300 ms)
+
+Unable to save timers to file C:/RubbleRumble/test/UnityEnvironment_Data\ML-Agents\Timers\DwTestScene 2_timers.json
+Setting up 6 worker threads for Enlighten.
+Memory Statistics:
+[ALLOC_TEMP_TLS] TLS Allocator
+  StackAllocators : 
+    [ALLOC_TEMP_MAIN]
+      Peak usage frame count: [4.0 KB-8.0 KB]: 30639 frames, [16.0 KB-32.0 KB]: 148 frames, [256.0 KB-0.5 MB]: 149 frames, [2.0 MB-4.0 MB]: 1 frames
+      Initial Block Size 4.0 MB
+      Current Block Size 4.0 MB
+      Peak Allocated Bytes 2.1 MB
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.worker 4]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Loading.PreloadManager]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 153.1 KB
+      Overflow Count 600
+    [ALLOC_TEMP_Background Job.worker 3]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.worker 11]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.worker 7]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.worker 6]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.worker 12]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.worker 2]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.worker 9]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.worker 0]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 6.4 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.worker 4]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 6.4 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.worker 5]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 6.4 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.worker 8]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.worker 10]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.worker 1]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_EnlightenWorker] x 6
+      Initial Block Size 64.0 KB
+      Current Block Size 64.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.worker 1]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 6.4 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.worker 3]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 6.4 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.worker 5]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.worker 13]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_UnityGfxDeviceWorker]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 15.6 KB
+      Overflow Count 0
+    [ALLOC_TEMP_AssetGarbageCollectorHelper] x 11
+      Initial Block Size 64.0 KB
+      Current Block Size 64.0 KB
+      Peak Allocated Bytes 138 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.worker 15]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.worker 2]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 6.4 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.worker 10]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 6.4 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.worker 7]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 6.4 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.worker 9]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 6.4 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.worker 0]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.worker 6]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 6.4 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.worker 8]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 6.4 KB
+      Overflow Count 0
+    [ALLOC_TEMP_HIDInput]
+      Initial Block Size 64.0 KB
+      Current Block Size 64.0 KB
+      Peak Allocated Bytes 10.8 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.worker 14]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Loading.AsyncRead]
+      Initial Block Size 64.0 KB
+      Current Block Size 64.0 KB
+      Peak Allocated Bytes 222 B
+      Overflow Count 0
+    [ALLOC_TEMP_BatchDeleteObjects]
+      Initial Block Size 64.0 KB
+      Current Block Size 64.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+[ALLOC_DEFAULT] Dual Thread Allocator
+  Peak main deferred allocation count 183
+    [ALLOC_BUCKET]
+      Large Block size 4.0 MB
+      Used Block count 1
+      Peak Allocated bytes 1.7 MB
+    [ALLOC_DEFAULT_MAIN]
+      Peak usage frame count: [16.0 MB-32.0 MB]: 30937 frames
+      Requested Block Size 16.0 MB
+      Peak Block count 2
+      Peak Allocated memory 24.1 MB
+      Peak Large allocation bytes 8.0 MB
+    [ALLOC_DEFAULT_THREAD]
+      Peak usage frame count: [16.0 MB-32.0 MB]: 30937 frames
+      Requested Block Size 16.0 MB
+      Peak Block count 1
+      Peak Allocated memory 26.9 MB
+      Peak Large allocation bytes 21.3 MB
+[ALLOC_TEMP_JOB_1_FRAME]
+  Initial Block Size 2.0 MB
+  Used Block Count 0
+  Overflow Count (too large) 0
+  Overflow Count (full) 0
+[ALLOC_TEMP_JOB_2_FRAMES]
+  Initial Block Size 2.0 MB
+  Used Block Count 0
+  Overflow Count (too large) 0
+  Overflow Count (full) 0
+[ALLOC_TEMP_JOB_4_FRAMES (JobTemp)]
+  Initial Block Size 2.0 MB
+  Used Block Count 1
+  Overflow Count (too large) 0
+  Overflow Count (full) 0
+[ALLOC_TEMP_JOB_ASYNC (Background)]
+  Initial Block Size 1.0 MB
+  Used Block Count 1
+  Overflow Count (too large) 0
+  Overflow Count (full) 0
+[ALLOC_GFX] Dual Thread Allocator
+  Peak main deferred allocation count 2
+    [ALLOC_BUCKET]
+      Large Block size 4.0 MB
+      Used Block count 1
+      Peak Allocated bytes 1.7 MB
+    [ALLOC_GFX_MAIN]
+      Peak usage frame count: [2.0 MB-4.0 MB]: 30783 frames, [4.0 MB-8.0 MB]: 154 frames
+      Requested Block Size 16.0 MB
+      Peak Block count 1
+      Peak Allocated memory 4.9 MB
+      Peak Large allocation bytes 0 B
+    [ALLOC_GFX_THREAD]
+      Peak usage frame count: [1.0 MB-2.0 MB]: 30644 frames, [2.0 MB-4.0 MB]: 293 frames
+      Requested Block Size 16.0 MB
+      Peak Block count 1
+      Peak Allocated memory 3.9 MB
+      Peak Large allocation bytes 0 B
+[ALLOC_CACHEOBJECTS] Dual Thread Allocator
+  Peak main deferred allocation count 73
+    [ALLOC_BUCKET]
+      Large Block size 4.0 MB
+      Used Block count 1
+      Peak Allocated bytes 1.7 MB
+    [ALLOC_CACHEOBJECTS_MAIN]
+      Peak usage frame count: [1.0 MB-2.0 MB]: 30937 frames
+      Requested Block Size 4.0 MB
+      Peak Block count 1
+      Peak Allocated memory 1.8 MB
+      Peak Large allocation bytes 0 B
+    [ALLOC_CACHEOBJECTS_THREAD]
+      Peak usage frame count: [2.0 MB-4.0 MB]: 30639 frames, [4.0 MB-8.0 MB]: 298 frames
+      Requested Block Size 4.0 MB
+      Peak Block count 2
+      Peak Allocated memory 7.0 MB
+      Peak Large allocation bytes 0 B
+[ALLOC_TYPETREE] Dual Thread Allocator
+  Peak main deferred allocation count 0
+    [ALLOC_BUCKET]
+      Large Block size 4.0 MB
+      Used Block count 1
+      Peak Allocated bytes 1.7 MB
+    [ALLOC_TYPETREE_MAIN]
+      Peak usage frame count: [8.0 KB-16.0 KB]: 30937 frames
+      Requested Block Size 2.0 MB
+      Peak Block count 1
+      Peak Allocated memory 9.2 KB
+      Peak Large allocation bytes 0 B
+    [ALLOC_TYPETREE_THREAD]
+      Peak usage frame count: [8.0 KB-16.0 KB]: 30937 frames
+      Requested Block Size 2.0 MB
+      Peak Block count 1
+      Peak Allocated memory 8.7 KB
+      Peak Large allocation bytes 0 B

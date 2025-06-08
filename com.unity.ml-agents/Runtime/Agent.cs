@@ -235,7 +235,7 @@ namespace Unity.MLAgents
         ///
         /// Consider limiting the number of steps in an episode to avoid wasting time during
         /// training. If you set the max step value to a reasonable estimate of the time it should
-        /// take to complete a task, then agents that havenâ€™t succeeded in that time frame will
+        /// take to complete a task, then agents that haven??™t succeeded in that time frame will
         /// reset and start a new training episode rather than continue to fail.
         /// </remarks>
         /// <example>
@@ -936,7 +936,7 @@ namespace Unity.MLAgents
         /// algorithms. (Attach a [Demonstration Recorder] component to the agent's [GameObject] to
         /// record the demonstration session to a file.)
         ///
-        /// Even when you donâ€™t plan to use heuristic decisions for an agent or imitation learning,
+        /// Even when you don??™t plan to use heuristic decisions for an agent or imitation learning,
         /// implementing a simple heuristic function can aid in debugging agent actions and interactions
         /// with its environment.
         ///
