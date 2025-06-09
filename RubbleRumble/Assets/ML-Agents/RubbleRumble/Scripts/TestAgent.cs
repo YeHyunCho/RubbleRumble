@@ -171,7 +171,8 @@ public class TestAgent : Agent
         sensor.AddObservation(holds3 ? 1f : 0f);
         
         //남은 시간 정규화된 값
-        tNorm = StageManager.Instance.TimeLeft / StageManager.Instance.TimeLimit;
+        float tl = StageManager.Instance.TimeLimit;
+        tNorm = (tl > 0f) ? StageManager.Instance.TimeLeft / tl : 0f;
         sensor.AddObservation(tNorm);
     }
 

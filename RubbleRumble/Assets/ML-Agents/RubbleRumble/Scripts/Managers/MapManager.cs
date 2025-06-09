@@ -45,25 +45,34 @@ public class MapManager : SingletonBase<MapManager>
         //ResetEnvironment();
     }
     //장성우 추가
-    public void ResetEnvironment() //학습 시 에피소드 종료마다 환경 초기화 필요.
+    public void ResetEnvironment() // 학습 시 에피소드 종료마다 환경 초기화 필요.
     {
-        //PoolManager.Instance.DeleteAllPools(); // 이전 오브젝트 초기화
+        // 1. 풀과 풀?오브젝트 완전히 제거
+        PoolManager.Instance.DeleteAllPools();
 
+        // 2. 필요한 풀 재등록
         PoolManager.Instance.AddPools<Obstacle>(_poolConfigs);
         LevelInfo = LevelManager.Instance.GetLevelInfo();
         spawnTime = new List<float>(LevelInfo.spawnCooldowns);
         SettingMap();
         curTime = 0;
+        StageManager.Instance.TimeReset();
     }
-        public void ResetEnvironment2() //학습 시 에피소드 종료마다 환경 초기화 필요.
+    public void ResetEnvironment2() // 학습 시 에피소드 종료마다 환경 초기화 필요.
     {
-        ReturnAllObstacles(); // 이전 오브젝트 초기화
+        // 1. 풀과 풀?오브젝트 완전히 제거
+        PoolManager.Instance.DeleteAllPools();
 
+        // 2. 환경에 남은 오브젝트를 모두 반환(안전 차원)
+        ReturnAllObstacles();
+
+        // 3. 필요한 풀 재등록
         PoolManager.Instance.AddPools<Obstacle>(_poolConfigs);
         LevelInfo = LevelManager.Instance.GetLevelInfo();
         spawnTime = new List<float>(LevelInfo.spawnCooldowns);
         SettingMap();
         curTime = 0;
+        StageManager.Instance.TimeReset();
     }
 
 
