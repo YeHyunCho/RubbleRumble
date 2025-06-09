@@ -1,0 +1,386 @@
+Mono path[0] = '/Users/seongwoo/Documents/GitHub/RubbleRumble/RubbleRumble/Test_Run_Build/UnityEnvironment.app/Contents/Resources/Data/Managed'
+Mono config path = '/Users/seongwoo/Documents/GitHub/RubbleRumble/RubbleRumble/Test_Run_Build/UnityEnvironment.app/Contents/MonoBleedingEdge/etc'
+[Physics::Module] Initialized MultithreadedJobDispatcher with 9 workers.
+New input system (experimental) initialized
+Initialize engine version: 2022.3.17f1 (4fc78088f837)
+[Subsystems] Discovering subsystems at path /Users/seongwoo/Documents/GitHub/RubbleRumble/RubbleRumble/Test_Run_Build/UnityEnvironment.app/Contents/Resources/Data/UnitySubsystems
+GfxDevice: creating device client; threaded=1; jobified=0
+ preferred device: Apple M4 (high power)
+Metal devices available: 1
+0: Apple M4 (high power)
+Using device Apple M4 (high power)
+Initializing Metal device caps: Apple M4
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.061 seconds
+- Finished resetting the current domain, in  0.001 seconds
+UnloadTime: 0.493083 ms
+Metal RecreateSurface[0x103d39a00]: surface size 146x80
+Metal RecreateSurface[0x103d39a00]: surface size 146x106
+Metal RecreateSurface[0x103d39a00]: surface size 146x132
+Metal RecreateSurface[0x103d39a00]: surface size 146x158
+Metal RecreateSurface[0x103d39a00]: surface size 148x190
+Metal RecreateSurface[0x103d39a00]: surface size 164x214
+Metal RecreateSurface[0x103d39a00]: surface size 182x238
+Metal RecreateSurface[0x103d39a00]: surface size 196x256
+Metal RecreateSurface[0x103d39a00]: surface size 216x280
+Metal RecreateSurface[0x103d39a00]: surface size 240x304
+Metal RecreateSurface[0x103d39a00]: surface size 256x322
+Metal RecreateSurface[0x103d39a00]: surface size 276x338
+Metal RecreateSurface[0x103d39a00]: surface size 326x378
+Metal RecreateSurface[0x103d39a00]: surface size 386x420
+Metal RecreateSurface[0x103d39a00]: surface size 412x436
+Metal RecreateSurface[0x103d39a00]: surface size 438x452
+Metal RecreateSurface[0x103d39a00]: surface size 470x470
+Metal RecreateSurface[0x103d39a00]: surface size 498x488
+Metal RecreateSurface[0x103d39a00]: surface size 530x506
+Metal RecreateSurface[0x103d39a00]: surface size 590x538
+Metal RecreateSurface[0x103d39a00]: surface size 620x552
+Metal RecreateSurface[0x103d39a00]: surface size 648x566
+Metal RecreateSurface[0x103d39a00]: surface size 678x578
+Metal RecreateSurface[0x103d39a00]: surface size 728x600
+Metal RecreateSurface[0x103d39a00]: surface size 740x606
+Metal RecreateSurface[0x103d39a00]: surface size 762x616
+Metal RecreateSurface[0x103d39a00]: surface size 784x624
+Metal RecreateSurface[0x103d39a00]: surface size 806x634
+Metal RecreateSurface[0x103d39a00]: surface size 814x638
+Metal RecreateSurface[0x103d39a00]: surface size 834x646
+Metal RecreateSurface[0x103d39a00]: surface size 852x654
+Metal RecreateSurface[0x103d39a00]: surface size 860x656
+Metal RecreateSurface[0x103d39a00]: surface size 876x664
+Metal RecreateSurface[0x103d39a00]: surface size 894x672
+Metal RecreateSurface[0x103d39a00]: surface size 922x688
+Metal RecreateSurface[0x103d39a00]: surface size 940x698
+Metal RecreateSurface[0x103d39a00]: surface size 958x710
+Metal RecreateSurface[0x103d39a00]: surface size 980x722
+Metal RecreateSurface[0x103d39a00]: surface size 1000x736
+Metal RecreateSurface[0x103d39a00]: surface size 1020x746
+Metal RecreateSurface[0x103d39a00]: surface size 1034x754
+Metal RecreateSurface[0x103d39a00]: surface size 1054x762
+Metal RecreateSurface[0x103d39a00]: surface size 1066x768
+Metal RecreateSurface[0x103d39a00]: surface size 1074x772
+Metal RecreateSurface[0x103d39a00]: surface size 1082x778
+Metal RecreateSurface[0x103d39a00]: surface size 1090x780
+Metal RecreateSurface[0x103d39a00]: surface size 1096x786
+Metal RecreateSurface[0x103d39a00]: surface size 1104x792
+Metal RecreateSurface[0x103d39a00]: surface size 1104x794
+Metal RecreateSurface[0x103d39a00]: surface size 1112x800
+Metal RecreateSurface[0x103d39a00]: surface size 1120x806
+Metal RecreateSurface[0x103d39a00]: surface size 1128x814
+Metal RecreateSurface[0x103d39a00]: surface size 1138x820
+Metal RecreateSurface[0x103d39a00]: surface size 1140x824
+Metal RecreateSurface[0x103d39a00]: surface size 1148x832
+Metal RecreateSurface[0x103d39a00]: surface size 1156x840
+Metal RecreateSurface[0x103d39a00]: surface size 1166x850
+Metal RecreateSurface[0x103d39a00]: surface size 1172x858
+Metal RecreateSurface[0x103d39a00]: surface size 1174x860
+Metal RecreateSurface[0x103d39a00]: surface size 1180x870
+Metal RecreateSurface[0x103d39a00]: surface size 1184x874
+Metal RecreateSurface[0x103d39a00]: surface size 1190x882
+Metal RecreateSurface[0x103d39a00]: surface size 1192x884
+Metal RecreateSurface[0x103d39a00]: surface size 1198x896
+Metal RecreateSurface[0x103d39a00]: surface size 1202x900
+Metal RecreateSurface[0x103d39a00]: surface size 1210x912
+Metal RecreateSurface[0x103d39a00]: surface size 1214x916
+Metal RecreateSurface[0x103d39a00]: surface size 1230x936
+Metal RecreateSurface[0x103d39a00]: surface size 1234x942
+Metal RecreateSurface[0x103d39a00]: surface size 1250x960
+Metal RecreateSurface[0x103d39a00]: surface size 1256x968
+Metal RecreateSurface[0x103d39a00]: surface size 1272x986
+Metal RecreateSurface[0x103d39a00]: surface size 1278x996
+Metal RecreateSurface[0x103d39a00]: surface size 1286x1004
+Metal RecreateSurface[0x103d39a00]: surface size 1308x1028
+Metal RecreateSurface[0x103d39a00]: surface size 1318x1040
+Metal RecreateSurface[0x103d39a00]: surface size 1338x1064
+Metal RecreateSurface[0x103d39a00]: surface size 1346x1074
+Metal RecreateSurface[0x103d39a00]: surface size 1356x1084
+Metal RecreateSurface[0x103d39a00]: surface size 1374x1106
+Metal RecreateSurface[0x103d39a00]: surface size 1394x1130
+Metal RecreateSurface[0x103d39a00]: surface size 1400x1136
+Metal RecreateSurface[0x103d39a00]: surface size 1402x1140
+Metal RecreateSurface[0x103d39a00]: surface size 1406x1144
+Metal RecreateSurface[0x103d39a00]: surface size 1408x1146
+Metal RecreateSurface[0x103d39a00]: surface size 1410x1148
+Metal RecreateSurface[0x103d39a00]: surface size 1412x1152
+Metal RecreateSurface[0x103d39a00]: surface size 1414x1154
+Metal RecreateSurface[0x103d39a00]: surface size 1416x1158
+Metal RecreateSurface[0x103d39a00]: surface size 1422x1166
+Metal RecreateSurface[0x103d39a00]: surface size 1422x1168
+Metal RecreateSurface[0x103d39a00]: surface size 1424x1168
+Metal RecreateSurface[0x103d39a00]: surface size 1424x1170
+Metal RecreateSurface[0x103d39a00]: surface size 1426x1170
+Metal RecreateSurface[0x103d39a00]: surface size 1428x1172
+Metal RecreateSurface[0x103d39a00]: surface size 1430x1174
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.220666 ms
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1663.
+Total: 1.003958 ms (FindLiveObjects: 0.075917 ms CreateObjectMapping: 0.027250 ms MarkObjects: 0.811250 ms  DeleteObjects: 0.089458 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.508584 ms
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 1462.
+Total: 1.131000 ms (FindLiveObjects: 0.157666 ms CreateObjectMapping: 0.027875 ms MarkObjects: 0.842500 ms  DeleteObjects: 0.102875 ms)
+
+Thread 0x16f447000 may have been prematurely finalized
+Setting up 5 worker threads for Enlighten.
+Thread 0x16e0d7000 may have been prematurely finalized
+Memory Statistics:
+[ALLOC_TEMP_TLS] TLS Allocator
+  StackAllocators : 
+    [ALLOC_TEMP_MAIN]
+      Peak usage frame count: [0-1.0 KB]: 2723 frames, [128.0 KB-256.0 KB]: 2 frames, [2.0 MB-4.0 MB]: 1 frames
+      Initial Block Size 4.0 MB
+      Current Block Size 4.0 MB
+      Peak Allocated Bytes 2.1 MB
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.worker 4]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Loading.PreloadManager]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 21.8 KB
+      Overflow Count 12
+    [ALLOC_TEMP_Background Job.worker 3]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.worker 11]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.worker 7]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.worker 6]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.worker 12]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.worker 2]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.worker 9]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.worker 0]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.worker 4]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 28.9 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.worker 5]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 28.9 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.worker 8]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.worker 10]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.worker 1]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_EnlightenWorker] x 5
+      Initial Block Size 64.0 KB
+      Current Block Size 64.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.worker 1]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 28.9 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.worker 3]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 28.9 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.worker 5]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.worker 13]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_UnityGfxDeviceWorker]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 448 B
+      Overflow Count 1
+    [ALLOC_TEMP_AssetGarbageCollectorHelper] x 9
+      Initial Block Size 64.0 KB
+      Current Block Size 64.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.worker 15]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.worker 2]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 28.9 KB
+      Overflow Count 0
+    [ALLOC_TEMP_OSX HID Input]
+      Initial Block Size 64.0 KB
+      Current Block Size 64.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.worker 7]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 28.9 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.worker 0]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.worker 6]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 28.9 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.worker 8]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.worker 14]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Loading.AsyncRead]
+      Initial Block Size 64.0 KB
+      Current Block Size 64.0 KB
+      Peak Allocated Bytes 150 B
+      Overflow Count 0
+    [ALLOC_TEMP_BatchDeleteObjects]
+      Initial Block Size 64.0 KB
+      Current Block Size 64.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+[ALLOC_DEFAULT] Dual Thread Allocator
+  Peak main deferred allocation count 38
+    [ALLOC_BUCKET]
+      Large Block size 4.0 MB
+      Used Block count 1
+      Peak Allocated bytes 1.4 MB
+    [ALLOC_DEFAULT_MAIN]
+      Peak usage frame count: [16.0 MB-32.0 MB]: 2726 frames
+      Requested Block Size 16.0 MB
+      Peak Block count 1
+      Peak Allocated memory 22.6 MB
+      Peak Large allocation bytes 8.0 MB
+    [ALLOC_DEFAULT_THREAD]
+      Peak usage frame count: [16.0 MB-32.0 MB]: 2726 frames
+      Requested Block Size 16.0 MB
+      Peak Block count 1
+      Peak Allocated memory 17.9 MB
+      Peak Large allocation bytes 16.0 MB
+[ALLOC_TEMP_JOB_1_FRAME]
+  Initial Block Size 2.0 MB
+  Used Block Count 0
+  Overflow Count (too large) 0
+  Overflow Count (full) 0
+[ALLOC_TEMP_JOB_2_FRAMES]
+  Initial Block Size 2.0 MB
+  Used Block Count 0
+  Overflow Count (too large) 0
+  Overflow Count (full) 0
+[ALLOC_TEMP_JOB_4_FRAMES (JobTemp)]
+  Initial Block Size 2.0 MB
+  Used Block Count 1
+  Overflow Count (too large) 0
+  Overflow Count (full) 0
+[ALLOC_TEMP_JOB_ASYNC (Background)]
+  Initial Block Size 1.0 MB
+  Used Block Count 1
+  Overflow Count (too large) 0
+  Overflow Count (full) 0
+[ALLOC_GFX] Dual Thread Allocator
+  Peak main deferred allocation count 2
+    [ALLOC_BUCKET]
+      Large Block size 4.0 MB
+      Used Block count 1
+      Peak Allocated bytes 1.4 MB
+    [ALLOC_GFX_MAIN]
+      Peak usage frame count: [64.0 KB-128.0 KB]: 2078 frames, [128.0 KB-256.0 KB]: 1 frames, [0.5 MB-1.0 MB]: 646 frames, [1.0 MB-2.0 MB]: 1 frames
+      Requested Block Size 16.0 MB
+      Peak Block count 1
+      Peak Allocated memory 1.0 MB
+      Peak Large allocation bytes 0 B
+    [ALLOC_GFX_THREAD]
+      Peak usage frame count: [1.0 KB-2.0 KB]: 1938 frames, [2.0 KB-4.0 KB]: 666 frames, [4.0 KB-8.0 KB]: 118 frames, [8.0 KB-16.0 KB]: 4 frames
+      Requested Block Size 16.0 MB
+      Peak Block count 1
+      Peak Allocated memory 8.1 KB
+      Peak Large allocation bytes 0 B
+[ALLOC_CACHEOBJECTS] Dual Thread Allocator
+  Peak main deferred allocation count 35
+    [ALLOC_BUCKET]
+      Large Block size 4.0 MB
+      Used Block count 1
+      Peak Allocated bytes 1.4 MB
+    [ALLOC_CACHEOBJECTS_MAIN]
+      Peak usage frame count: [0.5 MB-1.0 MB]: 2726 frames
+      Requested Block Size 4.0 MB
+      Peak Block count 1
+      Peak Allocated memory 1.0 MB
+      Peak Large allocation bytes 0 B
+    [ALLOC_CACHEOBJECTS_THREAD]
+      Peak usage frame count: [128.0 KB-256.0 KB]: 2723 frames, [256.0 KB-0.5 MB]: 2 frames, [0.5 MB-1.0 MB]: 1 frames
+      Requested Block Size 4.0 MB
+      Peak Block count 1
+      Peak Allocated memory 0.6 MB
+      Peak Large allocation bytes 0 B
+[ALLOC_TYPETREE] Dual Thread Allocator
+  Peak main deferred allocation count 0
+    [ALLOC_BUCKET]
+      Large Block size 4.0 MB
+      Used Block count 1
+      Peak Allocated bytes 1.4 MB
+    [ALLOC_TYPETREE_MAIN]
+      Peak usage frame count: [0-1.0 KB]: 2726 frames
+      Requested Block Size 2.0 MB
+      Peak Block count 1
+      Peak Allocated memory 112 B
+      Peak Large allocation bytes 0 B
+    [ALLOC_TYPETREE_THREAD]
+      Peak usage frame count: [1.0 KB-2.0 KB]: 2726 frames
+      Requested Block Size 2.0 MB
+      Peak Block count 1
+      Peak Allocated memory 1.9 KB
+      Peak Large allocation bytes 0 B

@@ -57,7 +57,7 @@ public class MapManager : SingletonBase<MapManager>
     }
         public void ResetEnvironment2() //학습 시 에피소드 종료마다 환경 초기화 필요.
     {
-        PoolManager.Instance.DeleteAllPools(); // 이전 오브젝트 초기화
+        ReturnAllObstacles(); // 이전 오브젝트 초기화
 
         PoolManager.Instance.AddPools<Obstacle>(_poolConfigs);
         LevelInfo = LevelManager.Instance.GetLevelInfo();

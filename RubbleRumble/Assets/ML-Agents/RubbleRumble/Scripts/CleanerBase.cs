@@ -240,11 +240,24 @@ public class CleanerBase : MonoBehaviour
     public bool GetisHoldingTrash() { return isHoldingTrash; }
     public int GetHoldingTrashName()
     {
-        if (heldTrash == null) { return 0; }
-        else if (heldTrash.trashData.trashName == "Can") { return 1; }
-        else if (heldObject.CompareTag("Box")) { return 2; }
-        else if (heldObject.CompareTag("UnfoldedBox")) { return 3; }
-        return 0;
+        // No object held
+        if (heldObject == null || heldTrash == null || heldTrash.trashData == null)
+        {
+            return 0;
+        }
+        // Determine trash type by name
+        string name = heldTrash.trashData.trashName;
+        switch (name)
+        {
+            case "Can":
+                return 1;
+            case "Box":
+                return 2;
+            case "UnfoldedBox":
+                return 3;
+            default:
+                return 0;
+        }
     }
 
     public int GetMopUseCount()

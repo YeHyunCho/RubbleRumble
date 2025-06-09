@@ -64,7 +64,8 @@ public class TestAgent : Agent
         mapManager = MapManager.Instance;
 
         aimap = GameObject.Find("AIMap");
-
+        walls = GameObject.FindGameObjectsWithTag("Wall");
+            
         workbench_xz = new Vector3(1.31f, -13.61f, 0.36f);
         Sink_xz = new Vector3(-2.72f, -15.72f, -4.62f);
         trashbinred_xz = new Vector3(7.1f, 0f, -8.6f);
@@ -93,7 +94,6 @@ public class TestAgent : Agent
         this.transform.localPosition = new Vector3(-15.94f, -0.007575989f, 1.46f); //위치 초기화
         this.transform.localRotation = Quaternion.Euler(0f, 180f, 0f); //회전 초기화
 
-        walls = GameObject.FindGameObjectsWithTag("Wall");
         //잔여시간 초기화
         stageManager.TimeReset();
         previousTimeLeft = stageManager.TimeLeft;

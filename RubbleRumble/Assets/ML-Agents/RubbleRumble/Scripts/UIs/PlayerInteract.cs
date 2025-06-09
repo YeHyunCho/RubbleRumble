@@ -1,4 +1,6 @@
+#if UNITY_EDITOR
 using UnityEditor.EditorTools;
+#endif
 using UnityEngine;
 
 // 상호작용 UI 상태를 열거형으로 정의
