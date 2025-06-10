@@ -11,17 +11,25 @@ using UnityEditor;
 
 public class TitleUIHandler : MonoBehaviour
 {
-    public void ClickStartButton()
-    {
-        SceneManager.LoadScene(1);
-    }
+    //    public void ClickStartButton()
+    //    {
+    //        SceneManager.LoadScene(1);
+    //    }
 
-    public void ClickExitButton()
+    //    public void ClickExitButton()
+    //    {
+    //#if UNITY_EDITOR
+    //        EditorApplication.ExitPlaymode();
+    //#else
+    //        Application.Quit();
+    //#endif
+    //    }
+
+    private void Update()
     {
-#if UNITY_EDITOR
-        EditorApplication.ExitPlaymode();
-#else
-        Application.Quit();
-#endif
+        if (Input.anyKeyDown)
+        {
+            SceneManager.LoadScene(1);
+        }
     }
 }
