@@ -120,13 +120,6 @@ public class TrashInteractionManager : MonoBehaviour
 
     public GameObject UnfoldBox(GameObject trashOnWorkbench)
     {
-        //GameObject oldBox = trashOnWorkbench;
-
-        //trashOnWorkbench = Instantiate(unfoldedBox, oldBox.transform.position, oldBox.transform.rotation);
-        //Destroy(oldBox);
-
-        //return trashOnWorkbench;
-
         Transform boxPos = trashOnWorkbench.transform;  // 박스 위치 설정
         bool isPlayer = false;  // 박스가 플레이어 소유인지 확인하는 플래그
         Obstacle foldedBox = trashOnWorkbench.GetComponent<Obstacle>();
@@ -139,7 +132,8 @@ public class TrashInteractionManager : MonoBehaviour
         Obstacle unfoldedBox = PoolManager.Instance.SpawnFromPool<Obstacle>("UnfoldedBox"); // 풀에서 펼쳐진 박스 가져오기
         unfoldedBox.transform.position = boxPos.position;
         unfoldedBox.IsPlayer = isPlayer;    // 소유권 설정
-        
+        MapManager.Instance.AddToList(unfoldedBox);
+
         return unfoldedBox.gameObject;  // 펼쳐진 박스 오브젝트를 반환
     }
 }
