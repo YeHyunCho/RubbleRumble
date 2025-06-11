@@ -156,17 +156,19 @@ public class MapManager : SingletonBase<MapManager>
         {
             Obstacle playerObstacle = playerObstacleList[i - 1];
             if (playerObstacle.isActiveAndEnabled)
-                PoolManager.Instance.ReturnToPool(playerObstacle.name, playerObstacle);
-            playerObstacleList.Remove(playerObstacle);
-            StageManager.Instance.PlayerObstacleCnt = 0;
+                playerObstacle.RemoveObstacle();    // 활성화된 리스트에서 제거하고 풀에 반환
+            //     PoolManager.Instance.ReturnToPool(playerObstacle.name, playerObstacle);
+            // playerObstacleList.Remove(playerObstacle);
+            // StageManager.Instance.PlayerObstacleCnt = 0;
         }
         for (int i = aiObstacleList.Count; i > 0; i--)
         {
             Obstacle aiObstacle = aiObstacleList[i - 1];
             if (aiObstacle.isActiveAndEnabled)
-                PoolManager.Instance.ReturnToPool(aiObstacle.name, aiObstacle);
-            aiObstacleList.Remove(aiObstacle);
-            StageManager.Instance.AIObstacleCnt = 0;
+                aiObstacle.RemoveObstacle();    // 활성화된 리스트에서 제거하고 풀에 반환
+            //     PoolManager.Instance.ReturnToPool(aiObstacle.name, aiObstacle);
+            // aiObstacleList.Remove(aiObstacle);
+            // StageManager.Instance.AIObstacleCnt = 0;
         }
     }
 }

@@ -40,6 +40,7 @@ public class CleanerBase : MonoBehaviour
 
     protected const float UNFOLD_DURATION = 2f;
     protected float qKeyHoldTime = 0f;
+    private float addscoreCB = 0f;
 
     protected void Awake()
     {
@@ -66,7 +67,9 @@ public class CleanerBase : MonoBehaviour
     {
         if (isNearObject)
         {
+            if (nearObject == null) { return; }
             TrashManager nearTrash = nearObject.GetComponent<TrashManager>();
+            if (nearTrash == null) { return; }
 
             if (currentTool == nearTrash.trashData.interactTool)
             {
@@ -154,6 +157,8 @@ public class CleanerBase : MonoBehaviour
                 isTrashOnTheWorkbench = true;
                 isHoldingTrash = false;
                 heldObject = null;
+
+                addscoreCB += 2f;
             }
         }
     }
@@ -164,7 +169,7 @@ public class CleanerBase : MonoBehaviour
         {
             qKeyHoldTime += Time.deltaTime;
             isUnfolding = true;
-
+            Debug.Log("TryUnfoldBox");
             if (qKeyHoldTime >= UNFOLD_DURATION)
             {
                 TrashManager box = trashOnWorkbench.GetComponent<TrashManager>();
@@ -175,6 +180,7 @@ public class CleanerBase : MonoBehaviour
                     trashOnWorkbench = interact.UnfoldBox(trashOnWorkbench);
                     isUnfolding = false;
                 }
+                addscoreCB += 5f;
             }
         }
     }
@@ -269,4 +275,10 @@ public class CleanerBase : MonoBehaviour
 
         return 0;
     }
+
+    public bool GetisNearWorkbench() { return isNearWorkbench; }
+    public bool GetisNearRecyclingBin() { return isNearRecyclingBin; }
+
+    public float GetCBAddScore() { return addscoreCB; }
+    public void Clear_CBAddscore() { addscoreCB = 0f; }
 }

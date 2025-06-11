@@ -27,22 +27,19 @@ public class AgentInputHandler : CleanerBase
             // Debug.Log("in e");
             UseTool();
             TryThrowAway();
-            addscore = 3f;
+            addscore = 1f;
         }
 
         // 박스를 작업대에 올림
         if (q)
         {
-            // Debug.Log("in q");
             TryPlaceTrashOnTheWorkbench();
-            addscore = 1f;
         }
 
         // 작업대에서 누르면 상자 분리(대걸레 세척 메서드는 Mop.cs에 위치)
         if (qhold)
         {
             TryUnfoldBox();
-            addscore = 5f;
         }
     }
 
