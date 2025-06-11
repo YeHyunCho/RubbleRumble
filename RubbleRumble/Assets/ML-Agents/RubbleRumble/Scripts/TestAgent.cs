@@ -122,7 +122,7 @@ public class TestAgent : Agent
         this.rBody.velocity = Vector3.zero;
         this.rBody.angularVelocity = Vector3.zero;
 
-        this.transform.localPosition = new Vector3(-15.94f, -0.007575989f, 1.46f); //위치 초기화
+        this.transform.localPosition = new Vector3(4.2f, -16.16847f, 5.066666f); //위치 초기화
         this.transform.localRotation = Quaternion.Euler(0f, 180f, 0f); //회전 초기화
 
         //잔여시간 초기화

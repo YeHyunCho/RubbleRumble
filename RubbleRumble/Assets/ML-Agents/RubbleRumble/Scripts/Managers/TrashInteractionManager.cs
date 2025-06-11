@@ -6,10 +6,14 @@ using UnityEngine;
 public class TrashInteractionManager : MonoBehaviour
 {
     [SerializeField] private GameObject unfoldedBox;
+    private Dictionary<GameObject, Vector3> originalScales = new Dictionary<GameObject, Vector3>();
+
 
     public void PickUpTrash(GameObject trash, Transform rightHand, GameObject player)
     {
-        trash.transform.SetParent(rightHand, true); // 쓰레기를 전달받은 rightHand의 자식으로 설정
+        // 부모 바꾸기 전 원본 스케일 저장
+        originalScales[trash] = trash.transform.localScale;
+        trash.transform.SetParent(rightHand); // 쓰레기를 전달받은 rightHand의 자식으로 설정
 
         // 쓰레기 오브젝트에서 HoldableItem 컴포넌트를 가져옴
         HoldableItem holdableInfo = trash.GetComponent<HoldableItem>();
@@ -56,6 +60,12 @@ public class TrashInteractionManager : MonoBehaviour
     {
         Vector3 workbenchTop = workbench.transform.position;
         trash.transform.SetParent(null);
+        // 박스 작업대에 올리면 원본 스케일로 복원
+        if (originalScales.TryGetValue(trash, out var savedScale))
+        {
+            trash.transform.localScale = savedScale;
+            originalScales.Remove(trash);
+        }
         trash.transform.position = workbenchTop;
         trash.transform.rotation = Quaternion.identity;
 
@@ -120,19 +130,26 @@ public class TrashInteractionManager : MonoBehaviour
 
     public GameObject UnfoldBox(GameObject trashOnWorkbench)
     {
+        //GameObject oldBox = trashOnWorkbench;
+
+        //trashOnWorkbench = Instantiate(unfoldedBox, oldBox.transform.position, oldBox.transform.rotation);
+        //Destroy(oldBox);
+
+        //return trashOnWorkbench;
+
         Transform boxPos = trashOnWorkbench.transform;  // 박스 위치 설정
         bool isPlayer = false;  // 박스가 플레이어 소유인지 확인하는 플래그
         Obstacle foldedBox = trashOnWorkbench.GetComponent<Obstacle>();
-        // if (foldedBox != null)
-        // {
-        //     isPlayer = foldedBox.IsPlayer;  // 소유권 설정
-        //     foldedBox.RemoveObstacle(); // 접힌 박스를 풀로 반환, 점수 부여 X
-        // }
+        if (foldedBox != null)
+        {
+            isPlayer = foldedBox.IsPlayer;  // 소유권 설정
+            foldedBox.RemoveObstacle(); // 접힌 박스를 풀로 반환, 점수 부여 X
+        }
 
         Obstacle unfoldedBox = PoolManager.Instance.SpawnFromPool<Obstacle>("UnfoldedBox"); // 풀에서 펼쳐진 박스 가져오기
         unfoldedBox.transform.position = boxPos.position;
         unfoldedBox.IsPlayer = isPlayer;    // 소유권 설정
-        MapManager.Instance.AddToList(unfoldedBox);
+        
         return unfoldedBox.gameObject;  // 펼쳐진 박스 오브젝트를 반환
     }
 }
