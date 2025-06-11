@@ -48,6 +48,14 @@ public class AICleanerBase : CleanerBase
     {
         base.Start();
         SetToolLocation(); // ← 여기서 호출하면 네가 만든 override가 호출됨!
+        if (workBench == null)
+        {
+            var benchObj = GameObject.Find("AIMap/Workbench");
+            if (benchObj == null)
+                benchObj = GameObject.Find("Workbench");  // 예비 대안
+            workBench = benchObj;
+            Debug.Log("[AICleanerBase] workBench 자동 할당: " + (workBench != null ? workBench.name : "없음"));
+        }
     }
     public void EquipToolPublic(int index)
     {

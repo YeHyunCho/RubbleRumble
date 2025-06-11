@@ -146,7 +146,7 @@ public class CleanerBase : MonoBehaviour
     {
         if (isNearWorkbench && isHoldingTrash)  
         {
-            if (heldTrash.trashData.trashName == "Box")
+            if (heldObject.CompareTag("Box"))
             {
                 interact.PlaceTrashOnWorkbench(workBench, heldObject, gameObject);
                 trashOnWorkbench = heldObject;

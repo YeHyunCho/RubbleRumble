@@ -6712,7 +6712,7 @@ MonoBehaviour:
   agentParameters:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
-  MaxStep: 1000
+  MaxStep: 3000
   motor: {fileID: 0}
   interaction: {fileID: 0}
   cleaner: {fileID: 0}
@@ -6747,7 +6747,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: ba65c97a0245c5f4289ff00f1e743f23, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 861c068cea290664e9977bebc4e3b0a2, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 2
   m_BehaviorName: Agent
