@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1844037604210598006}
   - component: {fileID: 1084064972787565109}
   - component: {fileID: 1247324277173780595}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Dirt
   m_TagString: Dust
   m_Icon: {fileID: 0}
