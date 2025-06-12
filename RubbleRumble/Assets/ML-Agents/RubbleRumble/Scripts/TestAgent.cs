@@ -50,6 +50,7 @@ public class TestAgent : Agent
     private float qHoldTime = 0f;
     private const float Q_HOLD_THRESHOLD = 2f; // 2초
     private GameObject[] walls;
+    public float triggerDistance = 5f;
     private int i = 0;
 
     protected override void Awake()
@@ -64,13 +65,44 @@ public class TestAgent : Agent
         mapManager = MapManager.Instance;
 
         aimap = GameObject.Find("AIMap");
-
+        walls = GameObject.FindGameObjectsWithTag("Wall");
+            
         workbench_xz = new Vector3(1.31f, -13.61f, 0.36f);
         Sink_xz = new Vector3(-2.72f, -15.72f, -4.62f);
         trashbinred_xz = new Vector3(7.1f, 0f, -8.6f);
         trashbinblue_xz = new Vector3(-0.008140475f, 1.151607f, -0.3802902f);
         trashbingreen_xz = new Vector3(26.25f, 0f, -21.63f);
 
+    }
+    
+    private void Update()
+    {
+        if (qPressed)
+        {
+            //q 누르고 있어야 한다면 점수 부여
+            if (
+                (agentInputHandler.GetisNearWorkbench() && agentInputHandler.GetHoldingTrashName() == 2)
+                || (relSink.magnitude <= triggerDistance
+                    && agentInputHandler.GetMopUseCount() > 0
+                    && agentInputHandler.GetCurrentTool() == 2)
+               )
+            {
+                AddReward(0.2f);
+                Debug.Log("qHoldTime: " + qHoldTime);
+            }
+            qHoldTime += Time.deltaTime;
+            if (qHoldTime >= Q_HOLD_THRESHOLD)
+            {
+                // 2초 이상 Q가 눌리면
+                qhold = true;
+                qHoldTime = 0f; // 한 번 실행 후 타이머 초기화
+            }
+        }
+        else
+        {
+            qhold = false;
+            qHoldTime = 0f; // Q를 뗐으면 누적 시간 리셋
+        }
     }
 
     public override void OnEpisodeBegin() //에피소드 자동 실행
@@ -85,15 +117,14 @@ public class TestAgent : Agent
             Debug.Log(i);
             RetryTestBtn.OnRetryTestButtonCliked();
         }
-            
+
         //속도 초기화
         this.rBody.velocity = Vector3.zero;
         this.rBody.angularVelocity = Vector3.zero;
 
-        this.transform.localPosition = new Vector3(-15.94f, -0.007575989f, 1.46f); //위치 초기화
+        this.transform.localPosition = new Vector3(4.2f, -16.16847f, 5.066666f); //위치 초기화
         this.transform.localRotation = Quaternion.Euler(0f, 180f, 0f); //회전 초기화
 
-        walls = GameObject.FindGameObjectsWithTag("Wall");
         //잔여시간 초기화
         stageManager.TimeReset();
         previousTimeLeft = stageManager.TimeLeft;
@@ -117,6 +148,13 @@ public class TestAgent : Agent
             Vector3 rel = obs.transform.localPosition - agentPos;
             sensor.AddObservation(rel.x);
             sensor.AddObservation(rel.z);
+
+            // 쓰레기 태그
+            sensor.AddObservation(obs.CompareTag("Can") ? 1f : 0f);
+            sensor.AddObservation(obs.CompareTag("Box") ? 1f : 0f);
+            sensor.AddObservation(obs.CompareTag("Dust") ? 1f : 0f);
+            sensor.AddObservation(obs.CompareTag("UnfoldedBox") ? 1f : 0f);
+            sensor.AddObservation(obs.CompareTag("Water") ? 1f : 0f);
         }
 
         foreach (var wall in walls)//벽들과 상대 거리
@@ -161,17 +199,23 @@ public class TestAgent : Agent
         sensor.AddObservation(isHoldingTrash);
         //쓰레기 종류
         int HoldingTrashName = agentInputHandler.GetHoldingTrashName();
-        bool holds0 = (HoldingTrashName == 0); //can
-        bool holds1 = (HoldingTrashName == 0); //can
-        bool holds2 = (HoldingTrashName == 1); //box
-        bool holds3 = (HoldingTrashName == 2); //unfoldebox
+        bool holds0 = (HoldingTrashName == 0); //not
+        bool holds1 = (HoldingTrashName == 1); //can
+        bool holds2 = (HoldingTrashName == 2); //box
+        bool holds3 = (HoldingTrashName == 3); //unfoldebox
         sensor.AddObservation(holds0 ? 1f : 0f);
         sensor.AddObservation(holds1 ? 1f : 0f);
         sensor.AddObservation(holds2 ? 1f : 0f);
         sensor.AddObservation(holds3 ? 1f : 0f);
+
+        //근처 체크
+        sensor.AddObservation(agentInputHandler.GetisNearWorkbench() ? 1f : 0f);
+        sensor.AddObservation(agentInputHandler.GetisNearRecyclingBin() ? 1f : 0f);
         
+
         //남은 시간 정규화된 값
-        tNorm = StageManager.Instance.TimeLeft / StageManager.Instance.TimeLimit;
+        float tl = StageManager.Instance.TimeLimit;
+        tNorm = (tl > 0f) ? StageManager.Instance.TimeLeft / tl : 0f;
         sensor.AddObservation(tNorm);
     }
 
@@ -190,29 +234,21 @@ public class TestAgent : Agent
         numkey = actionBuffers.DiscreteActions[3];
         qPressed = (actionBuffers.DiscreteActions[1] == 1);
         ePressed = (actionBuffers.DiscreteActions[2] == 1);
-        qhold = false;
-        ehold = false;
 
         Debug.Log("NOW key: " + numkey);
 
-        // 2) Q 홀드 여부 
-        if (qPressed)
+        agentInputHandler.HandleInput(numkey, qPressed, ePressed, qhold, ehold);
+
+        if (agentInputHandler.GetCurrentTool() == 2)
         {
-            qHoldTime += Time.deltaTime;
-            if (qHoldTime >= Q_HOLD_THRESHOLD)
+            Mop mop = FindObjectOfType<Mop>();
+            if (mop != null)
             {
-                // 2초 이상 Q가 눌리면
-                qhold = true;
-                qHoldTime = 0f; // 한 번 실행 후 타이머 초기화
+                mop.WashMopNearSink_Agent(qhold);
+                mop.Getreward();
+                mop.Setreward();
             }
         }
-        else
-        {
-            qhold = false;
-            qHoldTime = 0f; // Q를 뗐으면 누적 시간 리셋
-        }
-
-        agentInputHandler.HandleInput(numkey, qPressed, ePressed, qhold, ehold);
 
         score = stageManager.GetAiSocre();
 
@@ -239,15 +275,18 @@ public class TestAgent : Agent
         }
 
         AddReward(agentInputHandler.GetAddScore());
+        AddReward(agentInputHandler.GetCBAddScore()); //CleanerBase
+
 
         //남은 시간 변화량만큼 패널티
         cur = stageManager.TimeLeft;
         delta = previousTimeLeft - cur;
-        if (delta > 0f)
-            AddReward(-0.05f * delta);
+        // if (delta > 0f)
+        //     AddReward(-0.05f * delta);
         previousTimeLeft = cur;
 
         agentInputHandler.Clear_Addscore();
+        agentInputHandler.Clear_CBAddscore(); //CleanerBase
 
         if (cur <= 0.1f)
         {
@@ -295,7 +334,7 @@ public class TestAgent : Agent
         if (collision.gameObject.CompareTag("Wall"))
         {
             Debug.Log("wall HIT!!");
-            SetReward(-0.02f);
+            SetReward(-0.2f);
         }
     }
 }

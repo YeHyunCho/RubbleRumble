@@ -28,6 +28,8 @@ public class Mop : MonoBehaviour
 
     private float holdTime = 0f;
 
+    float reward = 0f;
+
     private void Awake()
     {
         righthandPos = gameObject.GetComponentInParent<Transform>().localPosition;
@@ -46,7 +48,7 @@ public class Mop : MonoBehaviour
             isPlayer = true;
             sink = GameObject.Find("PlayerMap/Sink");
         }
-        
+
         else
         {
             isPlayer = false;
@@ -64,7 +66,7 @@ public class Mop : MonoBehaviour
         //    transform.position = player.transform.position - offset;
         //}
         transform.localPosition = righthandPos + offset;
-        
+
         //Mop ÇÁ¸®ÆÕÀÇ °¢µµ ¼öÁ¤
         transform.localRotation = Quaternion.Euler(60, 20, 40);
 
@@ -156,6 +158,22 @@ public class Mop : MonoBehaviour
         }
     }
 
+    public void WashMopNearSink_Agent(bool qhold)
+    {
+        Vector3 Sink_xz = new Vector3(-2.72f, -15.72f, -4.62f);
+        float distance = Vector3.Distance(transform.position, Sink_xz);
+
+        if (distance <= triggerDistance)
+        {
+            if (qhold)
+            {
+                reward += 2f;
+                useCount = 0;
+                gameObject.GetComponent<MeshRenderer>().material = mat[useCount];
+            }
+        }
+    }
+
     // PlayerControllerï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½
     public void IncrementUseCount()
     {
@@ -167,5 +185,7 @@ public class Mop : MonoBehaviour
     }
     public float GetHoldingTime() { return holdTime; }
     public int GetUseCount() { return useCount; }
+    public float Getreward() { return reward; }
+    public void Setreward() { reward = 0f; }
     //public GameObject GetNearDust() { return nearDust; }
 }
