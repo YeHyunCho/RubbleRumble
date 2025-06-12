@@ -71,7 +71,7 @@ public class StageManager : SingletonBase<StageManager>
             IsWin = false;
             GameManager.Instance.GameOver();
         }
-
+        
         #region TestCode
         {
             if (Input.GetKeyDown(KeyCode.O))  // O를 누르면 AI 먼지 삭제
