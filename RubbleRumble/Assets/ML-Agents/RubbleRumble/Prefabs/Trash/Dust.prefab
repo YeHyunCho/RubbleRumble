@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5996988619814881793}
   - component: {fileID: 3219856882265281953}
   - component: {fileID: 8115410312552510200}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Dust
   m_TagString: Dust
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 2595756546393065840}
   - component: {fileID: 5982083728984214015}
   - component: {fileID: 713600749288197276}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Decal
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}

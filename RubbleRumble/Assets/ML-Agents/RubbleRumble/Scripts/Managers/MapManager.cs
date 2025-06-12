@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq; // Enumerable.Range().ToList()사용을 위해 추가가
 using UnityEngine.SceneManagement;
 
 public class MapManager : SingletonBase<MapManager>
@@ -16,12 +17,31 @@ public class MapManager : SingletonBase<MapManager>
     [SerializeField] private List<float> spawnTime = new List<float>(); // 쓰레기 재생성 하는 시간(반드시 빠른 시간 순으로 정렬)
     private float curTime;  // 현재 경과 시간
 
+     //스폰 포인트 배열을 2개로 분리 
+    [Header("Player Spawn Points")]
+    [SerializeField] private Transform[] playerSpawnPoints;
+
+    [Header("AI Spawn Points")]
+    [SerializeField] private Transform[] aiSpawnPoints;
+
+    [Tooltip("이 반경 안에 다른 쓰레기가 있으면 스폰하지 않습니다.")]
+    [SerializeField] private float spawnCheckRadius = 1.5f;
+
+    [Tooltip("스폰 포인트에서 얼마나 떨어진 위치에 생성될지 결정합니다.")]
+    [SerializeField] private float spawnPositionOffset = 1.0f;
+    
+    
+    [Tooltip("쓰레기 오브젝트들이 할당된 레이어를 선택해주세요.")]
+    [SerializeField] private LayerMask obstacleLayer;
+
     [Header("Pool")]
     [SerializeField] private PoolManager.PoolConfig[] _poolConfigs; // 인스펙터에서 풀 설정
 
+
+
     // 씬 로드 오류 있을시 본인 테스트씬 주석해제하고 사용
     //private const string TestSceneName = "TestScene";
-    //private const string TestSceneName = "JiyoungTestScene 2";
+    private const string TestSceneName = "JiyoungTestScene_0611";
     //private const string TestSceneName = "SwTestScene";
     //private const string TestSceneName = "YhTestScene2";
     //private const string TestSceneName = "ShTestScene";
@@ -90,23 +110,74 @@ public class MapManager : SingletonBase<MapManager>
         }
     }
 
+    /* 2025-06-11 쓰레기 스폰포인트 수정(강지영)
+       private void SpawnObstacle(Transform playerMap, Transform aiMap, string name, int count)
+       {
+           for (int i = 0; i < count; i++)
+           {
+               // 랜덤 위치 설정
+               // Vector3 randPos = new Vector3(Random.Range(-4.5f, 4.5f), 0.2f, Random.Range(-4.5f, 4.5f));
+               Vector3 randPos = new Vector3(Random.Range(-10.0f, 10.0f), 0.2f, Random.Range(-10.0f, 10.0f));
+               randPos = transform.TransformDirection(randPos);
+
+               // 풀에서 가져오고 위치와 회전값 설정
+               Obstacle playerObstacle = PoolManager.Instance.SpawnFromPool<Obstacle>(name, randPos + playerMap.transform.position, Quaternion.identity);
+               playerObstacle.IsPlayer = true; // 쓰레기를 플레이어로 소유권 설정
+               AddToList(playerObstacle);  // 플레이어 쓰레기 활성화 리스트에 추가
+
+               Obstacle aiObstacle = PoolManager.Instance.SpawnFromPool<Obstacle>(name, randPos + aiMap.transform.position, Quaternion.identity);
+               aiObstacle.IsPlayer = false; // 쓰레기를 AI로 소유권 설정
+               AddToList(aiObstacle);  // AI 쓰레기 활성화 리스트에 추가
+           }
+       }
+       */
+    
+/// <summary>
+    /// 플레이어와 AI 맵에 독립적으로 장애물을 생성합니다.
+    /// 각자에게 할당된 스폰 포인트 목록을 사용합니다.
+    /// </summary>
     private void SpawnObstacle(Transform playerMap, Transform aiMap, string name, int count)
     {
+        // 사용 가능한 스폰 포인트 인덱스 목록을 각각 생성
+        List<int> playerAvailableIndices = Enumerable.Range(0, playerSpawnPoints.Length).ToList();
+        List<int> aiAvailableIndices = Enumerable.Range(0, aiSpawnPoints.Length).ToList();
+
+        // 'count'번 만큼 플레이어와 AI에게 각각 스폰을 시도
         for (int i = 0; i < count; i++)
         {
-            // 랜덤 위치 설정
-            // Vector3 randPos = new Vector3(Random.Range(-4.5f, 4.5f), 0.2f, Random.Range(-4.5f, 4.5f));
-            Vector3 randPos = new Vector3(Random.Range(-10.0f, 10.0f), 0.2f, Random.Range(-10.0f, 10.0f));
-            randPos = transform.TransformDirection(randPos);
+            // --- 플레이어 스폰 시도 ---
+            if (playerAvailableIndices.Count > 0)
+            {
+                int randIndex = Random.Range(0, playerAvailableIndices.Count);
+                Transform spawnPoint = playerSpawnPoints[playerAvailableIndices[randIndex]];
+                
+                // 플레이어 스폰 포인트는 월드 좌표를 그대로 사용
+                if (!Physics.CheckSphere(spawnPoint.position, spawnCheckRadius, obstacleLayer))
+                {
+                    Vector3 randomOffset = new Vector3(Random.Range(-spawnPositionOffset, spawnPositionOffset), 0f, Random.Range(-spawnPositionOffset, spawnPositionOffset));
+                    Obstacle playerObstacle = PoolManager.Instance.SpawnFromPool<Obstacle>(name, spawnPoint.position + randomOffset, Quaternion.identity);
+                    playerObstacle.IsPlayer = true;
+                    AddToList(playerObstacle);
+                }
+                playerAvailableIndices.RemoveAt(randIndex); // 시도한 포인트는 목록에서 제거
+            }
 
-            // 풀에서 가져오고 위치와 회전값 설정
-            Obstacle playerObstacle = PoolManager.Instance.SpawnFromPool<Obstacle>(name, randPos + playerMap.transform.position, Quaternion.identity);
-            playerObstacle.IsPlayer = true; // 쓰레기를 플레이어로 소유권 설정
-            AddToList(playerObstacle);  // 플레이어 쓰레기 활성화 리스트에 추가
+            // --- AI 스폰 시도 ---
+            if (aiAvailableIndices.Count > 0)
+            {
+                int randIndex = Random.Range(0, aiAvailableIndices.Count);
+                Transform spawnPoint = aiSpawnPoints[aiAvailableIndices[randIndex]];
 
-            Obstacle aiObstacle = PoolManager.Instance.SpawnFromPool<Obstacle>(name, randPos + aiMap.transform.position, Quaternion.identity);
-            aiObstacle.IsPlayer = false; // 쓰레기를 AI로 소유권 설정
-            AddToList(aiObstacle);  // AI 쓰레기 활성화 리스트에 추가
+                // AI 스폰 포인트도 월드 좌표를 그대로 사용
+                if (!Physics.CheckSphere(spawnPoint.position, spawnCheckRadius, obstacleLayer))
+                {
+                    Vector3 randomOffset = new Vector3(Random.Range(-spawnPositionOffset, spawnPositionOffset), 0f, Random.Range(-spawnPositionOffset, spawnPositionOffset));
+                    Obstacle aiObstacle = PoolManager.Instance.SpawnFromPool<Obstacle>(name, spawnPoint.position + randomOffset, Quaternion.identity);
+                    aiObstacle.IsPlayer = false;
+                    AddToList(aiObstacle);
+                }
+                aiAvailableIndices.RemoveAt(randIndex); // 시도한 포인트는 목록에서 제거
+            }
         }
     }
 
