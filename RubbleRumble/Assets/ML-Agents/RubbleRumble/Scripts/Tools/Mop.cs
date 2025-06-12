@@ -28,6 +28,7 @@ public class Mop : MonoBehaviour
 
     private float holdTime = 0f;
 
+
     private void Awake()
     {
         righthandPos = gameObject.GetComponentInParent<Transform>().localPosition;
@@ -59,6 +60,7 @@ public class Mop : MonoBehaviour
 
     private void Update()
     {
+
         //if (isTrigger)
         //{
         //    transform.position = player.transform.position - offset;
@@ -147,6 +149,7 @@ public class Mop : MonoBehaviour
                 if (Input.GetKeyUp(KeyCode.Q))
                     holdTime = 0f;
             }
+            /*
             else                   // ¦¡¦¡¦¡¦¡¦¡ AI ¸ðµå : 2ÃÊ ¹öÆ¼¸é ÀÚµ¿ ¼¼Ã´
             {
                 holdTime += Time.deltaTime;
@@ -155,9 +158,11 @@ public class Mop : MonoBehaviour
                 {
                     useCount = 0;
                     GetComponent<MeshRenderer>().material = mat[useCount];
+                    _washCalledThisFrame = true;
                     holdTime = 0f;            // ´ÙÀ½ ¼¼Ã´À» À§ÇØ ¸®¼Â
                 }
             }
+            */
         }
         else
         {
@@ -166,7 +171,9 @@ public class Mop : MonoBehaviour
     }
 
 
-    // PlayerControllerï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½
+    // PlayerController
+
+
     public void IncrementUseCount()
     {
         useCount++;
@@ -178,4 +185,23 @@ public class Mop : MonoBehaviour
     public float GetHoldingTime() { return holdTime; }
     public int GetUseCount() { return useCount; }
     //public GameObject GetNearDust() { return nearDust; }
+
+    public void SetUseCount(int a)
+    {
+        useCount = 0;
+        GetComponent<MeshRenderer>().material = mat[useCount];
+    }
+    public bool IsNearSink()
+    {
+        transform.localPosition = righthandPos + offset;
+        transform.localRotation = Quaternion.Euler(60, 20, 40);
+
+        if (sink == null) return false;
+
+        float distance = Vector3.Distance(transform.position, sink.transform.position);
+
+        float looseDistance = triggerDistance + 0.5f;  // ¡ç ¿©À¯ °Å¸® Ãß°¡
+        return distance <= looseDistance;
+    }
+
 }

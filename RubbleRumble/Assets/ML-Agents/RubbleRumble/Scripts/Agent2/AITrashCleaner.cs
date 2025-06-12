@@ -1,5 +1,6 @@
 ﻿// =============================================================
-// AITrashCleaner.cs  ─ Box·Can·Mop 통합 로직 (Pause-&-Unfold 개선)
+// AITrashCleaner.cs  ─ Box·Can·Mop 통합 로직
+//    + WashMopNearSink() 감지 후 2초 정지 루틴 추가
 // =============================================================
 using System.Collections;
 using System.Collections.Generic;
@@ -45,7 +46,15 @@ public class AITrashCleaner : Agent
     private float _prevSinkDist = 0f;
     private float _prevDeskDist = 0f;
     private DecisionRequester _requester;
-    private bool _washingPause = false;
+
+
+
+
+
+    // Mop 사용 & 세척 관련
+    private bool _mopDirty = false;                   // Mop가 더러운 상태인지
+    private bool _washingPause = false;   // 세척-정지 중인가?
+    private float _washingEndTime = 0f;     // 정지 해제 시각
 
     // “박스 내려놓음 → 2초 정지 → 펼치기” 컨트롤용
     private bool _pauseAfterPlace = false;
@@ -80,7 +89,7 @@ public class AITrashCleaner : Agent
             rb.velocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
         }
-
+        transform.position = new Vector3(-22.12f, -0.0f, -1.34f);
         // 시작 위치·회전 및 환경 리셋
         transform.rotation = Quaternion.Euler(0f, 180f, 0f);
         StageManager.Instance?.TimeReset();
@@ -93,6 +102,11 @@ public class AITrashCleaner : Agent
         _threwAway = false;
         _prevScore = 0;
         cleaner.ResetHeldTrash();
+
+        _mopDirty = false;
+        _washingPause = false;  
+        _washingEndTime = 0f;     
+
 
         _prevPaperBinDist = GetClosestTargetDistance("TBpaper");
         _prevBinDist = GetClosestTargetDistance("TBcan");
@@ -117,62 +131,62 @@ public class AITrashCleaner : Agent
     // ──────────────────────────────────────────────────────────
     public override void OnActionReceived(ActionBuffers actions)
     {
-        var mop = cleaner.HeldTrash?.GetComponent<Mop>();
-
-        // 0-A. 이미 세척 정지 상태라면 계속 멈춤
         if (_washingPause)
         {
-            motor.Move(Vector3.zero);          // 가만히 서 있기
-
-            // Mop 내부 holdTime이 0이 되면 세척 완료
-            if (mop == null || mop.GetHoldingTime() == 0f)
-            {
+            motor.Move(Vector3.zero);          // 그대로 서 있기
+            if (Time.time >= _washingEndTime)  // 2 초 지났으면 해제
                 _washingPause = false;
-                AddReward(rWashMop);           // ← ★ 이 안에서 단-한-번만 지급
-            }
-
-            return;                            // 다른 행동 모두 스킵
+            return;                            // 다른 로직 모두 스킵
         }
 
-        // 0-B. 세척을 막 시작해야 하는지 체크
-        if (mop != null && mop.GetUseCount() >= 2 && mop.GetHoldingTime() > 0f)
+        //------------------------------------------------------------------
+        // 0. Mop 상태 파악 & 세척 루틴 감지
+        //------------------------------------------------------------------
+        var mop = GetComponentInChildren<Mop>();
+        if (mop != null)
         {
-            _washingPause = true;              // 다음 프레임부터 멈추기
-            motor.Move(Vector3.zero);          // 첫 프레임도 멈춤
-            return;
+            // 2회 이상 사용 → 더러움
+            _mopDirty = mop.GetUseCount() >= 2;
         }
 
+        //Debug.Log("더러운가? "+ _mopDirty); //잘 작동
 
+        if (mop != null && mop.IsNearSink())
+        {
+            //Debug.Log("Sink에 근접했습니다!");
+        }
+        else
+        {
+            //Debug.Log("Sink에서 멀어졌습니다.");
+        }
 
-        //------------------------------------------------------
-        // 0. “2초 멈춤” 상태 체크
-        //------------------------------------------------------
+        //------------------------------------------------------------------
+        // 2. “박스 내려놓기 2초 정지” 처리 (세척 정지보다 우선도 낮음)
+        //------------------------------------------------------------------
         if (_pauseAfterPlace)
         {
             motor.Move(Vector3.zero);
 
-            // ★ 1) 매 프레임 호출: 타이머 누적
-            cleaner.TryUnfoldBoxPublic();
+            cleaner.TryUnfoldBoxPublic();                  // 프레임마다 펼치기 시도
 
-            // ★ 2) 2초가 지나면(=타이머도 2초 쌓였으므로) 블록 탈출
             if (Time.time >= _pauseEndTime)
             {
                 _pauseAfterPlace = false;
-                Debug.Log("박스 펼치기 성공");
+                //Debug.Log("박스 펼치기 성공");
                 cleaner.EquipToolPublic(0);
                 cleaner.UseToolPublic();
             }
             return;
         }
 
-        //------------------------------------------------------
-        // 1. 기본 시간 페널티
-        //------------------------------------------------------
+        //------------------------------------------------------------------
+        // 3. 기본 시간 페널티
+        //------------------------------------------------------------------
         AddReward(stepPenalty);
 
-        //------------------------------------------------------
-        // 2. 이동 처리
-        //------------------------------------------------------
+        //------------------------------------------------------------------
+        // 4. 이동 처리
+        //------------------------------------------------------------------
         int move = actions.DiscreteActions[0];
         Vector3 dir = move switch
         {
@@ -189,9 +203,9 @@ public class AITrashCleaner : Agent
         if (dir != Vector3.zero) dir.Normalize();
         motor.Move(dir);
 
-        //------------------------------------------------------
-        // 3. 상호작용 처리
-        //------------------------------------------------------
+        //------------------------------------------------------------------
+        // 5. 상호작용 처리
+        //------------------------------------------------------------------
         int act = actions.DiscreteActions[1];
         switch (act)
         {
@@ -201,27 +215,37 @@ public class AITrashCleaner : Agent
             case 4: cleaner.EquipToolPublic(1); break;           // 빗자루
             case 5: cleaner.EquipToolPublic(2); break;           // 대걸레
             case 6:
-                // ① 내려놓기 시도 전, 박스 보유 여부 판단
                 bool hadBox = cleaner.IsHoldingTrash && cleaner.HeldTrash.CompareTag("Box");
+                cleaner.TryPlaceTrashOnWorkbenchPublic();       // 책상에 내려놓기 시도
 
-                cleaner.TryPlaceTrashOnWorkbenchPublic();   // 책상에 내려놓기 시도
-
-                // ② 성공 조건 : (전) 박스를 들고 있었고, (후) 손이 비어 있으며, 실제로 책상 위에 박스가 존재할 때
                 if (hadBox && !cleaner.IsHoldingTrash && cleaner.IsTrashOnWorkbench)
                 {
                     AddReward(rPlaceBox);
-                    Debug.Log("[DEBUG] 박스 내려놓음 & 2초 정지 돌입");
-
+                    //Debug.Log("[DEBUG] 박스 내려놓음 & 2초 정지 돌입");
                     _pauseAfterPlace = true;
                     _pauseEndTime = Time.time + 2f;
                 }
                 break;
-
         }
 
-        //------------------------------------------------------
-        // 4. 간단 이벤트 보상 (줍기·도착·버리기)
-        //------------------------------------------------------
+
+        if (mop != null && mop.GetUseCount() >= 2 && mop.IsNearSink())
+        {
+            AddReward(rWashMop);
+            Debug.Log("[보상] Mop이 더럽고 Sink 근처 → 세척 보상 지급");
+
+            mop.SetUseCount(0);          // Mop을 깨끗한 상태로 초기화
+
+            _washingPause = true;       // ★ 2 초 정지 시작
+            _washingEndTime = Time.time + 2f;
+            motor.Move(Vector3.zero);    // 첫 프레임도 바로 멈추기
+            return;                      // 이번 스텝은 여기서 끝
+        }
+
+
+        //------------------------------------------------------------------
+        // 6. 간단 이벤트 보상 (줍기·도착·버리기)
+        //------------------------------------------------------------------
         if (!_pickedUp && cleaner.IsHoldingTrash)
         {
             _pickedUp = true;
@@ -241,9 +265,9 @@ public class AITrashCleaner : Agent
             AddReward(rThrowAway);
         }
 
-        //------------------------------------------------------
-        // 5. 점수 변화 기반 보상 (최대 +1)
-        //------------------------------------------------------
+        //------------------------------------------------------------------
+        // 7. 점수 변화 기반 보상 (최대 +1)
+        //------------------------------------------------------------------
         int curScore = StageManager.Instance != null ? StageManager.Instance.AIScore : _prevScore;
         if (curScore > _prevScore)
         {
@@ -252,10 +276,30 @@ public class AITrashCleaner : Agent
         }
         _prevScore = curScore;
 
-        //------------------------------------------------------
-        // 6. 목표물 접근/후퇴 shaping
-        //------------------------------------------------------
+
+
+        //------------------------------------------------------------------
+        // 8. 목표물 접근/후퇴 shaping
+        //------------------------------------------------------------------
         var heldTrash = cleaner.HeldTrash;
+        if (heldTrash == null && _mopDirty)
+        {
+            string targetTag = "Sink";
+            float curDist = GetClosestTargetDistance(targetTag);
+            float prevDist = _prevSinkDist;
+            _prevSinkDist = curDist;
+
+            float now = Time.time;
+            if (now - _lastDistRewardTime >= _distRewardCooldown)
+            {
+                if (curDist < prevDist)
+                    AddReward(rApproachTarget * 2f);
+                else if (curDist > prevDist)
+                    AddReward(rRetreatPenalty);
+
+                _lastDistRewardTime = now;
+            }
+        }
         if (heldTrash != null)
         {
             string tag = heldTrash.tag;
@@ -263,7 +307,6 @@ public class AITrashCleaner : Agent
             float prevDist = 0f;
             string targetTag = null;
 
-            // 주목 대상 결정
             if (tag == "Can")
             {
                 targetTag = "TBcan";
@@ -286,17 +329,8 @@ public class AITrashCleaner : Agent
                 _prevPaperBinDist = curDist;
             }
 
-            // Mop일 경우 세척 대상 전환
-            var mopUseComp = heldTrash.GetComponent<Mop>();
-            if (mopUseComp != null && mopUseComp.GetUseCount() >= 2)
-            {
-                targetTag = "Sink";
-                curDist = GetClosestTargetDistance(targetTag);
-                prevDist = _prevSinkDist;
-                _prevSinkDist = curDist;
-            }
 
-            // 쿨타임 보상/벌점
+
             float now = Time.time;
             if (now - _lastDistRewardTime >= _distRewardCooldown && targetTag != null)
             {
@@ -308,19 +342,19 @@ public class AITrashCleaner : Agent
                 _lastDistRewardTime = now;
             }
 
+
+
+
         }
     }
-    // 임시 Heuristic()
+
+    // 임시 Heuristic() ─ AI 미학습 상태 테스트용
     public override void Heuristic(in ActionBuffers actionsOut)
     {
         var discreteActions = actionsOut.DiscreteActions;
-
         for (int i = 0; i < discreteActions.Length; i++)
-        {
             discreteActions[i] = 0;  // 모든 액션을 0으로 설정 (정지 등)
-        }
     }
-
 
     // ──────────────────────────────────────────────────────────
     // 센서 관측
@@ -339,10 +373,7 @@ public class AITrashCleaner : Agent
         sensor.AddObservation(GetClosestTargetDistance("Wall"));
 
         // 3) Mop 오염 단계 --------------------------------------------
-        int mopUse = 0;
-        var mop = cleaner.HeldTrash?.GetComponent<Mop>();
-        if (mop != null) mopUse = Mathf.Clamp(mop.GetUseCount(), 0, 2);
-        sensor.AddObservation(mopUse / 2f); // 0.0, 0.5, 1.0
+        sensor.AddObservation(_mopDirty ? 1f : 0f);   // 1 = Dirty, 0 = Clean
 
         // 4) 추가 대상 -----------------------------------------------
         AddDirDistObs(sensor, "TBdust");
@@ -360,12 +391,17 @@ public class AITrashCleaner : Agent
             else if (tag == "UnfoldedBox") heldType[3] = 1f;
         }
         else heldType[0] = 1f;
+
         foreach (var v in heldType) sensor.AddObservation(v);
     }
 
     // ──────────────────────────────────────────────────────────
     // 유틸리티
     // ──────────────────────────────────────────────────────────
+
+    // 일시 정지 전용 헬퍼
+    private void PauseAgent() => motor.Move(Vector3.zero);
+
     private void AddDirDistObs(VectorSensor s, string tag)
     {
         Vector3 dir; float dist = GetClosestTargetDistance(tag, out dir);

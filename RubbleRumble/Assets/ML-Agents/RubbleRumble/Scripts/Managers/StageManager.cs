@@ -64,6 +64,7 @@ public class StageManager : SingletonBase<StageManager>
             GameManager.Instance.GameOver();
         }
 
+        //학습을 위해 임시 제한
         // AI 진영 내 쓰레기가 없으면 패배
         if (AIObstacleCnt <= 0)
         {
