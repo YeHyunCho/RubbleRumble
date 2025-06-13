@@ -1,6 +1,6 @@
 ﻿// =============================================================
 // AITrashCleaner.cs  ─ Box·Can·Mop 통합 로직
-//    + WashMopNearSink() 감지 후 2초 정지 루틴 추가
+//    + StageManager/MapManager 초기화 보강
 // =============================================================
 using System.Collections;
 using System.Collections.Generic;
@@ -9,7 +9,6 @@ using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
 
-// 필요한 컴포넌트 선언 ──────────────────────────────────────────
 [RequireComponent(typeof(AgentMotorK))]
 [RequireComponent(typeof(TrashInteractionManager))]
 [RequireComponent(typeof(AICleanerBase))]
@@ -17,56 +16,58 @@ public class AITrashCleaner : Agent
 {
     // ─────────────── 참조 변수 ────────────────
     [Header("References")]
-    public AgentMotorK motor;                         // 이동 처리용 모터
-    public TrashInteractionManager interaction;       // 쓰레기와의 상호작용 매니저
-    public AICleanerBase cleaner;                     // 에이전트의 도구 및 쓰레기 상태 관리
+    public AgentMotorK motor;
+    public TrashInteractionManager interaction;
+    public AICleanerBase cleaner;
 
     // ─────────────── 설정값 ────────────────
     [Header("Decision Parameters")]
-    public int decisionInterval = 1;                  // 행동 결정을 내리는 간격
-    public float stepPenalty = -0.01f;                // 매 스텝마다 주는 시간 지연 벌점
+    public int decisionInterval = 1;
+    public float stepPenalty = -0.01f;
 
     // ─────────────── 보상 값 ────────────────
     [Header("Reward Values")]
-    public float rPickUpCan = 0.5f;                   // 캔을 주웠을 때 보상
-    public float rReachBin = 0.3f;                    // 분리수거장에 도달했을 때 보상
-    public float rThrowAway = 1.0f;                   // 쓰레기를 버렸을 때 보상
-    public float rApproachTarget = 0.001f;            // 목표물에 접근했을 때 보상
-    public float rRetreatPenalty = -0.0011f;          // 목표물에서 멀어졌을 때 벌점
-    public float rWashMop = 0.7f;                     // 대걸레 세척 보상
-    public float rPlaceBox = 0.6f;                    // Box를 책상에 내려놓으면 보상
+    public float rPickUpCan = 0.5f;
+    public float rReachBin = 0.3f;
+    public float rThrowAway = 1.0f;
+    public float rApproachTarget = 0.001f;
+    public float rRetreatPenalty = -0.0011f;
+    public float rWashMop = 0.7f;
+    public float rPlaceBox = 0.6f;
 
     // ─────────────── 내부 상태 ────────────────
-    private bool _pickedUp = false;
-    private bool _reachedBin = false;
-    private bool _threwAway = false;
-    private int _prevScore = 0;
-    private float _prevBinDist = 0f;
-    private float _prevPaperBinDist = 0f;
-    private float _prevSinkDist = 0f;
-    private float _prevDeskDist = 0f;
+    private bool _pickedUp, _reachedBin, _threwAway;
+    private int _prevScore;
+    private float _prevBinDist, _prevPaperBinDist, _prevSinkDist, _prevDeskDist;
     private DecisionRequester _requester;
 
-
-
-
-
-    // Mop 사용 & 세척 관련
-    private bool _mopDirty = false;                   // Mop가 더러운 상태인지
-    private bool _washingPause = false;   // 세척-정지 중인가?
-    private float _washingEndTime = 0f;     // 정지 해제 시각
-
-    // “박스 내려놓음 → 2초 정지 → 펼치기” 컨트롤용
+    // Mop 관련
+    private bool _mopDirty = false;
+    private bool _washingPause = false;
+    private float _washingEndTime = 0f;
     private bool _pauseAfterPlace = false;
     private float _pauseEndTime = 0f;
-
-    // 쿨타임
     private float _distRewardCooldown = 0.5f;
     private float _lastDistRewardTime = -999f;
 
     // ──────────────────────────────────────────────────────────
     // 초기화
     // ──────────────────────────────────────────────────────────
+    protected override void Awake()
+    {
+        base.Awake();
+
+        // 싱글톤 강제 생성
+        var sm = StageManager.Instance;
+        var mm = MapManager.Instance;
+
+        // TimeLimit이 0이면 Inspector에서 안 넣었을 가능성 → 경고만
+        if (sm != null && sm.TimeLimit <= 0f)
+            Debug.LogWarning(
+                $"[AITrashCleaner] StageManager.TimeLimit == {sm.TimeLimit}. " +
+                "Inspector에서 양수(예: 180)로 설정하세요!");
+    }
+
     public override void Initialize()
     {
         base.Initialize();
@@ -79,34 +80,33 @@ public class AITrashCleaner : Agent
         _requester.TakeActionsBetweenDecisions = false;
     }
 
+    // ──────────────────────────────────────────────────────────
     // 에피소드 시작
+    // ──────────────────────────────────────────────────────────
     public override void OnEpisodeBegin()
     {
-        // 속도 초기화
+        // 1) 물리 상태 리셋
         var rb = GetComponent<Rigidbody>();
         if (rb != null)
         {
             rb.velocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
         }
-        transform.position = new Vector3(-22.12f, -0.0f, -1.34f);
-        // 시작 위치·회전 및 환경 리셋
+        transform.position = new Vector3(-22.12f, 0f, -1.34f);
         transform.rotation = Quaternion.Euler(0f, 180f, 0f);
-        StageManager.Instance?.TimeReset();
-        MapManager.Instance?.ResetEnvironment();
-        RetryTestBtn.OnRetryTestButtonCliked();
 
-        // 내부 변수 초기화
-        _pickedUp = false;
-        _reachedBin = false;
-        _threwAway = false;
+        // 2) UI / 환경 / 타이머 리셋
+        RetryTestBtn.OnRetryTestButtonCliked(); // UI 먼저
+        StageManager.Instance.TimeReset();      // 타이머·점수 초기화
+        MapManager.Instance.ResetEnvironment(); // 오브젝트 재배치
+
+        // 3) 내부 변수 초기화
+        _pickedUp = _reachedBin = _threwAway = false;
         _prevScore = 0;
         cleaner.ResetHeldTrash();
 
-        _mopDirty = false;
-        _washingPause = false;  
-        _washingEndTime = 0f;     
-
+        _mopDirty = _washingPause = false;
+        _washingEndTime = 0f;
 
         _prevPaperBinDist = GetClosestTargetDistance("TBpaper");
         _prevBinDist = GetClosestTargetDistance("TBcan");

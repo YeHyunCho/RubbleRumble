@@ -10,7 +10,7 @@ public class StageManager : SingletonBase<StageManager>
 
     public int PlayerScore { get; private set; }    // 플레이어 진영 점수
     public int AIScore { get; private set; }    // AI 진영 점수
-    public float TimeLimit { get { return timeLimit;  } } // 제한 시간
+    public float TimeLimit { get { return timeLimit; } } // 제한 시간
     public float TimeLeft { get; private set; } // 잔여 시간
     public bool IsWin { get; private set; } // 승패 결과
 
@@ -58,19 +58,19 @@ public class StageManager : SingletonBase<StageManager>
         }
 
         // 플레이어 진영 내 쓰레기가 없으면 승리
-        if (PlayerObstacleCnt <= 0)    
+        if (PlayerObstacleCnt <= 0)
         {
             IsWin = true;
             GameManager.Instance.GameOver();
         }
 
         //학습을 위해 임시 제한
-        // AI 진영 내 쓰레기가 없으면 패배
+       /* // AI 진영 내 쓰레기가 없으면 패배
         if (AIObstacleCnt <= 0)
         {
             IsWin = false;
             GameManager.Instance.GameOver();
-        }
+        } */
         
         #region TestCode
         {
@@ -106,8 +106,10 @@ public class StageManager : SingletonBase<StageManager>
     {
         if (isPlayer)   // 플레이어 진영에 점수 추가
             PlayerScore += score;
-        
+
         else    // AI 진영에 점수 추가
             AIScore += score;
     }
+    
+    public int GetAiSocre() { return AIScore; }
 }

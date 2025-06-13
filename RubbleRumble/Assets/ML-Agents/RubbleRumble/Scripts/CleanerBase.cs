@@ -6,11 +6,11 @@ using DG.Tweening;
 
 public class CleanerBase : MonoBehaviour
 {
-    [Header ("Player Tool")]
+    [Header("Player Tool")]
     public GameObject[] toolPrefabs;
     public Transform rightHand;
 
-    [Header ("Get Game Object")]
+    [Header("Get Game Object")]
     public GameObject workBench;
     public GameObject sink;
     public GameObject unfoldedBox;
@@ -84,14 +84,14 @@ public class CleanerBase : MonoBehaviour
                     {
                         // 들고 있는 쓰레기가 박스라면
                         if (heldObject.CompareTag("Box") || heldObject.CompareTag("UnfoldedBox"))
-                        // 작업대 위에 박스가 없는 상태로 설정
-                        isTrashOnTheWorkbench = false;
+                            // 작업대 위에 박스가 없는 상태로 설정
+                            isTrashOnTheWorkbench = false;
                         trashOnWorkbench = null;
                     }
-                    
+
                     isNearObject = false;
                     isHoldingTrash = true;
-                } 
+                }
                 else if (currentTool == 1)
                 {
                     if (!trashBagData.trashData.readyToThrowAway)
@@ -108,7 +108,7 @@ public class CleanerBase : MonoBehaviour
                         isNearObject = false;
                         nearObject = null;
                     }
-                    
+
                 }
                 else if (currentTool == 2)
                 {
@@ -135,7 +135,7 @@ public class CleanerBase : MonoBehaviour
             if (heldTrash.trashData.readyToThrowAway && currentRecyclebin.CompareTag(heldTrash.trashData.interactTrashbin))
             {
                 interact.ThrowTrashAway(heldObject);
-                
+
                 heldObject = null;
                 isHoldingTrash = false;
             }
@@ -144,9 +144,9 @@ public class CleanerBase : MonoBehaviour
 
     protected void TryPlaceTrashOnTheWorkbench()
     {
-        if (isNearWorkbench && isHoldingTrash)  
+        if (isNearWorkbench && isHoldingTrash)
         {
-            if (heldObject.CompareTag("Box"))
+            if (heldTrash.trashData.trashName == "Box")
             {
                 interact.PlaceTrashOnWorkbench(workBench, heldObject, gameObject);
                 trashOnWorkbench = heldObject;
@@ -213,7 +213,7 @@ public class CleanerBase : MonoBehaviour
             if (!isNearRecyclingBin)
             {
                 isNearRecyclingBin = true;
-                currentRecyclebin = other.gameObject; 
+                currentRecyclebin = other.gameObject;
             }
         }
     }
@@ -236,4 +236,24 @@ public class CleanerBase : MonoBehaviour
     protected virtual void SetRightHand() { }
 
     protected virtual void SetToolLocation() { }
+
+    public bool GetisHoldingTrash() { return isHoldingTrash; }
+    public int GetHoldingTrashName()
+    {
+        if (heldTrash == null) { return 0; }
+        else if (heldTrash.trashData.trashName == "Can") { return 1; }
+        else if (heldObject.CompareTag("Box")) { return 2; }
+        else if (heldObject.CompareTag("UnfoldedBox")) { return 3; }
+        return 0;
+    }
+
+    public int GetMopUseCount()
+    {
+        Mop mop = FindObjectOfType<Mop>();
+        if (mop == null) { return 0; }
+        if (mop.GetUseCount() < 2) { return 0; }
+        if (mop.GetUseCount() == 2) { return 1; }
+
+        return 0;
+    }
 }
