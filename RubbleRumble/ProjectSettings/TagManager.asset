@@ -19,6 +19,7 @@ TagManager:
   - Water
   - TrashBag
   - Wall
+  - Desk
   layers:
   - Default
   - TransparentFX
@@ -27,7 +28,7 @@ TagManager:
   - Water
   - UI
   - Pickup
-  - 'Obstacle '
+  - 
   - 
   - 
   - 

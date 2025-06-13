@@ -1,15 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-static public class RetryTestBtn
+public static class RetryTestBtn
 {
-    // 화면 우상단에 초록색 재시작 테스트 버튼이 클릭되면
-    static public void OnRetryTestButtonCliked()
+    private static bool _isReloading; // 이미 리로드 중인지?
+
+    static RetryTestBtn()
     {
-        MapManager.Instance.ResetEnvironment2();   // 씬에 남아있는 모든 쓰레기 오브젝트 풀에 반환
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);   // 현재 활성화된 씬 재로드
-        StageManager.Instance.IsPlaying = true;
+        // 새 씬이 다 로드되면 플래그 해제
+        SceneManager.sceneLoaded += (_, __) => _isReloading = false;
+    }
+
+    public static void OnRetryTestButtonCliked()
+    {
+        if (_isReloading) return;     // 두 번 이상 눌러도 무시
+        _isReloading = true;
+
+        MapManager.Instance?.ReturnAllObstacles();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
