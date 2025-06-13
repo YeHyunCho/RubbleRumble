@@ -1,0 +1,42 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1749483595",
+        "python_version": "3.10.2 | packaged by conda-forge | (main, Mar  8 2022, 15:52:47) [Clang 11.1.0 ]",
+        "command_line_arguments": "/opt/anaconda3/envs/mlagents/bin/mlagents-learn config/test_config2.yaml --run-id=0609_10 --resume",
+        "mlagents_version": "1.0.0",
+        "mlagents_envs_version": "1.0.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "1.13.1",
+        "numpy_version": "1.23.1",
+        "end_time_seconds": "1749483595"
+    },
+    "total": 0.4706859579891898,
+    "count": 1,
+    "self": 0.0025542069924995303,
+    "children": {
+        "run_training.setup": {
+            "total": 0.011369167012162507,
+            "count": 1,
+            "self": 0.011369167012162507
+        },
+        "TrainerController.start_learning": {
+            "total": 0.45676258398452774,
+            "count": 1,
+            "self": 6.429298082366586e-05,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 0.45666924997931346,
+                    "count": 1,
+                    "self": 0.45666924997931346
+                },
+                "TrainerController._save_models": {
+                    "total": 2.9041024390608072e-05,
+                    "count": 1,
+                    "self": 2.9041024390608072e-05
+                }
+            }
+        }
+    }
+}

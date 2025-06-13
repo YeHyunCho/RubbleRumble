@@ -6,9 +6,13 @@ using UnityEngine;
 public class TrashInteractionManager : MonoBehaviour
 {
     [SerializeField] private GameObject unfoldedBox;
+    private Dictionary<GameObject, Vector3> originalScales = new Dictionary<GameObject, Vector3>();
+
 
     public void PickUpTrash(GameObject trash, Transform rightHand, GameObject player)
     {
+        // 부모 바꾸기 전 원본 스케일 저장
+        originalScales[trash] = trash.transform.localScale;
         trash.transform.SetParent(rightHand); // 쓰레기를 전달받은 rightHand의 자식으로 설정
 
         // 쓰레기 오브젝트에서 HoldableItem 컴포넌트를 가져옴
@@ -56,6 +60,12 @@ public class TrashInteractionManager : MonoBehaviour
     {
         Vector3 workbenchTop = workbench.transform.position;
         trash.transform.SetParent(null);
+        // 박스 작업대에 올리면 원본 스케일로 복원
+        if (originalScales.TryGetValue(trash, out var savedScale))
+        {
+            trash.transform.localScale = savedScale;
+            originalScales.Remove(trash);
+        }
         trash.transform.position = workbenchTop;
         trash.transform.rotation = Quaternion.identity;
 

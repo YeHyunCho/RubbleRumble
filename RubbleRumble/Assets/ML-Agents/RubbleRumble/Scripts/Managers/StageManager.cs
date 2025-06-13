@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class StageManager : SingletonBase<StageManager>
 {
+    private const float DEFAULT_TIME_LIMIT = 120f;
     [SerializeField] private float timeLimit;    // 제한 시간
     public int PlayerObstacleCnt;    // 플레이어 진영 내 쓰레기 수
     public int AIObstacleCnt;        // AI 진영 내 쓰레기 수
@@ -17,7 +18,12 @@ public class StageManager : SingletonBase<StageManager>
     protected override void Awake()
     {
         base.Awake();
-
+        // Ensure TimeLimit is always non?zero before any Agent observes it
+        if (timeLimit <= 0f)
+        {
+            timeLimit = DEFAULT_TIME_LIMIT;   // default seconds
+        }
+        TimeLeft = timeLimit;
         //TimeReset();
 
         /* TestCode */
@@ -32,7 +38,7 @@ public class StageManager : SingletonBase<StageManager>
         // 점수 및 제한 시간 초기화
         PlayerScore = 0;
         AIScore = 0;
-        timeLimit = 120f;
+        timeLimit = DEFAULT_TIME_LIMIT;
         TimeLeft = TimeLimit;
     }
 

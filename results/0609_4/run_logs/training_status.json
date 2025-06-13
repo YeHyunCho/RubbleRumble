@@ -1,0 +1,29 @@
+{
+    "Agent": {
+        "checkpoints": [
+            {
+                "steps": 9034,
+                "file_path": "results/0609_4/Agent/Agent-9034.onnx",
+                "reward": 11857.49691772461,
+                "creation_time": 1749472339.173665,
+                "auxillary_file_paths": [
+                    "results/0609_4/Agent/Agent-9034.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 9034,
+            "file_path": "results/0609_4/Agent.onnx",
+            "reward": 11857.49691772461,
+            "creation_time": 1749472339.173665,
+            "auxillary_file_paths": [
+                "results/0609_4/Agent/Agent-9034.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.0.0",
+        "torch_version": "1.13.1"
+    }
+}

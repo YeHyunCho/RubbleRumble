@@ -1,0 +1,47 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1749404063",
+        "python_version": "3.10.2 | packaged by conda-forge | (main, Mar  8 2022, 15:52:47) [Clang 11.1.0 ]",
+        "command_line_arguments": "/opt/anaconda3/envs/mlagents/bin/mlagents-learn config/test_config2.yaml --env=RubbleRumble/Test_Run_Build/UnityEnvironment.exe --run-id=0608_21 --num-envs=4",
+        "mlagents_version": "1.0.0",
+        "mlagents_envs_version": "1.0.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "1.13.1",
+        "numpy_version": "1.23.1",
+        "end_time_seconds": "1749404076"
+    },
+    "total": 12.549259541992797,
+    "count": 1,
+    "self": 0.013720374990953133,
+    "children": {
+        "run_training.setup": {
+            "total": 0.01827045899699442,
+            "count": 1,
+            "self": 0.01827045899699442
+        },
+        "TrainerController.start_learning": {
+            "total": 12.517268708004849,
+            "count": 1,
+            "self": 0.0004832900012843311,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 12.516684792004526,
+                    "count": 1,
+                    "self": 12.516684792004526
+                },
+                "trainer_threads": {
+                    "total": 1.0840012691915035e-06,
+                    "count": 1,
+                    "self": 1.0840012691915035e-06
+                },
+                "TrainerController._save_models": {
+                    "total": 9.954199776984751e-05,
+                    "count": 1,
+                    "self": 9.954199776984751e-05
+                }
+            }
+        }
+    }
+}

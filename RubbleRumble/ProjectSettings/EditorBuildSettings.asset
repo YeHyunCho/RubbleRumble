@@ -8,13 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/ML-Agents/RubbleRumble/Scenes/TitleScene.unity
     guid: e4946c873abc69341b56c05b66c13cf6
-  - enabled: 1
-    path: Assets/ML-Agents/RubbleRumble/Scenes/TitleUITestScene.unity
-    guid: baa8f65532e1a914cae0c58afaaed841
   - enabled: 0
     path: Assets/ML-Agents/RubbleRumble/Scenes/MenuScene.unity
     guid: 48325690bd73d374da22baa32fd56b4f
-  - enabled: 1
+  - enabled: 0
     path: Assets/ML-Agents/RubbleRumble/Scenes/MenuScene2.unity
     guid: 4a6a40dccc4cd764b98f34f418c3363e
   - enabled: 0
@@ -24,9 +21,6 @@ EditorBuildSettings:
     path: Assets/ML-Agents/RubbleRumble/Scenes/JiyoungTestScene.unity
     guid: eb13a849a8a34440b8b73d31fbdabd27
   - enabled: 1
-    path: Assets/ML-Agents/RubbleRumble/Scenes/YhTestScene.unity
-    guid: 026bc80f5076ecf4ba98f8adb256d341
-  - enabled: 0
     path: Assets/ML-Agents/RubbleRumble/Scenes/SwTestScene.unity
     guid: a9d637ccbb7b94e9a9c469b355db80c3
   m_configObjects: {}

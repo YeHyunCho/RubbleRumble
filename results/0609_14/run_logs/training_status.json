@@ -1,0 +1,65 @@
+{
+    "Agent": {
+        "checkpoints": [
+            {
+                "steps": 15513,
+                "file_path": "results/0609_14/Agent/Agent-15513.onnx",
+                "reward": null,
+                "creation_time": 1749485603.83952,
+                "auxillary_file_paths": [
+                    "results/0609_14/Agent/Agent-15513.pt"
+                ]
+            },
+            {
+                "steps": 25187,
+                "file_path": "results/0609_14/Agent/Agent-25187.onnx",
+                "reward": null,
+                "creation_time": 1749486174.1929002,
+                "auxillary_file_paths": [
+                    "results/0609_14/Agent/Agent-25187.pt"
+                ]
+            },
+            {
+                "steps": 30112,
+                "file_path": "results/0609_14/Agent/Agent-30112.onnx",
+                "reward": 13993.831115722656,
+                "creation_time": 1749554927.6651251,
+                "auxillary_file_paths": [
+                    "results/0609_14/Agent/Agent-30112.pt"
+                ]
+            },
+            {
+                "steps": 51203,
+                "file_path": "results/0609_14/Agent/Agent-51203.onnx",
+                "reward": null,
+                "creation_time": 1749555962.902951,
+                "auxillary_file_paths": [
+                    "results/0609_14/Agent/Agent-51203.pt"
+                ]
+            },
+            {
+                "steps": 125938,
+                "file_path": "results/0609_14/Agent/Agent-125938.onnx",
+                "reward": 17253.40673828125,
+                "creation_time": 1749560007.667052,
+                "auxillary_file_paths": [
+                    "results/0609_14/Agent/Agent-125938.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 125938,
+            "file_path": "results/0609_14/Agent.onnx",
+            "reward": 17253.40673828125,
+            "creation_time": 1749560007.667052,
+            "auxillary_file_paths": [
+                "results/0609_14/Agent/Agent-125938.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.0.0",
+        "torch_version": "1.13.1"
+    }
+}
