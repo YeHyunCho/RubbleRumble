@@ -1,0 +1,40 @@
+using UnityEngine;
+
+public class Obstacle : MonoBehaviour
+{
+    public int Score;
+    public bool IsPlayer;
+    public Transform ParentPool;
+
+    private void OnEnable()
+    {
+        ParentPool = transform.parent;
+        Collider collider = GetComponent<Collider>();
+        collider.enabled = true;    // 콜라이더 활성화
+        Rigidbody rigidbody = GetComponent<Rigidbody>();
+        if (rigidbody != null)
+            rigidbody.isKinematic = false;  // 물리 작용 활성화
+    }
+
+    public void CleanObstacle()
+    {
+        if (IsPlayer)
+        {
+            StageManager.Instance.AddScore(Score, true);
+        }
+        else
+        {
+            StageManager.Instance.AddScore(Score, false);
+        }
+
+        RemoveObstacle();
+    }
+
+    public void RemoveObstacle()
+    {
+        transform.parent = ParentPool;
+        MapManager.Instance.RemoveFromList(this);
+        if (isActiveAndEnabled)
+            PoolManager.Instance.ReturnToPool(gameObject.name, this);
+    }
+}
