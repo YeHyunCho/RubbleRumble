@@ -1,15 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-static public class RetryTestBtn
+public static class RetryTestBtn
 {
-    // È­¸é ¿ì»ó´Ü¿¡ ÃÊ·Ï»ö Àç½ÃÀÛ Å×½ºÆ® ¹öÆ°ÀÌ Å¬¸¯µÇ¸é
-    static public void OnRetryTestButtonCliked()
+    private static bool _isReloading; // ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½Îµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?
+
+    static RetryTestBtn()
     {
-        MapManager.Instance.ResetEnvironment2();   // ¾À¿¡ ³²¾ÆÀÖ´Â ¸ðµç ¾²·¹±â ¿ÀºêÁ§Æ® Ç®¿¡ ¹ÝÈ¯
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);   // ÇöÀç È°¼ºÈ­µÈ ¾À Àç·Îµå
-        StageManager.Instance.IsPlaying = true;
+        // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Îµï¿½Ç¸ï¿½ ï¿½Ã·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        SceneManager.sceneLoaded += (_, __) => _isReloading = false;
+    }
+
+    public static void OnRetryTestButtonCliked()
+    {
+        if (_isReloading) return;     // ï¿½ï¿½ ï¿½ï¿½ ï¿½Ì»ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        _isReloading = true;
+
+        MapManager.Instance?.ReturnAllObstacles();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

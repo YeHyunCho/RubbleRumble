@@ -19,7 +19,7 @@ public class Mop : MonoBehaviour
     private Vector3 righthandPos;
     //private Vector3 offset = new Vector3(0.4f, 0.05f, -0.55f);
 
-    //Mop ÇÁ¸®ÆÕÀÇ ¿ÀÇÁ¼Â ¼öÁ¤
+    //Mop ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     private Vector3 offset = new Vector3(0.02f, -0.1f, 0.04f);
 
     private int useCount;
@@ -41,8 +41,8 @@ public class Mop : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         agent = GameObject.FindWithTag("Agent");
 
-        // mop¿¡¼­ ÇÃ·¹ÀÌ¾î À§Ä¡°¡ agent À§Ä¡º¸´Ù °¡±î¿ì¸é
-        // ÇØ´ç mopÀÌ ÇÃ·¹ÀÌ¾î°¡ µé°í ÀÖ´Â °ÍÀ¸¹Ç·Î sink¸¦ ÇÃ·¹ÀÌ¾î ¸ÊÀÇ sink¿Í ¿¬°á
+        // mopï¿½ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ agent ï¿½ï¿½Ä¡ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        // ï¿½Ø´ï¿½ mopï¿½ï¿½ ï¿½Ã·ï¿½ï¿½Ì¾î°¡ ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ sinkï¿½ï¿½ ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½ sinkï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         if (Vector3.Distance(player.transform.position, transform.position) < Vector3.Distance(agent.transform.position, transform.position))
         {
             isPlayer = true;
@@ -61,13 +61,14 @@ public class Mop : MonoBehaviour
 
     private void Update()
     {
+
         //if (isTrigger)
         //{
         //    transform.position = player.transform.position - offset;
         //}
         transform.localPosition = righthandPos + offset;
 
-        //Mop ÇÁ¸®ÆÕÀÇ °¢µµ ¼öÁ¤
+        //Mop ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         transform.localRotation = Quaternion.Euler(60, 20, 40);
 
         /*if (Input.GetKeyDown(KeyCode.E) && nearDust != null)
@@ -131,30 +132,42 @@ public class Mop : MonoBehaviour
 
         if (distance <= triggerDistance)
         {
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (isPlayer)          // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)
             {
-                holdTime = 0f;
-            }
+                if (Input.GetKeyDown(KeyCode.Q))
+                    holdTime = 0f;
 
-            if (Input.GetKey(KeyCode.Q))
+                if (Input.GetKey(KeyCode.Q))
+                {
+                    holdTime += Time.deltaTime;
+                    if (holdTime >= 2f)
+                    {
+                        useCount = 0;
+                        GetComponent<MeshRenderer>().material = mat[useCount];
+                    }
+                }
+
+                if (Input.GetKeyUp(KeyCode.Q))
+                    holdTime = 0f;
+            }
+            /*
+            else                   // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ AI ï¿½ï¿½ï¿½ : 2ï¿½ï¿½ ï¿½ï¿½Æ¼ï¿½ï¿½ ï¿½Úµï¿½ ï¿½ï¿½Ã´
             {
                 holdTime += Time.deltaTime;
 
                 if (holdTime >= 2f)
                 {
                     useCount = 0;
-                    gameObject.GetComponent<MeshRenderer>().material = mat[useCount];
+                    GetComponent<MeshRenderer>().material = mat[useCount];
+                    _washCalledThisFrame = true;
+                    holdTime = 0f;            // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã´ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
                 }
             }
-
-            if (Input.GetKeyUp(KeyCode.Q))
-            {
-                holdTime = 0f;
-            }
+            */
         }
         else
         {
-            holdTime = 0f;
+            holdTime = 0f; // ï¿½ï¿½Å©ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½î³ªï¿½ï¿½ Å¸ï¿½Ì¸ï¿½ ï¿½Ê±ï¿½È­
         }
     }
 
@@ -188,4 +201,23 @@ public class Mop : MonoBehaviour
     public float Getreward() { return reward; }
     public void Setreward() { reward = 0f; }
     //public GameObject GetNearDust() { return nearDust; }
+
+    public void SetUseCount(int a)
+    {
+        useCount = 0;
+        GetComponent<MeshRenderer>().material = mat[useCount];
+    }
+    public bool IsNearSink()
+    {
+        transform.localPosition = righthandPos + offset;
+        transform.localRotation = Quaternion.Euler(60, 20, 40);
+
+        if (sink == null) return false;
+
+        float distance = Vector3.Distance(transform.position, sink.transform.position);
+
+        float looseDistance = triggerDistance + 0.5f;  // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Å¸ï¿½ ï¿½ß°ï¿½
+        return distance <= looseDistance;
+    }
+
 }

@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/ML-Agents/RubbleRumble/Scenes/MenuScene.unity
     guid: 48325690bd73d374da22baa32fd56b4f
-  - enabled: 1
+  - enabled: 0
     path: Assets/ML-Agents/RubbleRumble/Scenes/MenuScene2.unity
     guid: 4a6a40dccc4cd764b98f34f418c3363e
   - enabled: 0

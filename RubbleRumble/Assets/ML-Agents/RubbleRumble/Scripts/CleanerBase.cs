@@ -83,11 +83,11 @@ public class CleanerBase : MonoBehaviour
                     nearObject = null;
                     heldTrash = heldObject.GetComponent<TrashManager>();
 
-                    if (isNearWorkbench)    // ÀÛ¾÷´ë ±ÙÃ³¿¡¼­ ¾²·¹±â¸¦ ÁÖ¿î °æ¿ì
+                    if (isNearWorkbench)    // ï¿½Û¾ï¿½ï¿½ï¿½ ï¿½ï¿½Ã³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½â¸¦ ï¿½Ö¿ï¿½ ï¿½ï¿½ï¿½
                     {
-                        // µé°í ÀÖ´Â ¾²·¹±â°¡ ¹Ú½º¶ó¸é
+                        // ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½â°¡ ï¿½Ú½ï¿½ï¿½ï¿½ï¿½
                         if (heldObject.CompareTag("Box") || heldObject.CompareTag("UnfoldedBox"))
-                            // ÀÛ¾÷´ë À§¿¡ ¹Ú½º°¡ ¾ø´Â »óÅÂ·Î ¼³Á¤
+                            // ï¿½Û¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ú½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â·ï¿½ ï¿½ï¿½ï¿½ï¿½
                             isTrashOnTheWorkbench = false;
                         trashOnWorkbench = null;
                     }
@@ -111,7 +111,6 @@ public class CleanerBase : MonoBehaviour
                         isNearObject = false;
                         nearObject = null;
                     }
-
                 }
                 else if (currentTool == 2)
                 {
@@ -149,7 +148,7 @@ public class CleanerBase : MonoBehaviour
     {
         if (isNearWorkbench && isHoldingTrash)
         {
-            if (heldTrash.trashData.trashName == "Box")
+            if (heldObject.CompareTag("Box"))
             {
                 interact.PlaceTrashOnWorkbench(workBench, heldObject, gameObject);
                 trashOnWorkbench = heldObject;
@@ -195,7 +194,7 @@ public class CleanerBase : MonoBehaviour
 
     protected void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Can") || other.CompareTag("Box") || other.CompareTag("Dust") || other.CompareTag("UnfoldedBox") || other.CompareTag("Water")) // ÇÁ¸®ÆÕ ÅÂ±× ´Ù Trash·Î ÅëÀÏ½ÃÄÑµµµÉµí?
+        if (other.CompareTag("Can") || other.CompareTag("Box") || other.CompareTag("Dust") || other.CompareTag("UnfoldedBox") || other.CompareTag("Water")) // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Â±ï¿½ ï¿½ï¿½ Trashï¿½ï¿½ ï¿½ï¿½ï¿½Ï½ï¿½ï¿½Ñµï¿½ï¿½Éµï¿½?
         {
             nearObject = other.gameObject;
             isNearObject = true;
