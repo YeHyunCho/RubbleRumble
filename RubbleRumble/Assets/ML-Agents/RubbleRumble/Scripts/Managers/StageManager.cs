@@ -65,13 +65,14 @@ public class StageManager : SingletonBase<StageManager>
         }
 
         //학습을 위해 임시 제한
-       /* // AI 진영 내 쓰레기가 없으면 패배
+       // AI 진영 내 쓰레기가 없으면 패배
         if (AIObstacleCnt <= 0)
         {
             IsWin = false;
             GameManager.Instance.GameOver();
-        } */
+        }
         
+        /*
         #region TestCode
         {
             if (Input.GetKeyDown(KeyCode.O))  // O를 누르면 AI 먼지 삭제
@@ -98,6 +99,7 @@ public class StageManager : SingletonBase<StageManager>
             }
         }
         #endregion
+        */
     }
 
     // TODO: 쓰레기 쪽에서 해당 쓰레기가 플레이어 측인지 AI 판단하고 인자로 넘겨주기

@@ -12,8 +12,9 @@ public class MenuUIHandler : MonoBehaviour
     [Header("Level Button")]
     [SerializeField] private List<GameObject> BtnList = new List<GameObject>();
     [SerializeField] private List<Button> levelBtnList = new List<Button>();
-    private const string nextSceneName = "YhTestScene"; // 플레이씬 이름
-    //private const string nextSceneName = "ShTestScene"; // 플레이씬 이름
+    private const string titleSceneName = "TitleUITestScene"; // 플레이씬 이름
+    //private const string nextSceneName = "YhTestScene"; // 플레이씬 이름
+    private const string nextSceneName = "ShTestScene"; // 플레이씬 이름
 
     private void Start()
     {
@@ -36,7 +37,8 @@ public class MenuUIHandler : MonoBehaviour
 
     public void ClickBackButton()
     {
-        SceneManager.LoadScene(0);
+        //SceneManager.LoadScene(0);
+        SceneManager.LoadScene(titleSceneName);
     }
 
     public void OnClickedMenuBtn(int levelIdx)

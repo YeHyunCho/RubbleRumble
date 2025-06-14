@@ -17,7 +17,7 @@ public class GameOverPopup : UIBase
     [SerializeField] private Button nextBtn;
     [SerializeField] private Button exitBtn;
 
-    private const string menuSceneName = "MenuScene2";
+    private const string menuSceneName = "MenuScene3";
 
     private void Awake()
     {

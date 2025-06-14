@@ -157,7 +157,7 @@ MonoBehaviour:
   - idx: 0
     ObstacleDict:
       _serializedList:
-      - Key: Dirt
+      - Key: Dust
         Value: 10
     spawnCooldowns:
     - 30
@@ -165,18 +165,20 @@ MonoBehaviour:
   - idx: 1
     ObstacleDict:
       _serializedList:
-      - Key: Dirt
+      - Key: Dust
         Value: 10
       - Key: Can
         Value: 5
     spawnCooldowns:
     - 40
     - 70
-  - idx: 2
+  - idx: 3
     ObstacleDict:
       _serializedList:
-      - Key: Dirt
-        Value: 10
+      - Key: Water
+        Value: 5
+      - Key: Dust
+        Value: 3
       - Key: Can
         Value: 3
       - Key: Box
