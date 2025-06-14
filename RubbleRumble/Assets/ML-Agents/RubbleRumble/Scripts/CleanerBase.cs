@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using DG.Tweening;
+using DecalSystem;
 
 public class CleanerBase : MonoBehaviour
 {
@@ -32,7 +33,7 @@ public class CleanerBase : MonoBehaviour
     protected GameObject[] tools;
 
     protected GameObject heldObject;
-    protected GameObject trashOnWorkbench;
+    protected Stack<GameObject> trashOnWorkbench;   // 작업대 위에 올라가 있는 상자
     protected GameObject currentRecyclebin;
 
     protected int currentTool = -1;
@@ -44,7 +45,8 @@ public class CleanerBase : MonoBehaviour
     protected void Awake()
     {
         SetRightHand();
-    }
+        trashOnWorkbench = new Stack<GameObject>();
+;    }
 
     protected virtual void Start()
     {
@@ -59,7 +61,7 @@ public class CleanerBase : MonoBehaviour
 
         heldObject = null;
         nearObject = null;
-        trashOnWorkbench = null;
+        //trashOnWorkbench = null;
     }
 
     protected void UseTool()
@@ -84,9 +86,14 @@ public class CleanerBase : MonoBehaviour
                     {
                         // 들고 있는 쓰레기가 박스라면
                         if (heldObject.CompareTag("Box") || heldObject.CompareTag("UnfoldedBox"))
-                            // 작업대 위에 박스가 없는 상태로 설정
-                            isTrashOnTheWorkbench = false;
-                        trashOnWorkbench = null;
+                        {
+                            if (trashOnWorkbench.Count > 0) // 작업대 위에 박스가 있으면
+                                trashOnWorkbench.Pop(); // 작업대 위 최상단 박스 가져오기
+                            if (trashOnWorkbench.Count <= 0)    // 작업대 위에 박스가 없으면
+                            {
+                                isTrashOnTheWorkbench = false;  // 작업대 비어있는 상태로 만들기
+                            }
+                        }
                     }
 
                     isNearObject = false;
@@ -149,7 +156,8 @@ public class CleanerBase : MonoBehaviour
             if (heldTrash.trashData.trashName == "Box")
             {
                 interact.PlaceTrashOnWorkbench(workBench, heldObject, gameObject);
-                trashOnWorkbench = heldObject;
+                trashOnWorkbench.Push(heldObject);
+                Debug.Log("Box Pused");
 
                 isTrashOnTheWorkbench = true;
                 isHoldingTrash = false;
@@ -167,12 +175,13 @@ public class CleanerBase : MonoBehaviour
 
             if (qKeyHoldTime >= UNFOLD_DURATION)
             {
-                TrashManager box = trashOnWorkbench.GetComponent<TrashManager>();
+                TrashManager box = trashOnWorkbench.Peek().GetComponent<TrashManager>();
 
                 if (!box.trashData.readyToThrowAway)
                 {
                     qKeyHoldTime = 0f;
-                    trashOnWorkbench = interact.UnfoldBox(trashOnWorkbench);
+                    // 작업대 위에 접힌 상자를 없애고 펼친 상자 놓기
+                    trashOnWorkbench.Push(interact.UnfoldBox(trashOnWorkbench.Pop()));
                     isUnfolding = false;
                 }
             }
@@ -203,7 +212,7 @@ public class CleanerBase : MonoBehaviour
             }
             if (isTrashOnTheWorkbench)
             {
-                nearObject = trashOnWorkbench;
+                nearObject = trashOnWorkbench.Peek();
                 isNearObject = true;
             }
         }

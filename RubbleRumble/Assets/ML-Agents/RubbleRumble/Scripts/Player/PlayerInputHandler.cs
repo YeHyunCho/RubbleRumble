@@ -118,7 +118,12 @@ public class PlayerInputHandler : CleanerBase
     public float GetHoldingTime() { return qKeyHoldTime; }
     public float GetUnfoldDuration() { return UNFOLD_DURATION; }
     public GameObject GetHeldObject() { return heldObject; }
-    public GameObject GetTrashOnWorkbench() { return trashOnWorkbench; }
+    public GameObject GetTrashOnWorkbench()
+    {
+        // 작업대 위에 상자가 있으면 최상단에 있는 상자를 반환
+        if (trashOnWorkbench.Count > 0) return trashOnWorkbench.Peek();
+        else return null;
+    }
     public bool GetIsHoldingTrash() { return isHoldingTrash; }
     public bool GetIsNearWorkbench() { return isNearWorkbench; }
     public bool GetIsNearRecyclingBin() { return isNearRecyclingBin; }
