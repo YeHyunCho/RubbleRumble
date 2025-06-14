@@ -122,9 +122,7 @@ public class PlayerInteract : MonoBehaviour
         // 플레이어 근처에 물얼룩이 있고, 대걸레 사용할 수 있으면 상호작용 E 활성화 
         if (playerInputHandler.GetIsNearObject())
         {
-            // TODO: Water prefab 태그 Water로 변경 시 주석 해제 후 사용
-            //if (playerInputHandler.GetNearObject().CompareTag("Water") && mop.GetUseCount() < 2)
-            if (playerInputHandler.GetNearObject().CompareTag("Dust") && mop.GetUseCount() < 2)
+            if (playerInputHandler.GetNearObject().CompareTag("Water") && mop.GetUseCount() < 2)
             {
                 return InteractUIState.PressE;
             }
