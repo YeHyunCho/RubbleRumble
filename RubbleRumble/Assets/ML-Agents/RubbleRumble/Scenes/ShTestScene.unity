@@ -10551,6 +10551,12 @@ PrefabInstance:
       propertyPath: trashBin
       value: 
       objectReference: {fileID: 1727048031}
+    - target: {fileID: 3616103210611038671, guid: 109ab32ee4578f54e9692f348f724b28,
+        type: 3}
+      propertyPath: trashData
+      value: 
+      objectReference: {fileID: 11400000, guid: cf11cb4053bb1dd4baaa86393e0867c5,
+        type: 2}
     - target: {fileID: 4231876668235741568, guid: 109ab32ee4578f54e9692f348f724b28,
         type: 3}
       propertyPath: m_LocalScale.x
