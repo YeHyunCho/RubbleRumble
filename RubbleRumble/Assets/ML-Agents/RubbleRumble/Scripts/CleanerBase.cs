@@ -157,7 +157,6 @@ public class CleanerBase : MonoBehaviour
             {
                 interact.PlaceTrashOnWorkbench(workBench, heldObject, gameObject);
                 trashOnWorkbench.Push(heldObject);
-                Debug.Log("Box Pused");
 
                 isTrashOnTheWorkbench = true;
                 isHoldingTrash = false;

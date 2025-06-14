@@ -33,7 +33,7 @@ public class AICleanerBase : CleanerBase
         nearObject            = null;
         isNearObject          = false;
 
-        trashOnWorkbench      = null;
+        //trashOnWorkbench      = null;
         isTrashOnTheWorkbench = false;
 
         isNearWorkbench       = false;

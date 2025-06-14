@@ -8667,23 +8667,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4610953232916335865, guid: 2caeadd38b338cb418780c6781f5ae0c,
         type: 3}
+      propertyPath: levels.Array.data[2].spawnCooldowns.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4610953232916335865, guid: 2caeadd38b338cb418780c6781f5ae0c,
+        type: 3}
       propertyPath: levels.Array.data[2].ObstacleDict._serializedList.Array.size
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4610953232916335865, guid: 2caeadd38b338cb418780c6781f5ae0c,
         type: 3}
       propertyPath: levels.Array.data[2].ObstacleDict._serializedList.Array.data[0].Key
-      value: Water
+      value: Box
       objectReference: {fileID: 0}
     - target: {fileID: 4610953232916335865, guid: 2caeadd38b338cb418780c6781f5ae0c,
         type: 3}
       propertyPath: levels.Array.data[2].ObstacleDict._serializedList.Array.data[1].Key
-      value: Dust
+      value: Box
       objectReference: {fileID: 0}
     - target: {fileID: 4610953232916335865, guid: 2caeadd38b338cb418780c6781f5ae0c,
         type: 3}
       propertyPath: levels.Array.data[2].ObstacleDict._serializedList.Array.data[2].Key
-      value: Can
+      value: Box
       objectReference: {fileID: 0}
     - target: {fileID: 4610953232916335865, guid: 2caeadd38b338cb418780c6781f5ae0c,
         type: 3}
@@ -8693,22 +8698,22 @@ PrefabInstance:
     - target: {fileID: 4610953232916335865, guid: 2caeadd38b338cb418780c6781f5ae0c,
         type: 3}
       propertyPath: levels.Array.data[2].ObstacleDict._serializedList.Array.data[0].Value
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4610953232916335865, guid: 2caeadd38b338cb418780c6781f5ae0c,
         type: 3}
       propertyPath: levels.Array.data[2].ObstacleDict._serializedList.Array.data[1].Value
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4610953232916335865, guid: 2caeadd38b338cb418780c6781f5ae0c,
         type: 3}
       propertyPath: levels.Array.data[2].ObstacleDict._serializedList.Array.data[2].Value
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4610953232916335865, guid: 2caeadd38b338cb418780c6781f5ae0c,
         type: 3}
       propertyPath: levels.Array.data[2].ObstacleDict._serializedList.Array.data[3].Value
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8642842476108006682, guid: 2caeadd38b338cb418780c6781f5ae0c,
         type: 3}
