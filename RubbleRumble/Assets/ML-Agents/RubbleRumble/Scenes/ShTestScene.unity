@@ -13017,7 +13017,8 @@ MonoBehaviour:
       type: 3}
     size: 2
   - tag: Dust
-    prefab: {fileID: 570300928132906545, guid: 1feaec97395f4724db03901bdfde57cb, type: 3}
+    prefab: {fileID: 6306101440815883320, guid: ffc5a96d6b373d84cb7461a6ca19643a,
+      type: 3}
     size: 3
 --- !u!114 &1437803101
 MonoBehaviour:
