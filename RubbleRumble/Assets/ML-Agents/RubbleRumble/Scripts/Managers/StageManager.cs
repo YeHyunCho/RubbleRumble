@@ -57,6 +57,8 @@ public class StageManager : SingletonBase<StageManager>
             GameManager.Instance.GameOver();
         }
 
+        if (TimeLeft > 118f) return;    // 오브젝트 생성 시간 대기 위해 2초 딜레이
+
         // 플레이어 진영 내 쓰레기가 없으면 승리
         if (PlayerObstacleCnt <= 0)
         {

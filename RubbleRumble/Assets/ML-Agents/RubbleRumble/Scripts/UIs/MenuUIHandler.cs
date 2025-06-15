@@ -12,7 +12,8 @@ public class MenuUIHandler : MonoBehaviour
     [Header("Level Button")]
     [SerializeField] private List<GameObject> BtnList = new List<GameObject>();
     [SerializeField] private List<Button> levelBtnList = new List<Button>();
-    private const string titleSceneName = "TitleUITestScene"; // 플레이씬 이름
+    //private const string titleSceneName = "TitleUITestScene"; // 타이틀씬 이름
+    private const string titleSceneName = "TitleScene2"; // 타이틀씬 이름
     //private const string nextSceneName = "YhTestScene"; // 플레이씬 이름
     private const string nextSceneName = "ShTestScene"; // 플레이씬 이름
 

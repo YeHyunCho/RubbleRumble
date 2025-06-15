@@ -11,6 +11,8 @@ using UnityEditor;
 
 public class TitleUIHandler : MonoBehaviour
 {
+    private const string menuSceneName = "MenuScene3";
+
     public void ClickStartButton()
     {
         SceneManager.LoadScene(1);
@@ -23,5 +25,13 @@ public class TitleUIHandler : MonoBehaviour
 #else
         Application.Quit();
 #endif
+    }
+
+    private void Update()
+    {
+        if (Input.anyKey)
+        {
+            SceneManager.LoadScene(menuSceneName);
+        }
     }
 }
