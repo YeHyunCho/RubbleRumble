@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq; // Enumerable.Range().ToList()사용을 위해 추가가
-using UnityEngine.SceneManagement;
 
 public class MapManager : SingletonBase<MapManager>
 {
@@ -56,36 +55,16 @@ public class MapManager : SingletonBase<MapManager>
         //}
 
         base.Awake();
-        //PoolManager.Instance.AddPools<Obstacle>(_poolConfigs);
-
-        //LevelInfo = LevelManager.Instance.GetLevelInfo();   // 현재 레벨 설정 정보 가져오기
-        //spawnTime = LevelInfo.spawnCooldowns;   // 쿨타임 리스트 설정
-        //SettingMap();   // 맵에 쓰레기 초기 세팅
-        //curTime = 0;
-        //ResetEnvironment();
     }
     //장성우 추가
     public void ResetEnvironment() //학습 시 에피소드 종료마다 환경 초기화 필요.
     {
-        //PoolManager.Instance.DeleteAllPools(); // 이전 오브젝트 초기화
-
         PoolManager.Instance.AddPools<Obstacle>(_poolConfigs);
         LevelInfo = LevelManager.Instance.GetLevelInfo();
         spawnTime = new List<float>(LevelInfo.spawnCooldowns);
         SettingMap();
         curTime = 0;
     }
-        public void ResetEnvironment2() //학습 시 에피소드 종료마다 환경 초기화 필요.
-    {
-        PoolManager.Instance.DeleteAllPools(); // 이전 오브젝트 초기화
-
-        PoolManager.Instance.AddPools<Obstacle>(_poolConfigs);
-        LevelInfo = LevelManager.Instance.GetLevelInfo();
-        spawnTime = new List<float>(LevelInfo.spawnCooldowns);
-        SettingMap();
-        curTime = 0;
-    }
-
 
     private void Update()
     {
@@ -109,28 +88,6 @@ public class MapManager : SingletonBase<MapManager>
             SpawnObstacle(playerMap, aiMap, obstacle.Key, obstacle.Value);
         }
     }
-
-    /* 2025-06-11 쓰레기 스폰포인트 수정(강지영)
-       private void SpawnObstacle(Transform playerMap, Transform aiMap, string name, int count)
-       {
-           for (int i = 0; i < count; i++)
-           {
-               // 랜덤 위치 설정
-               // Vector3 randPos = new Vector3(Random.Range(-4.5f, 4.5f), 0.2f, Random.Range(-4.5f, 4.5f));
-               Vector3 randPos = new Vector3(Random.Range(-10.0f, 10.0f), 0.2f, Random.Range(-10.0f, 10.0f));
-               randPos = transform.TransformDirection(randPos);
-
-               // 풀에서 가져오고 위치와 회전값 설정
-               Obstacle playerObstacle = PoolManager.Instance.SpawnFromPool<Obstacle>(name, randPos + playerMap.transform.position, Quaternion.identity);
-               playerObstacle.IsPlayer = true; // 쓰레기를 플레이어로 소유권 설정
-               AddToList(playerObstacle);  // 플레이어 쓰레기 활성화 리스트에 추가
-
-               Obstacle aiObstacle = PoolManager.Instance.SpawnFromPool<Obstacle>(name, randPos + aiMap.transform.position, Quaternion.identity);
-               aiObstacle.IsPlayer = false; // 쓰레기를 AI로 소유권 설정
-               AddToList(aiObstacle);  // AI 쓰레기 활성화 리스트에 추가
-           }
-       }
-       */
     
 /// <summary>
     /// 플레이어와 AI 맵에 독립적으로 장애물을 생성합니다.

@@ -16,11 +16,6 @@ public class PlayerInteract : MonoBehaviour
     public Mop mop { get; private set; }
     public InteractUIState CurrentUIState { get; private set; }
 
-    private void Awake()
-    {
-        //interactRange = 3;
-    }
-
     private void Start()
     {
         if (playerInputHandler == null)

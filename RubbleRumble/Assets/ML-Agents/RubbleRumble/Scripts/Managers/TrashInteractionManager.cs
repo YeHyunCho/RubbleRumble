@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.Sentis.Layers;
 using UnityEngine;
 
 public class TrashInteractionManager : MonoBehaviour
@@ -51,7 +48,6 @@ public class TrashInteractionManager : MonoBehaviour
     }
 
 
-    //public void PlaceTrashOnWorkbench(WorkBench workbench, GameObject trash, GameObject player)
     public void PlaceTrashOnWorkbench(GameObject workbench, GameObject trash, GameObject player)
     {
         Vector3 workbenchTop = workbench.transform.position;
@@ -76,7 +72,6 @@ public class TrashInteractionManager : MonoBehaviour
 
     public void ThrowTrashAway(GameObject trash)
     {
-        //Destroy(trash);
         // Ç®·Î ¹ÝÈ¯ÇÏ¸ç Á¡¼ö È¹µæ
         Obstacle obstacle = trash.GetComponent<Obstacle>();
         if (obstacle != null)

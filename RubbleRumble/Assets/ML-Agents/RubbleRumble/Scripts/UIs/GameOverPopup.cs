@@ -29,13 +29,7 @@ public class GameOverPopup : UIBase
 
     private void OnEnable()
     {
-        if (StageManager.Instance.IsWin)
-            // TODO: 다음 스테이지로 넘어가게 하는 로직 작성(현재 임시로 Retry랑 동일하게 설정)
-            nextBtn.onClick.AddListener(OnNextBtnClicked);
-        else
-            nextBtn.onClick.AddListener(OnNextBtnClicked);
-
-        // TODO: exitBtn 누르면 LobbyScene으로 가도록 작성
+        nextBtn.onClick.AddListener(OnNextBtnClicked);
         exitBtn.onClick.AddListener(OnExitBtnClicked);  // exit 버튼 누르면 메뉴로 돌아가도록 연결
     }
 

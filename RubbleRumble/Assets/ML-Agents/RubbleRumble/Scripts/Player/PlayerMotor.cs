@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections; 
 
 public class PlayerMotor : MonoBehaviour
 {
@@ -27,7 +26,6 @@ public class PlayerMotor : MonoBehaviour
     private float currentAnimatorSpeed;        // 애니메이터에 현재 프레임에 전달할 최종 속도 값
     private float animatorSpeedVelocity;       // Mathf.SmoothDamp 함수 내부에서 사용되는 참조 변수 (속도 변화량 추적)
 
-    // private bool isDustPlaying = false;        // 먼지 효과가 현재 재생 중인지 나타내는 플래그 (2025_06_09 : 파티클 오류 수정을 위해 주석 처리리)
     private Quaternion targetBodyRotation;     // 캐릭터가 바라봐야 할 목표 Y축 회전값
     private bool isActuallyDashing = false;    // 실제로 대시 중인지 여부를 나타내는 상태 << 추가
 
@@ -199,32 +197,14 @@ public class PlayerMotor : MonoBehaviour
     // 먼지 효과를 제어하는 함수 << 매개변수 isDashingNow로 변경 (이전: isRunningEffect) >>
     void HandleDustEffect(bool isDashingNow)
     {
-        if (dustEffect != null)
-        {
-            /*
-            // 먼지 효과를 내야 하는 상황(isDashingNow가 true)이고, 현재 효과가 재생 중이 아닐 때
-            if (isDashingNow && !isDustPlaying)
-            {
-                dustEffect.Play();
-                isDustPlaying = true;
-            }
-            // 먼지 효과를 내지 않아야 하는 상황(isDashingNow가 false)이고, 현재 효과가 재생 중일 때
-            else if (!isDashingNow && isDustPlaying)
-            {
-                dustEffect.Stop();
-                isDustPlaying = false;
-            }
-            (2025_06_09 파티클 수정을 위해 주석 처리)*/
-
-        }
         if (isDashingNow && !dustEffect.isPlaying)
-            {
-                dustEffect.Play(); // 파티클 재생
-            }
-            // 대시하면 안 되는 상황인데, 파티클이 현재 재생 중일 때
-            else if (!isDashingNow && dustEffect.isPlaying)
-            {
-                dustEffect.Stop(); // 파티클 중지
-            }
+        {
+            dustEffect.Play(); // 파티클 재생
+        }
+        // 대시하면 안 되는 상황인데, 파티클이 현재 재생 중일 때
+        else if (!isDashingNow && dustEffect.isPlaying)
+        {
+            dustEffect.Stop(); // 파티클 중지
+        }
     }
 }

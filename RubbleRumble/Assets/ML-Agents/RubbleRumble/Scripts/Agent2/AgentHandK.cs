@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AgentHandK : MonoBehaviour
@@ -47,8 +45,6 @@ public class AgentHandK : MonoBehaviour
         if (trash != null) // 들고 있는 오브젝트와 작업대가 존재할 때
         {
             // 작업대 위쪽 위치 계산 (작업대 높이 + 0.2f 오프셋)
-            // Vector3 workbenchTop = transform.position + Vector3.up * (transform.localScale.y + 0.2f);
-            //Vector3 workbenchTop = new Vector3(30, 2.5f, -21.6f);
             Vector3 workbenchTop = workbench.transform.position;
             trash.transform.SetParent(null); // 손에서 분리
             trash.transform.position = workbenchTop; // 작업대 위로 이동

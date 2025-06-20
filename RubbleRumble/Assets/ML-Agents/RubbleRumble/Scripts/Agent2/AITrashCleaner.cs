@@ -2,8 +2,6 @@
 // AITrashCleaner.cs  ─ Box·Can·Mop 통합 로직
 //    + StageManager/MapManager 초기화 보강
 // =============================================================
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
@@ -96,7 +94,6 @@ public class AITrashCleaner : Agent
         transform.rotation = Quaternion.Euler(0f, 180f, 0f);
 
         // 2) UI / 환경 / 타이머 리셋
-        //RetryTestBtn.OnRetryTestButtonCliked(); // UI 먼저
         StageManager.Instance.TimeReset();      // 타이머·점수 초기화
         MapManager.Instance.ResetEnvironment(); // 오브젝트 재배치
 

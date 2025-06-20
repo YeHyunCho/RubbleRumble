@@ -22,9 +22,6 @@ public class LevelManager : SingletonBase<LevelManager>
         base.Awake();
         DontDestroyOnLoad(this);
         SelectedLevelIdx = -1;
-        /* 테스트용 코드 */
-        // 모든 씬에서 레벨 3으로 시작하도록 설정
-        //SelectedLevelIdx = 2;
     }
 
     // 현재 선택된 레벨 정보 반환

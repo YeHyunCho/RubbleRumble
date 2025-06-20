@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class StageManager : SingletonBase<StageManager>
@@ -13,17 +12,6 @@ public class StageManager : SingletonBase<StageManager>
     public float TimeLimit { get { return timeLimit; } } // 제한 시간
     public float TimeLeft { get; private set; } // 잔여 시간
     public bool IsWin { get; private set; } // 승패 결과
-
-    protected override void Awake()
-    {
-        base.Awake();
-
-        //TimeReset();
-
-        /* TestCode */
-        //timeLimit = 10f;
-        //TimeLeft = TimeLimit;
-    }
 
     // 5.21 장성우
     //episode 자동 실행 및 초기화 위한 시간 리셋
@@ -73,38 +61,8 @@ public class StageManager : SingletonBase<StageManager>
             IsWin = false;
             GameManager.Instance.GameOver();
         }
-        
-        /*
-        #region TestCode
-        {
-            if (Input.GetKeyDown(KeyCode.O))  // O를 누르면 AI 먼지 삭제
-            {
-                for (int i = 0; i < MapManager.Instance.aiObstacleList.Count; i++)
-                {
-                    if (MapManager.Instance.aiObstacleList[i].gameObject.activeSelf)
-                    {
-                        MapManager.Instance.aiObstacleList[i].CleanObstacle();
-                        break;
-                    }
-                }
-            }
-            if (Input.GetKeyDown(KeyCode.P))  // P를 누르면 Player 먼지 삭제
-            {
-                for (int i = 0; i < MapManager.Instance.playerObstacleList.Count; i++)
-                {
-                    if (MapManager.Instance.playerObstacleList[i].gameObject.activeSelf)
-                    {
-                        MapManager.Instance.playerObstacleList[i].CleanObstacle();
-                        break;
-                    }
-                }
-            }
-        }
-        #endregion
-        */
     }
 
-    // TODO: 쓰레기 쪽에서 해당 쓰레기가 플레이어 측인지 AI 판단하고 인자로 넘겨주기
     // 쓰레기가 풀로 반환되는 시점에 호출
     public void AddScore(int score, bool isPlayer)
     {

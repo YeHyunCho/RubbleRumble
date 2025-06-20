@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Agents : MonoBehaviour
@@ -72,11 +70,6 @@ public class Agents : MonoBehaviour
         // 이동 방향을 입력값으로 계산하고 부드럽게 전환
         Vector3 rawInput = new Vector3(hAxis, 0, vAxis).normalized;  // 입력값을 정규화하여 크기 1로 맞춤
         moveVec = Vector3.Lerp(moveVec, rawInput, Time.deltaTime * 15f);  // 부드럽게 이동 방향 보간
-
-        // 도구 장착 키 입력 처리
-        // if (Input.GetKeyDown(KeyCode.Alpha1)) EquipTool(0);  // 1번 키: 첫 번째 도구 장착
-        // else if (Input.GetKeyDown(KeyCode.Alpha2)) EquipTool(1);  // 2번 키: 두 번째 도구 장착
-        // else if (Input.GetKeyDown(KeyCode.Alpha3)) EquipTool(2);  // 3번 키: 세 번째 도구 장착
     }
 
     public void move_update(float mvx, float mvz, bool isshiftdown)
