@@ -3,12 +3,22 @@
   <p>🎮 캐주얼, 액션, 시뮬레이션 🎮</p>
 </div>
 
+> **시연 영상 보러가기** : https://youtu.be/PX9dC6pG-e0
+
+<div align="center">
+  <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/7018174f-2ddc-4d57-becb-7a0ce24ea987" style="border-radius: 10px;" />
+</div>
+
+
+
 ## 🕹️ 프로젝트 개요
 
 **프로젝트명** : Rubble Rumble   
 **프로젝트 기간** : 2025.03 ~ 2025.06   
 **프로젝트 형태** : 팀 프로젝트   
-**프로젝트 소개** : 인간 플레이어와 AI가 제한된 시간 내에 더 많은 쓰레기를 수거하고 처리하며 경쟁하는 3D 청소 대전 게임으로 단순한 청소를 넘어서 여러 요소를 통해 승부가 갈리는 실시간 액션 게임입니다.
+**프로젝트 소개** : 인간 플레이어와 AI가 제한된 시간 내에 더 많은 쓰레기를 수거하고 처리하며 경쟁하는 3D 청소 대전 게임으로 단순한 청소를 넘어서 여러 요소를 통해 승부가 갈리는 실시간 액션 게임입니다.   
+**프로젝트 흐름도**
+<img width="1024" height="625" alt="Image" src="https://github.com/user-attachments/assets/600a2b2c-1c0d-4609-b1b1-9e268d26742d" />
 
 
 ## 🕹️게임 플레이
