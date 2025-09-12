@@ -3,7 +3,8 @@
   <p>🎮 캐주얼, 액션, 시뮬레이션 🎮</p>
 </div>
 
-> **시연 영상 보러가기** : https://youtu.be/PX9dC6pG-e0
+> **시연 영상 보러가기** : https://youtu.be/PX9dC6pG-e0     
+[코드 폴더 바로가기 Click!](https://github.com/YeHyunCho/RubbleRumble/tree/yehyunie/RubbleRumble/Assets/ML-Agents/RubbleRumble/Scripts)
 
 <div align="center">
   <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/7018174f-2ddc-4d57-becb-7a0ce24ea987" style="border-radius: 10px;" />
